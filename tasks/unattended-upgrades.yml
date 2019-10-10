@@ -2,7 +2,7 @@
     - name: Install the `unattended-upgrades` package
       package:
         name: unattended-upgrades
-        state: installed
+        state: present
       when: ansible_os_family == "Debian"
 
     - name: Copy the `20auto-upgrades` configuration file
