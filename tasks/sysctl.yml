@@ -1,0 +1,93 @@
+---
+    #SYSCTL
+    ##SyncThing feature
+    - sysctl:
+        name: fs.inotify.max_user_watches
+        value: '204800'
+        state: present
+
+    - sysctl:
+        name: vm.swappiness
+        value: '0'
+        state: present
+
+    - sysctl:
+        name: fs.file-max
+        value: '2097152'
+        state: present
+
+    # # Remove kernel.panic entry from /etc/sysctl.conf
+    # - sysctl:
+    #     name: kernel.panic
+    #     state: absent
+    #     sysctl_file: /etc/sysctl.conf
+    # net.ipv4
+    # 
+    - sysctl:
+        name: net.ipv4.conf.all.rp_filter
+        value: '1'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_syncookies
+        value: '1'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_tw_reuse
+        value: '1'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_fin_timeout
+        value: '30'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_keepalive_intvl
+        value: '30'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_keepalive_probes
+        value: '5'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.conf.all.send_redirects
+        value: '0'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.ipv4.tcp_max_syn_backlog
+        value: '30000'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.core.somaxconn
+        value: '50000'
+        sysctl_set: yes
+        state: present
+        reload: yes
+
+    - sysctl:
+        name: net.core.netdev_max_backlog
+        value: '5000'
+        sysctl_set: yes
+        state: present
+
+    # Set ip forwarding on in /proc and in the sysctl file and reload if necessary
+    - sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        sysctl_set: yes
+        state: present
+        reload: yes

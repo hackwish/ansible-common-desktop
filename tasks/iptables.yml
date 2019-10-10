@@ -1,0 +1,87 @@
+---
+    #ENSURE INSTALL IPTABLES
+    - name: Install the `iptables` package
+      package:
+        name: iptables
+        state: latest
+    - name: Flush existing firewall rules
+      iptables:
+        flush: true
+
+    #GENERAL RULES
+    - name: Firewall rule - allow all loopback traffic
+      iptables:
+        action: append
+        chain: INPUT
+        in_interface: lo
+        jump: ACCEPT
+
+    - name: Firewall rule - allow established connections
+      iptables:
+        chain: INPUT
+        ctstate: ESTABLISHED,RELATED
+        jump: ACCEPT
+
+    #IP TABLES RULES
+    - name: Firewall rule - BLOCK port ping traffic
+      iptables:
+        chain: INPUT
+        jump: ACCEPT
+        protocol: icmp
+
+    - name: Firewall rule - allow port 22/SSH traffic
+      iptables:
+        chain: INPUT
+        destination_port: '22'
+        jump: ACCEPT
+        protocol: tcp
+
+    - name: Firewall rule - allow port Node Exporter 9100 traffic
+      iptables:
+        chain: INPUT
+        destination_port: '9100'
+        jump: ACCEPT
+        protocol: tcp
+
+    - iptables:
+        chain: INPUT
+        jump: DROP
+        protocol: tcp
+        tcp_flags:
+          flags: ALL
+          flags_set:
+            - ACK
+            - RST
+            - SYN
+            - FIN
+
+    # Tag all outbound tcp packets with DSCP DiffServ class CS1
+    - iptables:
+        chain: OUTPUT
+        jump: DSCP
+        table: mangle
+        set_dscp_mark_class: CS6
+        protocol: tcp
+
+    # Set tcp flags
+    - iptables:
+        chain: OUTPUT
+        jump: DROP
+        protocol: tcp
+        tcp_flags:
+          flags: ALL
+          flags_set:
+            - ACK
+            - RST
+            - SYN
+            - FIN
+
+    #ENABLE IPTABLES PERSISTENCE
+    - name: Install `netfilter-persistent` && `iptables-persistent` packages
+      package:
+        name: "{{item}}"
+        state: present
+      with_items:
+          - iptables-persistent
+          - netfilter-persistent
+      when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"

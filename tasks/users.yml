@@ -1,0 +1,33 @@
+---
+    #USERS
+    #Groups
+    - name: group wheel
+      group:
+        name: wheel
+        state: present
+
+    - name: Allow 'wheel' group to have passwordless sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^%wheel'
+        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+        validate: visudo -cf %s
+
+    - name: Install the `sudo` package
+      package:
+        name: sudo
+        state: latest
+
+    #Users
+    - name: Add root
+      user:
+        name: root
+        home: /root
+        shell: /bin/zsh
+        state: present
+
+    - name: group nosu    
+      group:
+        name: nosu
+        state: present

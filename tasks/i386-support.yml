@@ -1,0 +1,5 @@
+---
+    #ADD i386 SUPPORT
+    - lineinfile: dest=/var/lib/dpkg/arch line="amd64" create=yes
+    - lineinfile: dest=/var/lib/dpkg/arch line="i386" create=yes
+      register: add_i386

@@ -1,0 +1,23 @@
+Port 12225
+
+AcceptEnv LANG LC_*
+ChallengeResponseAuthentication no
+LogLevel INFO
+LoginGraceTime 120
+PasswordAuthentication no
+PrintMotd no
+Protocol 2
+StrictModes yes
+Subsystem sftp /usr/lib/openssh/sftp-server
+SyslogFacility AUTH
+UseDNS no
+UsePAM yes
+UsePrivilegeSeparation yes
+X11Forwarding no
+#PermitRootLogin no
+AllowAgentForwarding no
+AllowTcpForwarding yes
+MaxAuthTries 2
+MaxSessions 2
+TCPKeepAlive no
+PermitTunnel yes

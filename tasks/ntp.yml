@@ -1,0 +1,17 @@
+---
+    #NTP
+    - name: Ensure NTP-related packages are installed.
+      package:
+        name: ntp
+        state: present
+
+    - name: Ensure tzdata package is installed (Linux).
+      package:
+        name: tzdata
+        state: present
+      when: ansible_system == "Linux"
+
+    #TZDATA
+    - name: set timezone
+      timezone:
+        name: America/Santiago

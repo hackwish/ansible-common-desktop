@@ -1,0 +1,43 @@
+---
+# tasks file for ansible-commom-desktop
+- include: ssh-keys.yml
+  tags: ssh-keys
+
+- include: repos.yml
+  tags: repos
+
+- include: i386-support.yml
+  tags: i386-support
+
+- include: packages.yml
+  tags: packages
+
+- include: aditional-packagesyml
+  tags: aditional-packages
+
+- include: locales.yml
+  tags: locales
+
+- include: unattended-upgrades.yml
+  tags: unattended-upgrades
+
+- include: sysctl.yml
+  tags: sysctl
+
+- include: ulimit.yml
+  tags: ulimit
+
+- include: iptables.yml
+  tags: iptables
+
+- include: ntp.yml
+  tags: ntp
+
+- include: users.yml
+  tags: users
+
+# - include: sshd.yml
+#   tags: sshd
+
+# - include: fail2ban.yml
+#   tags: fail2ban
