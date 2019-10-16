@@ -290,7 +290,7 @@
           - vlc
           - whois
           - wine1.8
-          - wine32-development
+          #- wine32-development
           - xclip
           - xinetd
           - xserver-xorg
