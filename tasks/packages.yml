@@ -260,6 +260,7 @@
           - swaks
           - synaptic
           - syncthing
+          - synergy
           - sysstat
           - tcpdump
           - telnetd
@@ -304,3 +305,8 @@
         state: present
       register: common-installation
       tags: common
+
+     - name: Install snaps
+       snap:
+         name:
+           - k9s
