@@ -306,7 +306,7 @@
       register: common-installation
       tags: common
 
-     - name: Install snaps
-       snap:
-         name:
-           - k9s
+    - name: Install snaps
+      snap:
+        name:
+          - k9s
