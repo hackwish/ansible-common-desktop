@@ -296,7 +296,7 @@
       - virtualbox-6.0
       - vlc
       - whois
-      - wine1.8
+      #- wine1.8
       #- wine32-development
       - xclip
       - xinetd
