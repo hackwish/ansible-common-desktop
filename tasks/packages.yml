@@ -312,13 +312,18 @@
       - k9s
       - postman
       - insomnia
-      - slack
       - telegram-desktop
       - discord
+      - keepassxc
+
+- name: Install snaps classic
+  snap:
+    name:
+      - slack
       # - sublime-text
       - eclipse
       - atom
       - phpstorm
       - code
       - skype
-      - keepassxc
+    classic: yes
