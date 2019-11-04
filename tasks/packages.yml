@@ -310,3 +310,5 @@
   snap:
     name:
       - k9s
+      - postman
+      - insomnia
