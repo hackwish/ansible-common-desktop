@@ -303,7 +303,7 @@
       - zlib1g-dev
       - zsh
     state: present
-  register: common-packages-installation
+  #register: common-packages-installation
   tags: common
 
 - name: Install snaps
