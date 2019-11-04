@@ -141,6 +141,8 @@
       - libfreetype6-dev
       - libgdbm-dev
       - libguestfs-perl
+      - libjack-dev
+      - libjack0
       - libjansson-dev
       - liblua5.3-dev
       - libmagic-dev
