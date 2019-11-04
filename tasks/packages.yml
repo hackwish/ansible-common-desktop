@@ -312,3 +312,13 @@
       - k9s
       - postman
       - insomnia
+      - slack
+      - telegram-desktop
+      - discord
+      # - sublime-text
+      - eclipse
+      - atom
+      - phpstorm
+      - code
+      - skype
+      - keepassxc
