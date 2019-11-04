@@ -20,6 +20,7 @@
     packages:
       - libgl1-mesa-dri:i386
       - libgl1-mesa-glx:i386
+      - wine32-development
 
 #INSTALL COMMON PACKAGES 
 - name: Instala paquetes common
