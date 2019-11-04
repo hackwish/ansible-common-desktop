@@ -9,7 +9,7 @@
           - python-packaging
           - language-pack-es
         state: present
-      register: common-aditional-installation
+      # register: common-aditional-installation
       ignore_errors: true
       when: ansible_distribution == 'Ubuntu'
 
@@ -23,7 +23,7 @@
           - language-pack-es
           - mate-tweak
         state: present
-      register: common-aditional-installation
+      # register: common-aditional-installation
       ignore_errors: true
       when: ansible_distribution == 'Linux Mint'
 
