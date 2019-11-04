@@ -20,6 +20,8 @@
     packages:
       - libgl1-mesa-dri:i386
       - libgl1-mesa-glx:i386
+      - libasound2-plugins:i386
+      - wine-stable:i386
       - wine32-development
 
 #INSTALL COMMON PACKAGES 
