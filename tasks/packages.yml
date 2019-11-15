@@ -85,6 +85,7 @@
       - filezilla-common
       - filezilla-theme-papirus
       - fonts-noto
+      - forticlient
       - fpc
       - freeglut3
       - fslint
