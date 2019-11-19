@@ -140,17 +140,16 @@
         repo: ppa:yannubuntu/boot-repair
         codename: bionic
     
-    #FORTINET VPN
-    - apt_key:
-        url: https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY
-        state: present
-        
-    - apt_repository:
-        repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse'
-        state : present
-      when: ansible_distribution == 'Linux Mint'
-
-    - apt_repository:
-          repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /{{ ansible_distribution_release }} multiverse'
-          state : present
-      when: ansible_distribution == 'Ubuntu'
+ #   #FORTINET VPN
+ #   - apt_key:
+ #       url: https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY
+ #       state: present
+ #       
+ #   - apt_repository:
+ #       repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse'
+ #       state : present
+ #
+ #   - apt_repository:
+ #         repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /{{ ansible_distribution_release }} multiverse'
+ #         state : present
+ #     when: ansible_distribution == 'Ubuntu'

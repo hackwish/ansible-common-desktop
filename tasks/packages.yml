@@ -85,7 +85,7 @@
       - filezilla-common
       - filezilla-theme-papirus
       - fonts-noto
-      - forticlient
+      # - forticlient
       - fpc
       - freeglut3
       - fslint
@@ -207,6 +207,7 @@
       - numix-icon-theme-square
       - nvidia-cuda-dev
       - nvidia-cuda-toolkit
+      - openfortivpn
       - openssh-client
       - openssh-server
       - openvpn
@@ -239,6 +240,8 @@
       - rbenv
       - redshift
       - redshift-gtk
+      - remmina
+      - rdesktop
       - rdfind
       - rtl8812au-dkms
       - ruby-dev
@@ -331,5 +334,5 @@
       - atom
       - phpstorm
       - code
-      - skype
+      # - skype
     classic: yes
