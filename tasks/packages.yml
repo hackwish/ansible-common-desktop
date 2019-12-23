@@ -324,6 +324,10 @@
       - telegram-desktop
       - discord
       - keepassxc
+      - wickrpro
+      - wickrme
+      - vault
+      - signal-desktop
 
 - name: Install snaps classic
   snap:
