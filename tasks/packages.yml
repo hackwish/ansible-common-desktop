@@ -43,9 +43,9 @@
       - balena-etcher-electron
       - bc
       - bison
-      - boinc-client
-      - boinc-manager
-      - boinc-screensaver
+      # - boinc-client
+      # - boinc-manager
+      # - boinc-screensaver
       - boot-repair
       - brasero-cdrkit
       - browser-plugin-vlc
