@@ -118,6 +118,7 @@
       - google-cloud-sdk-datastore-emulator
       - google-chrome-stable
       - gpick
+      - graphviz
       - grub-customizer
       - gufw
       - hardinfo
