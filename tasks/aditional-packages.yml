@@ -1,18 +1,15 @@
 ---
     #ADITIONALS PACKAGES
-    - name: Instala packages adicionales (Ubuntu)
-      apt: 
-        name: "{{ packages }}"
-      vars:
-        packages:
-          - linux-headers-generic
-          - python-packaging
-          - language-pack-es
-          - gnome-tweak-tools
-        state: present
-      # register: common-aditional-installation
-      ignore_errors: true
-      when: ansible_distribution == 'Ubuntu'
+    # - name: Instala packages adicionales (Ubuntu)
+    #   apt: 
+    #     name: "{{ packages }}"
+    #   vars:
+    #     packages:
+
+    #     state: present
+    #   # register: common-aditional-installation
+    #   ignore_errors: true
+    #   when: ansible_distribution == 'Ubuntu'
 
     # - name: Instala packages adicionales (Linux Mint)
     #   apt: 
@@ -77,8 +74,9 @@
 
     #INSTALL PIPS
     - name: Install Python packages.
-      pip:
+      pip3:
         name: "{{ packages }}"
+        executable: pip3
       vars:
         packages:
           - pyOpenSSL

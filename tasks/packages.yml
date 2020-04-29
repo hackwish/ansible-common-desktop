@@ -300,6 +300,8 @@
       - chrome-gnome-shell
       - screenfetch
       - calibre
+      - python-packaging
+      - language-pack-es
     state: present
   #register: common-packages-installation
   tags: common
