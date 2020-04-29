@@ -83,7 +83,6 @@
       # - forticlient
       - fpc
       - freeglut3
-      - fslint
       - g++
       - gcc
       - gdebi
