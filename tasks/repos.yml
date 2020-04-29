@@ -122,24 +122,9 @@
         state: present
 
     - apt_repository:
-          repo: 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu focal main'
+          repo: 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu disco main'
           state : present
 
     #BOOT REPAIR
     - apt_repository:
         repo: ppa:yannubuntu/boot-repair
-        codename: focal
-    
- #   #FORTINET VPN
- #   - apt_key:
- #       url: https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY
- #       state: present
- #       
- #   - apt_repository:
- #       repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /focal multiverse'
- #       state : present
- #
- #   - apt_repository:
- #         repo: 'deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /{{ ansible_distribution_release }} multiverse'
- #         state : present
- #     when: ansible_distribution == 'Ubuntu'
