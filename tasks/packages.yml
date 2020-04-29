@@ -45,7 +45,6 @@
       - bison
       - boot-repair
       - brasero-cdrkit
-      # - browser-plugin-vlc
       - build-essential
       - ca-certificates
       - catfish
@@ -64,7 +63,6 @@
       - curl
       - dbus
       - dconf-editor
-      - dconf-tools
       - default-jdk
       - default-jre
       - dia
