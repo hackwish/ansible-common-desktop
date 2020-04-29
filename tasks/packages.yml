@@ -118,7 +118,6 @@
       - hardinfo
       - hddtemp
       - htop
-      - icedtea-plugin
       - iftop
       - intel-microcode
       - iotop
