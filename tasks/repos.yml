@@ -100,10 +100,6 @@
     #       state : present
     #   when: ansible_distribution == 'Ubuntu'
 
-    #UKUU
-    - apt_repository:
-        repo: ppa:teejee2008/ppa
-
     #GRUB CUSTOMIZER
     - apt_repository:
         repo: ppa:danielrichter2007/grub-customizer
