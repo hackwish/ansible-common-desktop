@@ -103,6 +103,7 @@
     #GRUB CUSTOMIZER
     - apt_repository:
         repo: ppa:danielrichter2007/grub-customizer
+        codename: disco
 
     #ETCHER
     - apt_key:
