@@ -2,27 +2,21 @@
     #ADD REPOS
     - apt_repository:
         repo: ppa:numix/ppa
-        codename: focal
 
     - apt_repository:
         repo: ppa:system76/pop
-        codename: focal
 
     - apt_repository:
         repo: ppa:system76-dev/stable
-        codename: focal
 
     - apt_repository:
         repo: ppa:git-core/ppa
-        codename: focal
 
     - apt_repository:
         repo: ppa:papirus/papirus
-        codename: focal
 
     - apt_repository:
         repo: ppa:nilarimogard/webupd8
-        codename: focal
 
     #Google Chrome
     - apt_key:
