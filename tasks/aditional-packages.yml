@@ -8,7 +8,7 @@
           - linux-headers-generic
           - python-packaging
           - language-pack-es
-          - gnome-tweak
+          - gnome-tweak-tools
         state: present
       # register: common-aditional-installation
       ignore_errors: true

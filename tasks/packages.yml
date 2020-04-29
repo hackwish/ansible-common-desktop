@@ -219,7 +219,7 @@
       - putty-tools
       - pv
       - python
-      - python-dev
+      - python3-pip
       - python-setuptools
       # - qemu
       # - qemu-kvm
@@ -248,7 +248,7 @@
       - soundconverter
       - spotify-client
       - ssh-askpass
-      - steam-installer
+      - steam
       - stress
       # - sublime-merge
       # - sublime-text
@@ -277,7 +277,6 @@
       - uuid-runtime
       - vim
       - vim-common
-      - vim-gnome
       - vim-gtk
       - vim-gui-common
       - vim-snippets
