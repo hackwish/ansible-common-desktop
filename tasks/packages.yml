@@ -45,7 +45,7 @@
       - bison
       - boot-repair
       - brasero-cdrkit
-      - browser-plugin-vlc
+      # - browser-plugin-vlc
       - build-essential
       - ca-certificates
       - catfish
