@@ -74,7 +74,7 @@
 
     #INSTALL PIPS
     - name: Install Python packages.
-      pip3:
+      pip:
         name: "{{ packages }}"
         executable: pip3
       vars:
