@@ -128,3 +128,7 @@
     #BOOT REPAIR
     - apt_repository:
         repo: ppa:yannubuntu/boot-repair
+
+    #SHUTTER
+    - apt_repository:
+        repo: ppa:linuxuprising/shutter  
