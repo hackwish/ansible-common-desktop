@@ -1,9 +1,8 @@
 ---
 #ADD REPOS
 - apt_repository:
-    repo: ppa:numix/ppa
-    codename: eoan
-
+    repo: 'http://ppa.launchpad.net/numix/ppa/ubuntu eoan main'
+    
 - apt_repository:
     repo: ppa:system76/pop
 
