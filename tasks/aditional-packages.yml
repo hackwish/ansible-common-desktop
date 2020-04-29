@@ -8,71 +8,72 @@
           - linux-headers-generic
           - python-packaging
           - language-pack-es
+          - gnome-tweak
         state: present
       # register: common-aditional-installation
       ignore_errors: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Instala packages adicionales (Linux Mint)
-      apt: 
-        name: "{{ packages }}"
-      vars:
-        packages:
-          - mint-meta-codecs
-          - mint-meta-mate
-          - language-pack-es
-          - mate-tweak
-        state: present
-      # register: common-aditional-installation
-      ignore_errors: true
-      when: ansible_distribution == 'Linux Mint'
+    # - name: Instala packages adicionales (Linux Mint)
+    #   apt: 
+    #     name: "{{ packages }}"
+    #   vars:
+    #     packages:
+    #       - mint-meta-codecs
+    #       - mint-meta-mate
+    #       - language-pack-es
+    #       - mate-tweak
+    #     state: present
+    #   # register: common-aditional-installation
+    #   ignore_errors: true
+    #   when: ansible_distribution == 'Linux Mint'
 
     #INSTALL NO PACKAGE SOFTWARE
     ##SOAP UI
-    - name: Create Directory for SOAP UI
-      file: path=/opt/soapui state=directory mode="a+rw"
+    # - name: Create Directory for SOAP UI
+    #   file: path=/opt/soapui state=directory mode="a+rw"
 
-    - name: Get SOAP UI.
-      get_url:
-        url: https://s3.amazonaws.com/downloads.eviware/soapuios/5.5.0/SoapUI-5.5.0-linux-bin.tar.gz
-        dest: "/opt/soapui/"
-        mode: 0755    
+    # - name: Get SOAP UI.
+    #   get_url:
+    #     url: https://s3.amazonaws.com/downloads.eviware/soapuios/5.5.0/SoapUI-5.5.0-linux-bin.tar.gz
+    #     dest: "/opt/soapui/"
+    #     mode: 0755    
 
-    - name: Verify SOAP UI exists
-      stat: path=/opt/soapui/SoapUI-5.5.0-linux-bin.tar.gz
-      register: soapui_stat
+    # - name: Verify SOAP UI exists
+    #   stat: path=/opt/soapui/SoapUI-5.5.0-linux-bin.tar.gz
+    #   register: soapui_stat
 
-    - name: Unarchive SOAP UI
-      unarchive:
-        src: /opt/soapui/SoapUI-5.5.0-linux-bin.tar.gz
-        dest: /opt/soapui/
-        remote_src: yes
+    # - name: Unarchive SOAP UI
+    #   unarchive:
+    #     src: /opt/soapui/SoapUI-5.5.0-linux-bin.tar.gz
+    #     dest: /opt/soapui/
+    #     remote_src: yes
 
-    - name: Configure SOAP UI on system bin.
-      file:
-        src: "/opt/soapui/SoapUI-5.5.0/bin/soapui.sh"
-        dest: "/usr/bin/soapui"
-        state: link
-      when: soapui_stat.stat.exists
+    # - name: Configure SOAP UI on system bin.
+    #   file:
+    #     src: "/opt/soapui/SoapUI-5.5.0/bin/soapui.sh"
+    #     dest: "/usr/bin/soapui"
+    #     state: link
+    #   when: soapui_stat.stat.exists
 
-    - name: Configure SOAP UI on system sbin.
-      file:
-        src: "/opt/soapui/SoapUI-5.5.0/bin/soapui.sh"
-        dest: "/usr/sbin/soapui"
-        state: link
-      when: soapui_stat.stat.exists
+    # - name: Configure SOAP UI on system sbin.
+    #   file:
+    #     src: "/opt/soapui/SoapUI-5.5.0/bin/soapui.sh"
+    #     dest: "/usr/sbin/soapui"
+    #     state: link
+    #   when: soapui_stat.stat.exists
 
-    - name: Create Desktop menu file
-      copy:
-        dest: "/usr/share/applications/SoapUI.desktop"
-        content: |
-            [Desktop Entry]
-            Name=Soap UI
-            Exec=/opt/soapui/SoapUI-5.5.0/bin/soapui.sh
-            StartupNotify=true
-            Terminal=false
-            Type=Application
-        mode: 0755
+    # - name: Create Desktop menu file
+    #   copy:
+    #     dest: "/usr/share/applications/SoapUI.desktop"
+    #     content: |
+    #         [Desktop Entry]
+    #         Name=Soap UI
+    #         Exec=/opt/soapui/SoapUI-5.5.0/bin/soapui.sh
+    #         StartupNotify=true
+    #         Terminal=false
+    #         Type=Application
+    #     mode: 0755
 
     #INSTALL PIPS
     - name: Install Python packages.
@@ -93,18 +94,18 @@
         name: 'gemspec'
         state: present
 
-    - gem:
-        name: 'capistrano'
-        state: present
+    # - gem:
+    #     name: 'capistrano'
+    #     state: present
 
-    - gem:
-        name: 'capistrano'
-        version: '3.4.0'
-        state: present
+    # - gem:
+    #     name: 'capistrano'
+    #     version: '3.4.0'
+    #     state: present
 
-    - gem:
-        name: 'capistrano-passenger'
-        state: present
+    # - gem:
+    #     name: 'capistrano-passenger'
+    #     state: present
 
     - gem:
         name: 'fog'

@@ -5,11 +5,11 @@
     upgrade: dist
   when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
 
-- name: Upgrading all packages (CentOS)
-  yum:
-    name: '*'
-    state: latest
-  when: ansible_os_family == "RedHat"
+# - name: Upgrading all packages (CentOS)
+#   yum:
+#     name: '*'
+#     state: latest
+#   when: ansible_os_family == "RedHat"
    
     #INSTALL i386 COMMON PACKAGES 
 - name: Instala paquetes common i386  
@@ -39,13 +39,10 @@
       - atop
       - autoconf
       - automake
-      - awscli
+      # - awscli
       - balena-etcher-electron
       - bc
       - bison
-      # - boinc-client
-      # - boinc-manager
-      # - boinc-screensaver
       - boot-repair
       - brasero-cdrkit
       - browser-plugin-vlc
@@ -73,17 +70,17 @@
       - dia
       - dirmngr
       - dnsmasq
-      - docker
-      - docker-ce
-      - docker-compose
+      # - docker
+      # - docker-ce
+      # - docker-compose
       - dropbox
       - ebtables
       - fdupes
       - figlet
       - file-roller
-      - filezilla
-      - filezilla-common
-      - filezilla-theme-papirus
+      # - filezilla
+      # - filezilla-common
+      # - filezilla-theme-papirus
       - fonts-noto
       # - forticlient
       - fpc
@@ -105,18 +102,18 @@
       - gnome-tweak-tool
       - gnupg2
       - golang-go
-      - google-cloud-sdk
-      - google-cloud-sdk-bigtable-emulator
-      - google-cloud-sdk-cbt
-      - google-cloud-sdk-cloud-build-local
-      - google-cloud-sdk-datalab
-      - google-cloud-sdk-app-engine-go
-      - google-cloud-sdk-app-engine-java
-      - google-cloud-sdk-app-engine-python
-      - google-cloud-sdk-app-engine-python-extras
-      - google-cloud-sdk-pubsub-emulator
-      - google-cloud-sdk-bigtable-emulator
-      - google-cloud-sdk-datastore-emulator
+      # - google-cloud-sdk
+      # - google-cloud-sdk-bigtable-emulator
+      # - google-cloud-sdk-cbt
+      # - google-cloud-sdk-cloud-build-local
+      # - google-cloud-sdk-datalab
+      # - google-cloud-sdk-app-engine-go
+      # - google-cloud-sdk-app-engine-java
+      # - google-cloud-sdk-app-engine-python
+      # - google-cloud-sdk-app-engine-python-extras
+      # - google-cloud-sdk-pubsub-emulator
+      # - google-cloud-sdk-bigtable-emulator
+      # - google-cloud-sdk-datastore-emulator
       - google-chrome-stable
       - gpick
       - graphviz
@@ -134,9 +131,9 @@
       - jq
       - k3b
       - kdeconnect
-      - kubectl
+      # - kubectl
       - libavformat-dev
-      - libdvd-pkg
+      # - libdvd-pkg
       - libegl1-mesa
       - libelf-dev
       - libffi-dev
@@ -162,8 +159,8 @@
       - libstdc++6
       - libsvn-java
       - libtool
-      - libvirt-bin
-      - libvirt-dev
+      # - libvirt-bin
+      # - libvirt-dev
       - libxml-writer-perl
       - libxml2-dev
       - libxslt-dev
@@ -176,19 +173,19 @@
       - lm-sensors
       - lsb-release
       - lshw
-      - lxd
-      - lxd-client
+      # - lxd
+      # - lxd-client
       - lutris
       - mailutils
       - make
-      - meld
+      # - meld
       - module-assistant
       - moreutils
       - mpack
       - multipath-tools
       - multitail
-      - mysql-workbench
-      - mysql-workbench-data
+      # - mysql-workbench
+      # - mysql-workbench-data
       - nano
       - ncdu
       - netcat
@@ -217,7 +214,7 @@
       - p7zip-rar
       - papirus-icon-theme
       - pepperflashplugin-nonfree
-      - pgadmin3
+      # - pgadmin3
       - pigz
       - pkg-config
       - plank
@@ -235,8 +232,8 @@
       - python-gpg
       - python-pip
       - python-setuptools
-      - qemu
-      - qemu-kvm
+      # - qemu
+      # - qemu-kvm
       - quodlibet
       - rar
       - rbenv
@@ -264,8 +261,8 @@
       - ssh-askpass
       - steam-installer
       - stress
-      - sublime-merge
-      - sublime-text
+      # - sublime-merge
+      # - sublime-text
       - subversion
       - sudo
       - swaks
@@ -296,10 +293,10 @@
       - vim-gtk
       - vim-gui-common
       - vim-snippets
-      - virt-manager
-      - virt-viewer
-      - virtinst
-      - virtualbox-6.0
+      # - virt-manager
+      # - virt-viewer
+      # - virtinst
+      # - virtualbox-6.0
       - vlc
       - whois
       #- wine1.8
@@ -313,6 +310,9 @@
       - zip
       - zlib1g-dev
       - zsh
+      - chrome-gnome-shell
+      - screenfetch
+      - calibre
     state: present
   #register: common-packages-installation
   tags: common
@@ -320,9 +320,9 @@
 - name: Install snaps
   snap:
     name:
-      - k9s
-      - postman
-      - insomnia
+      # - k9s
+      # - postman
+      # - insomnia
       - telegram-desktop
       - discord
       - keepassxc
@@ -331,14 +331,13 @@
       - vault
       - signal-desktop
 
-- name: Install snaps classic
-  snap:
-    name:
-      - slack
-      # - sublime-text
-      - eclipse
-      - atom
-      - phpstorm
-      - code
-      # - skype
-    classic: yes
+# - name: Install snaps classic
+#   snap:
+#     name:
+#       # - slack
+#       - eclipse
+#       - atom
+#       - phpstorm
+#       - code
+#       # - skype
+#     classic: yes
