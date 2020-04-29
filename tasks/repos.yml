@@ -103,12 +103,10 @@
     #UKUU
     - apt_repository:
         repo: ppa:teejee2008/ppa
-        codename: focal
 
     #GRUB CUSTOMIZER
     - apt_repository:
         repo: ppa:danielrichter2007/grub-customizer
-        codename: focal
 
     #ETCHER
     - apt_key:
