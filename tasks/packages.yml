@@ -298,7 +298,6 @@
       - zlib1g-dev
       - zsh
       - chrome-gnome-shell
-      - firefox-gnome-shell
       - screenfetch
       - calibre
       - python-packaging
