@@ -146,7 +146,7 @@
       - libportmidi-dev
       - libreadline-dev
       - libswscale-dev
-      - libsdl2-image-dev
+      #- libsdl2-image-dev
       - libsqlite3-dev
       - libssl-dev
       - libstdc++5
@@ -248,7 +248,7 @@
       - soundconverter
       - spotify-client
       - ssh-askpass
-      - steam
+      #- steam
       - stress
       # - sublime-merge
       # - sublime-text
@@ -302,7 +302,7 @@
       - calibre
       - python-packaging
       - language-pack-es
-      - winehq-stable
+      #- winehq-stable
     state: present
   #register: common-packages-installation
   tags: common
