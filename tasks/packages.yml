@@ -11,18 +11,18 @@
 #     state: latest
 #   when: ansible_os_family == "RedHat"
    
-    #INSTALL i386 COMMON PACKAGES 
-- name: Instala paquetes common i386  
-  apt:
-    name: "{{ packages }}"
-    update_cache: "{{add_i386.changed}}"
-  vars:
-    packages:
-      - libgl1-mesa-dri:i386
-      - libgl1-mesa-glx:i386
-      - libasound2-plugins:i386
-      - wine-stable:i386
-      - wine32-development
+#    #INSTALL i386 COMMON PACKAGES 
+#- name: Instala paquetes common i386  
+#  apt:
+#    name: "{{ packages }}"
+#    update_cache: "{{add_i386.changed}}"
+#  vars:
+#    packages:
+#      - libgl1-mesa-dri:i386
+#      - libgl1-mesa-glx:i386
+#      - libasound2-plugins:i386
+#      - wine-stable:i386
+#      - wine32-development
 
 #INSTALL COMMON PACKAGES 
 - name: Instala paquetes common
