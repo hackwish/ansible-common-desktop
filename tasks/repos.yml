@@ -4,11 +4,11 @@
         repo: ppa:numix/ppa
         codename: eoan
 
-    - apt_repository:
-        repo: ppa:system76/pop
-
     #- apt_repository:
-    #    repo: ppa:system76-dev/stable
+    #    repo: ppa:system76/pop
+
+    - apt_repository:
+        repo: ppa:system76-dev/stable
 
     - apt_repository:
         repo: ppa:git-core/ppa
