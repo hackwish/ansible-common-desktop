@@ -7,8 +7,8 @@
     - apt_repository:
         repo: ppa:system76/pop
 
-    - apt_repository:
-        repo: ppa:system76-dev/stable
+    #- apt_repository:
+    #    repo: ppa:system76-dev/stable
 
     - apt_repository:
         repo: ppa:git-core/ppa
