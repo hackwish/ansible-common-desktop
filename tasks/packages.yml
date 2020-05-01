@@ -302,6 +302,7 @@
       - calibre
       - python-packaging
       - language-pack-es
+      - winehq-stable
     state: present
   #register: common-packages-installation
   tags: common
@@ -323,10 +324,10 @@
 - name: Install snaps classic
   snap:
     name:
-      # - slack
+      - slack
       # - eclipse
       # - atom
       # - phpstorm
-      # - code
+      - code
       - skype
     classic: yes
