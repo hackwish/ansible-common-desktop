@@ -146,4 +146,4 @@
 
     #LUTRIS
     - apt_repository:
-        repo: ppa:linuxuprising/shutter  
+        repo: ppa:lutris-team/lutris
