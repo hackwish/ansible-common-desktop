@@ -319,11 +319,12 @@
       # - k9s
       # - postman
       # - insomnia
-      - telegram-desktop
-      - discord
+      # - telegram-desktop
+      # - discord
       - keepassxc
-      - wickrpro
-      - wickrme
+      - rambox
+      # - wickrpro
+      # - wickrme
       - vault
       - signal-desktop
 
