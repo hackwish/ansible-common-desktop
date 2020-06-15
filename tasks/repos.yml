@@ -4,9 +4,9 @@
         repo: ppa:numix/ppa
         codename: focal
 
-    - apt_repository:
-        repo: ppa:system76/pop
-        codename: focal
+#    - apt_repository:
+#        repo: ppa:system76/pop
+#        codename: focal
 
 #    - apt_repository:
 #        repo: ppa:system76-dev/stable
