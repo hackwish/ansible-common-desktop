@@ -2,19 +2,22 @@
     #ADD REPOS
     - apt_repository:
         repo: ppa:numix/ppa
-        codename: eoan
+        codename: focal
 
-#    - apt_repository:
-#        repo: ppa:system76/pop
+    - apt_repository:
+        repo: ppa:system76/pop
+        codename: eoan
 
 #    - apt_repository:
 #        repo: ppa:system76-dev/stable
 
     - apt_repository:
         repo: ppa:git-core/ppa
+        codename: eoan
 
     - apt_repository:
         repo: ppa:papirus/papirus
+        codename: eoan
 
     - apt_repository:
         repo: ppa:nilarimogard/webupd8
