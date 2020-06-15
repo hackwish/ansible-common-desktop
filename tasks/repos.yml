@@ -13,14 +13,15 @@
 
     - apt_repository:
         repo: ppa:git-core/ppa
-        codename: eoan
+        codename: focal
 
     - apt_repository:
         repo: ppa:papirus/papirus
-        codename: eoan
+        codename: focal
 
     - apt_repository:
         repo: ppa:nilarimogard/webupd8
+        codename: focal
 
     #Google Chrome
     - apt_key:
