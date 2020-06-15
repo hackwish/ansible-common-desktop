@@ -153,3 +153,4 @@
     #LUTRIS
     - apt_repository:
         repo: ppa:lutris-team/lutris
+        codename: focal
