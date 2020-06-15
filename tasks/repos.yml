@@ -132,10 +132,12 @@
     #BOOT REPAIR
     - apt_repository:
         repo: ppa:yannubuntu/boot-repair
+        codename: focal
 
     #SHUTTER
     - apt_repository:
         repo: ppa:linuxuprising/shutter  
+        codename: focal
 
     #WINE
     - apt_key:
