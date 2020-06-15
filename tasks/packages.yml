@@ -68,9 +68,9 @@
       - dia
       - dirmngr
       - dnsmasq
-      # - docker
-      # - docker-ce
-      # - docker-compose
+      - docker
+      - docker-ce
+      - docker-compose
       - dropbox
       - ebtables
       - fdupes
@@ -283,7 +283,7 @@
       # - virt-manager
       # - virt-viewer
       # - virtinst
-      # - virtualbox-6.0
+      - virtualbox-6.0
       - vlc
       - whois
       #- wine1.8
