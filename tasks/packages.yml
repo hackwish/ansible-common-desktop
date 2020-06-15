@@ -283,7 +283,7 @@
       # - virt-manager
       # - virt-viewer
       # - virtinst
-      - virtualbox-6.0
+      - virtualbox-6.1
       - vlc
       - whois
       #- wine1.8
