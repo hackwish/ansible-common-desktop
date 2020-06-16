@@ -323,7 +323,7 @@
       # - telegram-desktop
       # - discord
       - keepassxc
-      - rambox
+      # - rambox
       # - wickrpro
       # - wickrme
       - vault
