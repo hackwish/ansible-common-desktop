@@ -39,7 +39,7 @@
       - atop
       - autoconf
       - automake
-      # - awscli
+      - awscli
       - balena-etcher-electron
       - bc
       - bison
@@ -76,9 +76,9 @@
       - fdupes
       - figlet
       - file-roller
-      # - filezilla
-      # - filezilla-common
-      # - filezilla-theme-papirus
+      - filezilla
+      - filezilla-common
+      - filezilla-theme-papirus
       - flatpak
       - fonts-noto
       # - forticlient
@@ -99,18 +99,18 @@
       - gnome-tweak-tool
       - gnupg2
       - golang-go
-      # - google-cloud-sdk
-      # - google-cloud-sdk-bigtable-emulator
-      # - google-cloud-sdk-cbt
-      # - google-cloud-sdk-cloud-build-local
-      # - google-cloud-sdk-datalab
-      # - google-cloud-sdk-app-engine-go
-      # - google-cloud-sdk-app-engine-java
-      # - google-cloud-sdk-app-engine-python
-      # - google-cloud-sdk-app-engine-python-extras
-      # - google-cloud-sdk-pubsub-emulator
-      # - google-cloud-sdk-bigtable-emulator
-      # - google-cloud-sdk-datastore-emulator
+      - google-cloud-sdk
+      - google-cloud-sdk-bigtable-emulator
+      - google-cloud-sdk-cbt
+      - google-cloud-sdk-cloud-build-local
+      - google-cloud-sdk-datalab
+      - google-cloud-sdk-app-engine-go
+      - google-cloud-sdk-app-engine-java
+      - google-cloud-sdk-app-engine-python
+      - google-cloud-sdk-app-engine-python-extras
+      - google-cloud-sdk-pubsub-emulator
+      - google-cloud-sdk-bigtable-emulator
+      - google-cloud-sdk-datastore-emulator
       - google-chrome-stable
       - gpick
       - graphviz
@@ -127,7 +127,7 @@
       - jq
       - k3b
       - kdeconnect
-      # - kubectl
+      - kubectl
       - libavformat-dev
       # - libdvd-pkg
       - libegl1-mesa
@@ -166,19 +166,19 @@
       - lm-sensors
       - lsb-release
       - lshw
-      # - lxd
-      # - lxd-client
+      - lxd
+      - lxd-client
       - lutris
       - mailutils
       - make
-      # - meld
+      - meld
       - module-assistant
       - moreutils
       - mpack
       - multipath-tools
       - multitail
-      # - mysql-workbench
-      # - mysql-workbench-data
+      - mysql-workbench
+      - mysql-workbench-data
       - nano
       - ncdu
       - netcat
@@ -206,7 +206,7 @@
       - p7zip-rar
       - papirus-icon-theme
       - pepperflashplugin-nonfree
-      # - pgadmin3
+      - pgadmin3
       - pigz
       - pkg-config
       - plank
@@ -249,10 +249,10 @@
       - soundconverter
       - spotify-client
       - ssh-askpass
-      #- steam
+      - steam
       - stress
-      # - sublime-merge
-      # - sublime-text
+      - sublime-merge
+      - sublime-text
       - subversion
       - sudo
       - swaks
@@ -317,10 +317,10 @@
 - name: Install snaps
   snap:
     name:
-      # - k9s
+      - k9s
       # - postman
-      # - insomnia
-      # - telegram-desktop
+      - insomnia
+      - telegram-desktop
       # - discord
       - keepassxc
       # - rambox

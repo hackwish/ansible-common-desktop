@@ -32,13 +32,13 @@
     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
 
-# #Sublime Text & Sublime Merge
-# - apt_key:
-#     url: https://download.sublimetext.com/sublimehq-pub.gpg
-#     state: present
-# - apt_repository:
-#     repo: 'deb https://download.sublimetext.com/ apt/stable/'
-#     state: present
+#Sublime Text & Sublime Merge
+- apt_key:
+    url: https://download.sublimetext.com/sublimehq-pub.gpg
+    state: present
+- apt_repository:
+    repo: 'deb https://download.sublimetext.com/ apt/stable/'
+    state: present
 
 #SyncThing
 - apt_key:
@@ -83,19 +83,15 @@
     state : present
 #  when: ansible_distribution == 'Ubuntu'
 
-# #GCLOUD SDK
-# - apt_key:
-#     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-#     state: present
+#GCLOUD SDK
+- apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
    
-# # - apt_repository:
-# #       repo: 'deb http://packages.cloud.google.com/apt cloud-sdk-'{{ codename }}' main'
-# #       state : present
-# #   when: ansible_distribution == 'Linux Mint'
-# - apt_repository:
-#       repo: 'deb http://packages.cloud.google.com/apt cloud-sdk-{{ ansible_distribution_release }} main'
-#       state : present
-#   when: ansible_distribution == 'Ubuntu'
+- apt_repository:
+      repo: 'deb http://packages.cloud.google.com/apt cloud-sdk-{{ codename }} main'
+      state : present
+
 #GRUB CUSTOMIZER
 # - apt_repository:
 #     repo: ppa:danielrichter2007/grub-customizer
