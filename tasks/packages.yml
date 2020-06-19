@@ -178,8 +178,7 @@
       - mpack
       - multipath-tools
       - multitail
-      - mysql-workbench
-      - mysql-workbench-data
+      # - mysql-workbench-community
       - nano
       - ncdu
       - netcat
