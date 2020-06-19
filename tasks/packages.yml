@@ -167,8 +167,8 @@
       - lm-sensors
       - lsb-release
       - lshw
-      - lxd
-      - lxd-client
+      # - lxd
+      # - lxd-client
       - lutris
       - mailutils
       - make
