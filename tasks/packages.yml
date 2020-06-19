@@ -326,6 +326,7 @@
       # - rambox
       # - wickrpro
       # - wickrme
+      - lxd
       - vault
       - signal-desktop
 
