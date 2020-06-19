@@ -111,6 +111,7 @@
       - google-cloud-sdk-pubsub-emulator
       - google-cloud-sdk-bigtable-emulator
       - google-cloud-sdk-datastore-emulator
+      - google-cloud-sdk-firestore-emulator
       - google-chrome-stable
       - gpick
       - graphviz

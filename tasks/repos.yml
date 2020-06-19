@@ -89,7 +89,7 @@
     state: present
    
 - apt_repository:
-      repo: 'deb http://packages.cloud.google.com/apt cloud-sdk-{{ codename }} main'
+      repo: 'deb http://packages.cloud.google.com/apt cloud-sdk main'
       state : present
 
 #GRUB CUSTOMIZER
