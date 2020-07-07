@@ -357,11 +357,11 @@
     classic: yes
 
 # Flatpak
-- name: Add the Gnome flatpak remote to the system installation
-  flatpak_remote:
-    name: gnome
-    state: present
-    flatpakrepo_url: https://sdk.gnome.org/gnome-apps.flatpakrepo
+# - name: Add the Gnome flatpak remote to the system installation
+#   flatpak_remote:
+#     name: gnome
+#     state: present
+#     flatpakrepo_url: https://sdk.gnome.org/gnome-apps.flatpakrepo
 
 - name: Add the flathub flatpak repository remote to the user installation
   flatpak_remote:
