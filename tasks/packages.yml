@@ -96,6 +96,7 @@
       - git-lfs
       - git-svn
       - gnome-shell-extensions
+      - gnome-software-plugin-flatpak
       - gnome-tweak-tool
       - gnupg2
       - golang-go
@@ -309,16 +310,27 @@
       - laptop-mode-tools
       - timeshift
       - libglib2.0-dev-bin
+      - vlc-plugin-bittorrent
+      # Lutris Vulkan
+      - nvidia-driver-440 
+      - libnvidia-gl-440 
+      - libnvidia-gl-440:i386
+      - libvulkan1
+      - libvulkan1:i386
+      - libgl1-mesa-dri:i386
+      - mesa-vulkan-drivers
+      - mesa-vulkan-drivers:i386
       #- winehq-stable
     state: present
   #register: common-packages-installation
   tags: common
 
+# Snap
 - name: Install snaps
   snap:
     name:
       - k9s
-      # - postman
+      - postman
       - insomnia
       - telegram-desktop
       # - discord
@@ -329,6 +341,7 @@
       - lxd
       - vault
       - signal-desktop
+      - zoom-client
 
 - name: Install snaps classic
   snap:
@@ -340,3 +353,18 @@
       - code
       - skype
     classic: yes
+
+# Flatpak
+- name: Add the Gnome flatpak remote to the system installation
+  flatpak_remote:
+    name: gnome
+    state: present
+    flatpakrepo_url: https://sdk.gnome.org/gnome-apps.flatpakrepo
+
+- name: Add the flathub flatpak repository remote to the user installation
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
+
