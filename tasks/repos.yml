@@ -160,3 +160,11 @@
     repo: ppa:graphics-drivers/ppa
     codename: '{{ codename }}'
 
+# Wallpaper changers
+- apt_repository:
+    repo: ppa:sicklylife/shotwell
+    codename: '{{ codename }}'
+
+- apt_repository:
+    repo: ppa:peterlevi/ppa
+    codename: '{{ codename }}'
