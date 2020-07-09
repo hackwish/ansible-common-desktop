@@ -322,6 +322,7 @@
       - mesa-vulkan-drivers:i386
       - variety
       - shotwell
+      - vinagre
       #- winehq-stable
     state: present
   #register: common-packages-installation
