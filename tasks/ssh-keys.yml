@@ -8,7 +8,7 @@
       ssh_key_file: .ssh/id_rsa
 
 - name : list users to apply oh-my-zsh
-  shell: "getent passwd | awk -F: '$3 > 999 {print $1}'"
+  shell: "getent passwd {1000..60000} | awk -F: '$3 {print $1}'"
   register: users
 
 - name: Create a 4096-bit SSH key for current users
