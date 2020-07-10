@@ -324,7 +324,7 @@
       - shotwell
       - vinagre
       - virtualenv
-      - synergy
+      # - synergy
       #- winehq-stable
     state: present
   #register: common-packages-installation
