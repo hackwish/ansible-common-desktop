@@ -99,7 +99,7 @@
 
 # ETCHER
 - apt_key:
-    keyserver: keyserver.ubuntu.com
+    keyserver: hkps://keyserver.ubuntu.com:443
     id: 379CE192D401AB61
     state: present
 - apt_repository:
