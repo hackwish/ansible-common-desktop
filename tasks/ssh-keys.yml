@@ -8,8 +8,12 @@
       ssh_key_file: .ssh/id_rsa
 
 - name : list users to create ssh keys
-  shell: "getent passwd {1000..60000} | awk -F: '$3 {print $1}'"
+  shell: "getent passwd {1000..9999} | awk -F: '$3 {print $1}'"
   register: users_ssh
+
+- debug:
+    var: users_ssh
+    verbosity: 2
 
 - name: Create a 4096-bit SSH key for current users
   user:
