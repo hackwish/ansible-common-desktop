@@ -7,9 +7,9 @@
       ssh_key_bits: 4096
       ssh_key_file: .ssh/id_rsa
 
-- name : list users to apply oh-my-zsh
+- name : list users to create ssh keys
   shell: "getent passwd {1000..60000} | awk -F: '$3 {print $1}'"
-  register: users
+  register: users_ssh
 
 - name: Create a 4096-bit SSH key for current users
   user:
@@ -17,4 +17,4 @@
       generate_ssh_key: yes
       ssh_key_bits: 4096
       ssh_key_file: .ssh/id_rsa
-  with_items: "{{ users.stdout_lines }}"
+  with_items: "{{ users_ssh.stdout_lines }}"
