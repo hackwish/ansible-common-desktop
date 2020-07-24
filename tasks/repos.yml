@@ -31,6 +31,7 @@
 - apt_repository:
     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
+    filename: google-chrome
 
 #Sublime Text & Sublime Merge
 - apt_key:
@@ -178,3 +179,4 @@
 - apt_repository:
     repo: 'deb [trusted=yes] https://dl.bintray.com/celestia/releases-deb bionic universe'
     state : present
+    filename: celestia-bintray
