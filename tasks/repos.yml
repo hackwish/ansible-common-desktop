@@ -168,3 +168,13 @@
 - apt_repository:
     repo: ppa:peterlevi/ppa
     codename: '{{ codename }}'
+
+# Astronomy
+## Celestia
+- apt_key:
+    url: https://bintray.com/user/downloadSubjectPublicKey?username=bintray
+    state: present
+   
+- apt_repository:
+      repo: 'https://dl.bintray.com/celestia/releases-deb bionic universe'
+      state : present
