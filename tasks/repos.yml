@@ -176,5 +176,5 @@
     state: present
    
 - apt_repository:
-      repo: 'https://dl.bintray.com/celestia/releases-deb bionic universe'
+      repo: 'deb https://dl.bintray.com/celestia/releases-deb bionic universe'
       state : present
