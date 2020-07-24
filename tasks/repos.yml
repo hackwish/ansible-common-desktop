@@ -181,8 +181,11 @@
 - apt_key:
     url: https://bintray.com/user/downloadSubjectPublicKey?username=bintray
     state: present
-   
+
 - apt_repository:
     repo: 'deb [trusted=yes] https://dl.bintray.com/celestia/releases-deb bionic universe'
     state : present
     filename: celestia-bintray
+    update_cache: yes
+    retries: 10
+    until: result|success
