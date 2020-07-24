@@ -139,7 +139,7 @@
 #LUTRIS
 - apt_key:
     keyserver: keyserver.ubuntu.com
-    id: 4096R/82D96E430A1F1C0F0502747E37B90EDD4E3EFAE4
+    id: 82D96E430A1F1C0F0502747E37B90EDD4E3EFAE4
     state: present
 
 - apt_repository:
