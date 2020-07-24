@@ -186,6 +186,10 @@
     repo: 'deb [trusted=yes] https://dl.bintray.com/celestia/releases-deb bionic universe'
     state : present
     filename: celestia-bintray
+    register: apt_result
+    until: apt_result|success
     update_cache: yes
+    cache_valid_time: 3600
     retries: 10
-    until: result|success
+    delay: 1
+    ignore_errors: yes
