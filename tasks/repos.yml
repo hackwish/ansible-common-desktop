@@ -8,6 +8,7 @@
   shell: apt-get update
   become: true
   become_user: root
+  ignore_errors: yes
 
 #ADD REPOS
 - apt_repository:
@@ -198,8 +199,14 @@
     filename: celestia-bintray
     # register: apt_result
     # until: apt_result|success
-    update_cache: yes
+    update_cache: no
     # cache_valid_time: 3600
     # retries: 10
     # delay: 1
     # ignore_errors: yes
+
+- name: apt-get update
+  shell: apt-get update
+  become: true
+  become_user: root
+  ignore_errors: yes
