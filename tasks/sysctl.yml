@@ -84,6 +84,18 @@
         sysctl_set: yes
         state: present
 
+    - sysctl:
+        name: net.netfilter.nf_conntrack_count
+        value: '167012'
+        sysctl_set: yes
+        state: present
+
+    - sysctl:
+        name: net.netfilter.nf_conntrack_max
+        value: '262144'
+        sysctl_set: yes
+        state: present
+
     # Set ip forwarding on in /proc and in the sysctl file and reload if necessary
     - sysctl:
         name: net.ipv4.ip_forward

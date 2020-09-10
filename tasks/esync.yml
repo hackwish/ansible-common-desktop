@@ -1,0 +1,12 @@
+---
+- name: Add esync config in system.conf
+  lineinfile:
+    path: /etc/systemd/system.conf
+    line: DefaultLimitNOFILE=524288
+    create: yes
+
+- name: Add esync config in user.conf
+  lineinfile:
+    path: /etc/systemd/user.conf
+    line: DefaultLimitNOFILE=524288
+    create: yes

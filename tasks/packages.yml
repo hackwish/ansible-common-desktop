@@ -326,6 +326,7 @@
       - virtualenv
       - stellarium
       - celestia
+      - kubectx
       # - synergy
       #- winehq-stable
     state: present
@@ -359,6 +360,7 @@
       # - phpstorm
       - code
       - skype
+      - helm
     classic: yes
 
 # Flatpak

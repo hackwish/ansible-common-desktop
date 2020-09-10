@@ -27,6 +27,9 @@
 - include: ulimit.yml
   tags: ulimit
 
+- include: esync.yml
+  tags: esync
+
 - include: iptables.yml
   tags: iptables
 
