@@ -151,12 +151,16 @@
 - apt_key:
     keyserver: keyserver.ubuntu.com
     id: 82D96E430A1F1C0F0502747E37B90EDD4E3EFAE4
-    state: present
+    state: absent
 
 - apt_repository:
-    repo: 'deb http://ppa.launchpad.net/lutris-team/lutris/ubuntu {{ codename }} main ' #ppa:lutris-team/lutris
+    repo: 'deb http://ppa.launchpad.net/lutris-team/lutris/ubuntu {{ codename }} main' #ppa:lutris-team/lutris
     # codename: '{{ codename }}'
-    state: present
+    state: absent
+
+- apt_repository:
+    repo: ppa:lutris-team/lutris
+    codename: '{{ codename }}'
 
 # #MySQL
 # - apt_key:
