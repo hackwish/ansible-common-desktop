@@ -326,7 +326,7 @@
       - virtualenv
       - stellarium
       - celestia
-      - kubectx
+      # - kubectx
       # - synergy
       #- winehq-stable
     state: present
