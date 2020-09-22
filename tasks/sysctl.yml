@@ -3,7 +3,7 @@
     ##SyncThing feature
     - sysctl:
         name: fs.inotify.max_user_watches
-        value: '204800'
+        value: '524288'
         state: present
 
     - sysctl:
