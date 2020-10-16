@@ -350,7 +350,7 @@
       - vault
       - signal-desktop
       - zoom-client
-      - tfswitch
+      # - tfswitch
 
 - name: Install snaps classic
   snap:
