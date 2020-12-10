@@ -50,9 +50,9 @@
       - catfish
       - ccze
       - checkinstall
-      - chromium-browser
-      - chromium-browser-l10n
-      - chromium-codecs-ffmpeg
+      # - chromium-browser
+      # - chromium-browser-l10n
+      # - chromium-codecs-ffmpeg
       - clang
       - cmake
       - cmake-curses-gui
