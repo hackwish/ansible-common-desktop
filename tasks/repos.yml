@@ -11,7 +11,8 @@
   ignore_errors: yes
 
 #ADD REPOS
-- apt_repository:
+- name: Add Repo Numix
+  apt_repository:
     repo: ppa:numix/ppa
     codename: '{{ codename }}'
 
@@ -22,15 +23,18 @@
 # - apt_repository:
 #      repo: ppa:system76-dev/stable
 
-- apt_repository:
+- name: Add Repo Git Core
+  apt_repository:
     repo: ppa:git-core/ppa
     codename: '{{ codename }}'
 
-- apt_repository:
+- name: Add Repo Papirus
+  apt_repository:
     repo: ppa:papirus/papirus
     codename: '{{ codename }}'
 
-- apt_repository:
+- name: Add Repo webupd8 general porpuses
+  apt_repository:
     repo: ppa:nilarimogard/webupd8
     codename: '{{ codename }}'
 
