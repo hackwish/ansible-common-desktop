@@ -116,7 +116,7 @@
       - google-chrome-stable
       - gpick
       - graphviz
-      # - grub-customizer
+      - grub-customizer
       - gufw
       - hardinfo
       - hddtemp
