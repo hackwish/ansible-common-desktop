@@ -50,9 +50,9 @@
       - catfish
       - ccze
       - checkinstall
-      - chromium-browser
-      - chromium-browser-l10n
-      - chromium-codecs-ffmpeg
+      # - chromium-browser
+      # - chromium-browser-l10n
+      # - chromium-codecs-ffmpeg
       - clang
       - cmake
       - cmake-curses-gui
@@ -342,7 +342,7 @@
       - postman
       - insomnia
       - telegram-desktop
-      # - discord
+      - discord
       - keepassxc
       # - rambox
       # - wickrpro
@@ -351,6 +351,7 @@
       - vault
       - signal-desktop
       - zoom-client
+      # - tfswitch
 
 - name: Install snaps classic
   snap:
