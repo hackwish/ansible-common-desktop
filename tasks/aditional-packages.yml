@@ -80,6 +80,7 @@
       vars:
         packages:
           - pyOpenSSL
+          - virtualenv
           #- awscli
         state: present
 
