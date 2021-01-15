@@ -89,6 +89,8 @@
       - dconf-editor
       - default-jdk
       - default-jre
+      - deja-dup
+      - deja-dup-caja
       - dia
       - dirmngr
       - dnsmasq
@@ -138,6 +140,7 @@
       - google-cloud-sdk-datastore-emulator
       - google-cloud-sdk-firestore-emulator
       - google-cloud-sdk-pubsub-emulator
+      - gparted
       - gpick
       - graphviz
       - grub-customizer
@@ -146,6 +149,7 @@
       - hddtemp
       - htop
       - iftop
+      - inkscape
       - intel-microcode
       - iotop
       - iptables-persistent
@@ -153,6 +157,7 @@
       - jq
       - k3b
       - kdeconnect
+      - krita
       - kubectl
       - language-pack-es
       - laptop-mode-tools
@@ -241,6 +246,7 @@
       - plank
       - playonlinux
       - portaudio19-dev
+      - postgresql-client
       - postfix
       - powertop
       - preload
