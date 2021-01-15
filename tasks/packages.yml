@@ -30,6 +30,30 @@
     name: "{{ packages }}"
   vars:
     packages:
+      # - chromium-browser
+      # - chromium-browser-l10n
+      # - chromium-codecs-ffmpeg
+      # - forticlient
+      # - kubectx
+      # - libdvd-pkg
+      # - libvirt-bin
+      # - libvirt-dev
+      # - lxd
+      # - lxd-client
+      # - mysql-workbench-community
+      # - qemu
+      # - qemu-kvm
+      # - skypeforlinux
+      # - synergy
+      # - synergy -- not available yet
+      # - virt-manager
+      # - virt-viewer
+      # - virtinst
+      # Lutris Vulkan
+      #- libsdl2-image-dev
+      #- wine1.8
+      #- wine32-development
+      #- winehq-stable
       - acl
       - apt-transport-https
       - apt-xapian-index
@@ -47,12 +71,12 @@
       - brasero-cdrkit
       - build-essential
       - ca-certificates
+      - calibre
       - catfish
       - ccze
+      - celestia
       - checkinstall
-      # - chromium-browser
-      # - chromium-browser-l10n
-      # - chromium-codecs-ffmpeg
+      - chrome-gnome-shell
       - clang
       - cmake
       - cmake-curses-gui
@@ -81,7 +105,6 @@
       - filezilla-theme-papirus
       - flatpak
       - fonts-noto
-      # - forticlient
       - fpc
       - freeglut3
       - g++
@@ -98,22 +121,23 @@
       - gnome-shell-extensions
       - gnome-software-plugin-flatpak
       - gnome-tweak-tool
+      - gnome-tweaks
       - gnupg2
       - golang-go
+      - google-chrome-stable
       - google-cloud-sdk
-      - google-cloud-sdk-bigtable-emulator
-      - google-cloud-sdk-cbt
-      - google-cloud-sdk-cloud-build-local
-      - google-cloud-sdk-datalab
       - google-cloud-sdk-app-engine-go
       - google-cloud-sdk-app-engine-java
       - google-cloud-sdk-app-engine-python
       - google-cloud-sdk-app-engine-python-extras
-      - google-cloud-sdk-pubsub-emulator
       - google-cloud-sdk-bigtable-emulator
+      - google-cloud-sdk-bigtable-emulator
+      - google-cloud-sdk-cbt
+      - google-cloud-sdk-cloud-build-local
+      - google-cloud-sdk-datalab
       - google-cloud-sdk-datastore-emulator
       - google-cloud-sdk-firestore-emulator
-      - google-chrome-stable
+      - google-cloud-sdk-pubsub-emulator
       - gpick
       - graphviz
       - grub-customizer
@@ -130,14 +154,17 @@
       - k3b
       - kdeconnect
       - kubectl
+      - language-pack-es
+      - laptop-mode-tools
       - libavformat-dev
-      # - libdvd-pkg
       - libegl1-mesa
       - libelf-dev
       - libffi-dev
       - libfile-tee-perl
       - libfreetype6-dev
       - libgdbm-dev
+      - libgl1-mesa-dri:i386
+      - libglib2.0-dev-bin
       - libguestfs-perl
       - libjack-dev
       - libjack0
@@ -145,19 +172,20 @@
       - liblua5.3-dev
       - libmagic-dev
       - libncurses5-dev
+      - libnvidia-gl-440 
+      - libnvidia-gl-440:i386
       - libopencv-highgui-dev
       - libportmidi-dev
       - libreadline-dev
-      - libswscale-dev
-      #- libsdl2-image-dev
       - libsqlite3-dev
       - libssl-dev
       - libstdc++5
       - libstdc++6
       - libsvn-java
+      - libswscale-dev
       - libtool
-      # - libvirt-bin
-      # - libvirt-dev
+      - libvulkan1
+      - libvulkan1:i386
       - libxml-writer-perl
       - libxml2-dev
       - libxslt-dev
@@ -168,18 +196,17 @@
       - lm-sensors
       - lsb-release
       - lshw
-      # - lxd
-      # - lxd-client
       - lutris
       - mailutils
       - make
       - meld
+      - mesa-vulkan-drivers
+      - mesa-vulkan-drivers:i386
       - module-assistant
       - moreutils
       - mpack
       - multipath-tools
       - multitail
-      # - mysql-workbench-community
       - nano
       - ncdu
       - netcat
@@ -199,6 +226,7 @@
       - numix-icon-theme-circle
       - nvidia-cuda-dev
       - nvidia-cuda-toolkit
+      - nvidia-driver-440 
       - openfortivpn
       - openssh-client
       - openssh-server
@@ -221,27 +249,27 @@
       - putty-tools
       - pv
       - python
-      - python3-pip
+      - python-packaging
       - python-setuptools
+      - python3-pip
       - python3-venv
-      # - qemu
-      # - qemu-kvm
       - quodlibet
       - rar
       - rbenv
+      - rdesktop
+      - rdfind
       - redshift
       - redshift-gtk
       - remmina
-      - rdesktop
-      - rdfind
       - rtl8812au-dkms
       - ruby-dev
       - ruby-full
       - screen
+      - screenfetch
       - sharutils
+      - shotwell
       - shutter
       - siege
-      # - skypeforlinux
       - smartmontools
       - snapd
       - snmp
@@ -252,6 +280,7 @@
       - spotify-client
       - ssh-askpass
       - steam
+      - stellarium
       - stress
       - sublime-merge
       - sublime-text
@@ -260,11 +289,12 @@
       - swaks
       - synaptic
       - syncthing
-      # - synergy -- not available yet
       - sysstat
       - tcpdump
+      - teams
       - telnetd
       - terminator
+      - timeshift
       - tinyca
       - tmux
       - tor
@@ -278,19 +308,20 @@
       - unrar
       - unzip
       - uuid-runtime
+      - variety
       - vim
       - vim-common
       - vim-gtk
       - vim-gui-common
       - vim-snippets
-      # - virt-manager
-      # - virt-viewer
-      # - virtinst
+      - vinagre
       - virtualbox-6.1
+      - virtualenv
       - vlc
+      - vlc-plugin-bittorrent
       - whois
-      #- wine1.8
-      #- wine32-development
+      - wine
+      - winetricks
       - xclip
       - xinetd
       - xserver-xorg
@@ -300,36 +331,6 @@
       - zip
       - zlib1g-dev
       - zsh
-      - chrome-gnome-shell
-      - screenfetch
-      - calibre
-      - python-packaging
-      - language-pack-es
-      - gnome-tweaks
-      - wine
-      - winetricks
-      - laptop-mode-tools
-      - timeshift
-      - libglib2.0-dev-bin
-      - vlc-plugin-bittorrent
-      # Lutris Vulkan
-      - nvidia-driver-440 
-      - libnvidia-gl-440 
-      - libnvidia-gl-440:i386
-      - libvulkan1
-      - libvulkan1:i386
-      - libgl1-mesa-dri:i386
-      - mesa-vulkan-drivers
-      - mesa-vulkan-drivers:i386
-      - variety
-      - shotwell
-      - vinagre
-      - virtualenv
-      - stellarium
-      - celestia
-      # - kubectx
-      # - synergy
-      #- winehq-stable
     state: present
   #register: common-packages-installation
   tags: common
@@ -338,38 +339,38 @@
 - name: Install snaps
   snap:
     name:
-      - k9s
-      - postman
-      - insomnia
-      - telegram-desktop
-      - discord
-      - keepassxc
       # - rambox
-      # - wickrpro
-      - wickrme
-      - lxd
-      - vault
-      - signal-desktop
-      - zoom-client
-      - doctl
-      - beekeeper-studio
-      - retroarch
-      - notion-snap
-      - brave
-      - bitwarden
       # - tfswitch
+      # - wickrpro
+      - beekeeper-studio
+      - bitwarden
+      - brave
+      - discord
+      - doctl
+      - insomnia
+      - k9s
+      - keepassxc
+      - lxd
+      - notion-snap
+      - postman
+      - retroarch
+      - signal-desktop
+      - telegram-desktop
+      - vault
+      - wickrme
+      - zoom-client
 
 - name: Install snaps classic
   snap:
     name:
-      - slack
-      # - eclipse
       # - atom
+      # - eclipse
       # - phpstorm
       - code
-      - skype
       - helm
       - powershell
+      - skype
+      - slack
     classic: yes
 
 # Flatpak

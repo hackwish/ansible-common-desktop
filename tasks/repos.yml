@@ -213,6 +213,15 @@
     # delay: 1
     # ignore_errors: yes
 
+# MS Teams
+- apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+   
+- apt_repository:
+      repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main'
+      state : present
+
 - name: apt-get update
   shell: apt-get update
   become: true
