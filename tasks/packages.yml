@@ -346,11 +346,17 @@
       - keepassxc
       # - rambox
       # - wickrpro
-      # - wickrme
+      - wickrme
       - lxd
       - vault
       - signal-desktop
       - zoom-client
+      - doctl
+      - beekeeper-studio
+      - retroarch
+      - notion-snap
+      - brave
+      - bitwarden
       # - tfswitch
 
 - name: Install snaps classic
@@ -363,6 +369,7 @@
       - code
       - skype
       - helm
+      - powershell
     classic: yes
 
 # Flatpak
