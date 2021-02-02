@@ -375,6 +375,7 @@
       - code
       - helm
       - powershell
+      - pycharm-community
       - skype
       - slack
     classic: yes
