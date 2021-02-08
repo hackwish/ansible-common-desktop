@@ -1,93 +1,93 @@
 ---
 #SYSCTL
 ## Elasticsearch
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: vm.max_map_count
     value: '262144'
     state: present
 ##SyncThing feature
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: fs.inotify.max_user_watches
     value: '524288'
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: vm.swappiness
     value: '0'
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: fs.file-max
     value: '2097152'
     state: present
 # # Remove kernel.panic entry from /etc/sysctl.conf
-# - ansible.posix.sysctl::
+# - ansible.posix.sysctl:
 #     name: kernel.panic
 #     state: absent
 #     sysctl_file: /etc/sysctl.conf
 # net.ipv4
 # 
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.conf.all.rp_filter
     value: '1'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_syncookies
     value: '1'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_tw_reuse
     value: '1'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_fin_timeout
     value: '30'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_keepalive_intvl
     value: '30'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_keepalive_probes
     value: '5'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.conf.all.send_redirects
     value: '0'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.tcp_max_syn_backlog
     value: '30000'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.core.somaxconn
     value: '50000'
     sysctl_set: yes
     state: present
     reload: yes
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.core.netdev_max_backlog
     value: '5000'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.netfilter.nf_conntrack_count
     value: '167012'
     sysctl_set: yes
     state: present
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.netfilter.nf_conntrack_max
     value: '262144'
     sysctl_set: yes
     state: present
 # Set ip forwarding on in /proc and in the sysctl file and reload if necessary
-- ansible.posix.sysctl::
+- ansible.posix.sysctl:
     name: net.ipv4.ip_forward
     value: '1'
     sysctl_set: yes
