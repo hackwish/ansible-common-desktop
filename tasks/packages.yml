@@ -374,6 +374,8 @@
       # - atom
       # - eclipse
       # - phpstorm
+      - bashtop
+      - bpytop
       - code
       - helm
       - powershell
