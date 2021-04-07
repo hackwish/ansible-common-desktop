@@ -222,6 +222,11 @@
 #       repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main'
 #       state : present
 
+# Timekpr
+- apt_repository:
+    repo: ppa:mjasnik/ppa
+    codename: '{{ codename }}'
+
 - name: apt-get update
   shell: apt-get update
   become: true

@@ -301,6 +301,7 @@
       # - teams
       - telnetd
       - terminator
+      - timekpr-next
       - timeshift
       - tinyca
       - tmux
