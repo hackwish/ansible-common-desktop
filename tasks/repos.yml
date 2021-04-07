@@ -61,7 +61,7 @@
     url: https://syncthing.net/release-key.txt
     state: present
 - apt_repository:
-    repo: 'deb https://apt.syncthing.net/ syncthing stable'
+    repo: deb https://apt.syncthing.net/ syncthing stable
     state: present
 
 #Spotify
@@ -71,7 +71,7 @@
     url: https://download.spotify.com/debian/pubkey_0D811D58.gpg
     state: present
 - apt_repository:
-    repo: 'deb http://repository.spotify.com stable non-free'
+    repo: deb http://repository.spotify.com stable non-free
     state: present
 
 #Virtualbox
@@ -95,7 +95,7 @@
 #     when: ansible_distribution == 'Linux Mint'
 
 - apt_repository:
-    repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ codename }} stable'
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ codename }} stable
     state : present
 #  when: ansible_distribution == 'Ubuntu'
 
@@ -105,7 +105,7 @@
     state: present
    
 - apt_repository:
-      repo: 'deb http://packages.cloud.google.com/apt cloud-sdk main'
+      repo: deb http://packages.cloud.google.com/apt cloud-sdk main
       state : present
 
 #GRUB CUSTOMIZER
@@ -119,7 +119,7 @@
     id: 379CE192D401AB61
     state: present
 - apt_repository:
-    repo: 'deb https://deb.etcher.io stable etcher'
+    repo: deb https://deb.etcher.io stable etcher
     state : present
 
 # DROPBOX
