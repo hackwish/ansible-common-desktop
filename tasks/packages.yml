@@ -297,7 +297,7 @@
       - syncthing
       - sysstat
       - tcpdump
-      - teams
+      # - teams
       - telnetd
       - terminator
       - timeshift
