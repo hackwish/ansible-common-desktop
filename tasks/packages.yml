@@ -76,6 +76,7 @@
       - ccze
       - celestia
       - checkinstall
+      - cheese
       - chrome-gnome-shell
       - clang
       - cmake
@@ -353,6 +354,7 @@
       - brave
       - discord
       - doctl
+      - dbeaver-ce
       - insomnia
       - k9s
       - keepassxc
@@ -372,6 +374,8 @@
       # - atom
       # - eclipse
       # - phpstorm
+      - bashtop
+      - bpytop
       - code
       - helm
       - powershell
