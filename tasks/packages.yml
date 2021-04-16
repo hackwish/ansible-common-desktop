@@ -206,6 +206,7 @@
       - lutris
       - mailutils
       - make
+      - mat
       - meld
       - mesa-vulkan-drivers
       - mesa-vulkan-drivers:i386
