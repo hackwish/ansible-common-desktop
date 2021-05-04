@@ -330,6 +330,7 @@
       - virtualenv
       - vlc
       - vlc-plugin-bittorrent
+      - woeusb
       - whois
       - wine
       - winetricks
