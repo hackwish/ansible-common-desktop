@@ -100,6 +100,7 @@
       - docker-compose
       - dropbox
       - ebtables
+      - exiv2
       - fdupes
       - figlet
       - file-roller
@@ -178,6 +179,7 @@
       - libjansson-dev
       - liblua5.3-dev
       - libmagic-dev
+      - libimage-exiftool-perl
       - libncurses5-dev
       - libnvidia-gl-440 
       - libnvidia-gl-440:i386
@@ -206,6 +208,8 @@
       - lutris
       - mailutils
       - make
+      - mat
+      - mat2
       - meld
       - mesa-vulkan-drivers
       - mesa-vulkan-drivers:i386
