@@ -125,22 +125,22 @@
     codename: '{{ codename }}'
 
 # Astronomy
-## Celestia
-- apt_key:
-    url: https://bintray.com/user/downloadSubjectPublicKey?username=bintray
-    state: present
+# ## Celestia
+# - apt_key:
+#     url: https://bintray.com/user/downloadSubjectPublicKey?username=bintray
+#     state: present
 
-- apt_repository:
-    repo: 'deb [trusted=yes] https://dl.bintray.com/celestia/releases-deb bionic universe'
-    state : present
-    filename: celestia-bintray
-    # register: apt_result
-    # until: apt_result|success
-    update_cache: no
-    # cache_valid_time: 3600
-    # retries: 10
-    # delay: 1
-    # ignore_errors: yes
+# - apt_repository:
+#     repo: 'deb [trusted=yes] https://dl.bintray.com/celestia/releases-deb bionic universe'
+#     state : present
+#     filename: celestia-bintray
+#     # register: apt_result
+#     # until: apt_result|success
+#     update_cache: no
+#     # cache_valid_time: 3600
+#     # retries: 10
+#     # delay: 1
+#     # ignore_errors: yes
 
 # Timekpr
 # - apt_repository:

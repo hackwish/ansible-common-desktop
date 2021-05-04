@@ -30,7 +30,7 @@
       - calibre
       - catfish
       - ccze
-      - celestia
+      # - celestia
       - checkinstall
       - cheese
       - chrome-gnome-shell
@@ -310,6 +310,12 @@
       - skype
       - slack
     classic: yes
+
+- name: Install snaps edge
+  snap:
+    name:
+      - celestia-daily
+    channel: latest/edge
 
 # Flatpak
 - name: Add the flathub flatpak repository remote to the user installation
