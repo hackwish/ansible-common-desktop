@@ -148,7 +148,7 @@
     # codename: '{{ codename }}'
 - apt_key:
     keyserver: keyserver.ubuntu.com
-    id: 4096R/1C27A13ABDE62E7917743810AF91A06147FA1307
+    id: 1C27A13ABDE62E7917743810AF91A06147FA1307
     state: present
 - apt_repository:
     repo: 'deb http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
