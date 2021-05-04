@@ -5,55 +5,12 @@
     upgrade: dist
   when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
 
-# - name: Upgrading all packages (CentOS)
-#   yum:
-#     name: '*'
-#     state: latest
-#   when: ansible_os_family == "RedHat"
-   
-#    #INSTALL i386 COMMON PACKAGES 
-#- name: Instala paquetes common i386  
-#  apt:
-#    name: "{{ packages }}"
-#    update_cache: "{{add_i386.changed}}"
-#  vars:
-#    packages:
-#      - libgl1-mesa-dri:i386
-#      - libgl1-mesa-glx:i386
-#      - libasound2-plugins:i386
-#      - wine-stable:i386
-#      - wine32-development
-
 #INSTALL COMMON PACKAGES 
 - name: Instala paquetes common
   apt: 
     name: "{{ packages }}"
   vars:
     packages:
-      # - chromium-browser
-      # - chromium-browser-l10n
-      # - chromium-codecs-ffmpeg
-      # - forticlient
-      # - kubectx
-      # - libdvd-pkg
-      # - libvirt-bin
-      # - libvirt-dev
-      # - lxd
-      # - lxd-client
-      # - mysql-workbench-community
-      # - qemu
-      # - qemu-kvm
-      # - skypeforlinux
-      # - synergy
-      # - synergy -- not available yet
-      # - virt-manager
-      # - virt-viewer
-      # - virtinst
-      # Lutris Vulkan
-      #- libsdl2-image-dev
-      #- wine1.8
-      #- wine32-development
-      #- winehq-stable
       - acl
       - apt-transport-https
       - apt-xapian-index
@@ -63,7 +20,6 @@
       - atop
       - autoconf
       - automake
-      - awscli
       - balena-etcher-electron
       - bc
       - bison
@@ -95,9 +51,6 @@
       - dia
       - dirmngr
       - dnsmasq
-      - docker
-      - docker-ce
-      - docker-compose
       - dropbox
       - ebtables
       - exiv2
@@ -129,19 +82,6 @@
       - gnupg2
       - golang-go
       - google-chrome-stable
-      - google-cloud-sdk
-      - google-cloud-sdk-app-engine-go
-      - google-cloud-sdk-app-engine-java
-      - google-cloud-sdk-app-engine-python
-      - google-cloud-sdk-app-engine-python-extras
-      - google-cloud-sdk-bigtable-emulator
-      - google-cloud-sdk-bigtable-emulator
-      - google-cloud-sdk-cbt
-      - google-cloud-sdk-cloud-build-local
-      - google-cloud-sdk-datalab
-      - google-cloud-sdk-datastore-emulator
-      - google-cloud-sdk-firestore-emulator
-      - google-cloud-sdk-pubsub-emulator
       - gparted
       - gpick
       - graphviz
@@ -161,7 +101,6 @@
       - kdeconnect
       - krita
       - krita-l10n
-      - kubectl
       - language-pack-es
       - laptop-mode-tools
       - libavformat-dev
@@ -210,7 +149,6 @@
       - make
       - mat
       - mat2
-      - meld
       - mesa-vulkan-drivers
       - mesa-vulkan-drivers:i386
       - module-assistant
@@ -247,14 +185,12 @@
       - p7zip-rar
       - papirus-icon-theme
       - pepperflashplugin-nonfree
-      - pgadmin3
       - pigz
       - pixmap
       - pkg-config
       - plank
       - playonlinux
       - portaudio19-dev
-      - postgresql-client
       - postfix
       - powertop
       - preload
@@ -296,8 +232,6 @@
       - steam
       - stellarium
       - stress
-      - sublime-merge
-      - sublime-text
       - subversion
       - sudo
       - swaks
@@ -305,7 +239,6 @@
       - syncthing
       - sysstat
       - tcpdump
-      # - teams
       - telnetd
       - terminator
       - timekpr-next
@@ -355,24 +288,15 @@
 - name: Install snaps
   snap:
     name:
-      # - rambox
-      # - tfswitch
-      # - wickrpro
-      - beekeeper-studio
       - bitwarden
       - brave
       - discord
       - doctl
-      - dbeaver-ce
-      - insomnia
-      - k9s
       - keepassxc
       - lxd
       - notion-snap
-      - postman
       - retroarch
       - signal-desktop
-      - sosumi
       - telegram-desktop
       - vault
       - wickrme
@@ -381,26 +305,13 @@
 - name: Install snaps classic
   snap:
     name:
-      # - atom
-      # - eclipse
-      # - phpstorm
       - bashtop
       - bpytop
-      - code
-      - helm
-      - powershell
-      - pycharm-community
       - skype
       - slack
     classic: yes
 
 # Flatpak
-# - name: Add the Gnome flatpak remote to the system installation
-#   flatpak_remote:
-#     name: gnome
-#     state: present
-#     flatpakrepo_url: https://sdk.gnome.org/gnome-apps.flatpakrepo
-
 - name: Add the flathub flatpak repository remote to the user installation
   flatpak_remote:
     name: flathub
