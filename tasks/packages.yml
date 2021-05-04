@@ -214,6 +214,7 @@
       - mpack
       - multipath-tools
       - multitail
+      - murrine-themes
       - nano
       - ncdu
       - netcat
@@ -244,6 +245,7 @@
       - pepperflashplugin-nonfree
       - pgadmin3
       - pigz
+      - pixmap
       - pkg-config
       - plank
       - playonlinux

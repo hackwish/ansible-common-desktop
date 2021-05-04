@@ -115,11 +115,13 @@
 
 # ETCHER
 - apt_key:
-    keyserver: hkps://keyserver.ubuntu.com:443
-    id: 379CE192D401AB61
+    url: https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
+    # keyserver: hkps://keyserver.ubuntu.com:443
+    # id: 379CE192D401AB61
     state: present
 - apt_repository:
-    repo: deb https://deb.etcher.io stable etcher
+    repo: 'deb https://dl.cloudsmith.io/public/balena/etcher/deb/ubuntu  {{ codename }} main'
+    # repo: deb https://deb.etcher.io stable etcher
     state : present
 
 # DROPBOX
