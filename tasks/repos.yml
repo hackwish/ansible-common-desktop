@@ -153,6 +153,7 @@
 - apt_repository:
     repo: 'deb http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
     state : present
+    update_cache: no
 
 - name: apt-get update
   shell: apt-get update
