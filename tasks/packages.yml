@@ -280,6 +280,10 @@
       - zip
       - zlib1g-dev
       - zsh
+      - kazam
+      - pavucontrol
+      - bluez
+      - bluez-tools
     state: present
   #register: common-packages-installation
   tags: common
