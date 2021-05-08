@@ -125,6 +125,12 @@
     repo: ppa:peterlevi/ppa
     codename: '{{ codename }}'
 
+#Audio-Recorder
+- apt_repository:
+    repo: ppa:audio-recorder/ppa
+    codename: '{{ codename }}'
+
+
 # Astronomy
 # ## Celestia
 # - apt_key:
