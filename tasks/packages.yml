@@ -288,6 +288,10 @@
       - v4l2loopback-utils
       - v4l2loopback-dkms
       - ffmpeg
+      - kdenlive
+      - pitivi
+      - shotcut
+      - openshot
     state: present
   #register: common-packages-installation
   tags: common
