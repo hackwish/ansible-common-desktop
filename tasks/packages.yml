@@ -263,7 +263,7 @@
       - vim-gui-common
       - vim-snippets
       - vinagre
-      - virtualbox-6.1
+      # - virtualbox-6.1
       - virtualenv
       - vlc
       - vlc-plugin-bittorrent
