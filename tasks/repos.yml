@@ -110,6 +110,11 @@
     repo: ppa:linuxuprising/apps
     codename: '{{ codename }}'
 
+# Lutris
+- apt_repository:
+    repo: ppa:lutris-team/lutris
+    codename: '{{ codename }}'
+    
 # Lutris Vulkan Drivers
 ## Nvidia PPA
 - apt_repository:
