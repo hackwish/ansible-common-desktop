@@ -167,6 +167,17 @@
     state : present
     update_cache: no
 
+# Signal
+- apt_key:
+    url: https://updates.signal.org/desktop/apt/keys.asc
+    # keyserver: hkps://keyserver.ubuntu.com:443
+    # id: 379CE192D401AB61
+    state: present
+- apt_repository:
+    repo: 'deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main'
+    state : present
+    update_cache: no
+
 - name: apt-get update
   shell: apt-get update
   become: true

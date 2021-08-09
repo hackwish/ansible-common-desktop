@@ -292,6 +292,7 @@
       - pitivi
       - shotcut
       - openshot
+      - signal-desktop
     state: present
   #register: common-packages-installation
   tags: common
@@ -336,4 +337,15 @@
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
+
+# Install from debs
+- name: Install a .deb package for Zoom
+  apt:
+    deb: https://zoom.us/client/latest/zoom_amd64.deb
+  when: ansible_os_family == "Debian"
+
+- name: Install a .deb package for Discord
+  apt:
+    deb: https://dl.discordapp.net/apps/linux/0.0.15/discord-0.0.15.deb
+  when: ansible_os_family == "Debian"
 
