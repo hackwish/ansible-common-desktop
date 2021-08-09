@@ -320,7 +320,7 @@
     name:
       - bashtop
       - bpytop
-      - skype
+      # - skype
       - slack
     classic: yes
 
