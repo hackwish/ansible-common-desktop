@@ -302,17 +302,17 @@
     name:
       - bitwarden
       - brave
-      - discord
+      # - discord
       - doctl
       - keepassxc
       - lxd
       - notion-snap
       - retroarch
-      - signal-desktop
+      # - signal-desktop
       - telegram-desktop
       - vault
       - wickrme
-      - zoom-client
+      # - zoom-client
 
 - name: Install snaps classic
   snap:
