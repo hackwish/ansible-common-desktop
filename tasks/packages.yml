@@ -301,6 +301,7 @@
 - name: Install snaps
   snap:
     name:
+      - barrier
       - bitwarden
       - brave
       # - discord
