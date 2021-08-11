@@ -312,6 +312,7 @@
       - retroarch
       # - signal-desktop
       - telegram-desktop
+      - teams
       - vault
       - wickrme
       # - zoom-client
