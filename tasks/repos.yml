@@ -91,9 +91,16 @@
     codename: '{{ codename }}'
 
 # SHUTTER
+## Disable for deprecation repo notice: https://www.linuxuprising.com/2021/08/official-shutter-screenshot-tool.html
 - apt_repository:
     repo: ppa:linuxuprising/shutter  
     codename: '{{ codename }}'
+    state : absent
+
+- apt_repository:
+    repo: ppa:shutter/ppa 
+    codename: '{{ codename }}'
+    state : present
 
 # WINE
 - apt_key:
