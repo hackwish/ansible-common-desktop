@@ -96,6 +96,7 @@
     repo: ppa:linuxuprising/shutter  
     codename: '{{ codename }}'
     state : absent
+    update_cache: no
 
 - apt_repository:
     repo: ppa:shutter/ppa 
