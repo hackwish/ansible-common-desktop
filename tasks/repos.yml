@@ -102,6 +102,7 @@
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
     state : present
+    update_cache: no
 
 # WINE
 - apt_key:
