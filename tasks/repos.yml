@@ -116,6 +116,7 @@
 - apt_repository:
     repo: 'deb https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
     state: present
+    update_cache: no
 
 #vlc-plugin-bittorrent
 - apt_repository:
