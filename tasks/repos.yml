@@ -91,6 +91,7 @@
 - apt_repository:
     repo: ppa:yannubuntu/boot-repair
     codename: '{{ codename }}'
+    update_cache: no
 
 # SHUTTER
 ## Disable for deprecation repo notice: https://www.linuxuprising.com/2021/08/official-shutter-screenshot-tool.html
