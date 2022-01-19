@@ -58,6 +58,7 @@
 - apt_repository:
     repo: deb http://repository.spotify.com stable non-free
     state: present
+    update_cache: no
 
 #GRUB CUSTOMIZER
 # - apt_repository:
