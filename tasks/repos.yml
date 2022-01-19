@@ -15,21 +15,25 @@
   apt_repository:
     repo: ppa:numix/ppa
     codename: '{{ codename }}'
+    update_cache: no
 
 - name: Add Repo Git Core
   apt_repository:
     repo: ppa:git-core/ppa
     codename: '{{ codename }}'
+    update_cache: no
 
 - name: Add Repo Papirus
   apt_repository:
     repo: ppa:papirus/papirus
     codename: '{{ codename }}'
+    update_cache: no
 
 - name: Add Repo webupd8 general porpuses
   apt_repository:
     repo: ppa:nilarimogard/webupd8
     codename: '{{ codename }}'
+    update_cache: no
 
 #Google Chrome
 - apt_key:
@@ -40,20 +44,23 @@
     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
     filename: google-chrome
+    update_cache: no
 
 #SyncThing
 - apt_key:
     url: https://syncthing.net/release-key.txt
     state: present
+    update_cache: no
 - apt_repository:
     repo: deb https://apt.syncthing.net/ syncthing stable
     state: present
+    update_cache: no
 
 #Spotify
 - apt_key:
     # keyserver: hkp://keyserver.ubuntu.com:80
     # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-    url: https://download.spotify.com/debian/pubkey_0D811D58.gpg
+    url: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg
     state: present
 - apt_repository:
     repo: deb http://repository.spotify.com stable non-free
@@ -122,31 +129,37 @@
 - apt_repository:
     repo: ppa:linuxuprising/apps
     codename: '{{ codename }}'
+    update_cache: no
 
 # Lutris
 - apt_repository:
     repo: ppa:lutris-team/lutris
     codename: '{{ codename }}'
+    update_cache: no
     
 # Lutris Vulkan Drivers
 ## Nvidia PPA
 - apt_repository:
     repo: ppa:graphics-drivers/ppa
     codename: '{{ codename }}'
+    update_cache: no
 
 # Wallpaper changers
 - apt_repository:
     repo: ppa:sicklylife/shotwell
     codename: '{{ codename }}'
+    update_cache: no
 
 - apt_repository:
     repo: ppa:peterlevi/ppa
     codename: '{{ codename }}'
+    update_cache: no
 
 #Audio-Recorder
 - apt_repository:
     repo: ppa:audio-recorder/ppa
     codename: '{{ codename }}'
+    update_cache: no
 
 
 # Astronomy
