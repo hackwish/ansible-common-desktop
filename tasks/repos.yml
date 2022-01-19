@@ -50,7 +50,6 @@
 - apt_key:
     url: https://syncthing.net/release-key.txt
     state: present
-    update_cache: no
 - apt_repository:
     repo: deb https://apt.syncthing.net/ syncthing stable
     state: present
@@ -107,7 +106,6 @@
     codename: '{{ codename }}'
     state : absent
     update_cache: no
-
 - apt_repository:
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
