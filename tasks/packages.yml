@@ -342,6 +342,17 @@
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
 
+#INSTALL PIPS
+- name: Install Python packages.
+  pip:
+    name: "{{ packages }}"
+    executable: pip3
+  vars:
+    packages:
+      - maestral
+      - maestral[gui]
+    state: present
+
 # Install from debs
 - name: Install a .deb package for Zoom
   apt:
