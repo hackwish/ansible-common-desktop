@@ -358,9 +358,10 @@
   apt:
     deb: https://zoom.us/client/latest/zoom_amd64.deb
   when: ansible_os_family == "Debian"
+  ignore_errors: true
 
 - name: Install a .deb package for Discord
   apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.15/discord-0.0.15.deb
+    deb: https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
   when: ansible_os_family == "Debian"
-
+  ignore_errors: true
