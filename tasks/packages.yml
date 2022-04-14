@@ -11,6 +11,8 @@
     name: "{{ packages }}"
   vars:
     packages:
+      # - celestia
+      # - virtualbox-6.1
       - acl
       - apt-transport-https
       - apt-xapian-index
@@ -23,6 +25,8 @@
       - balena-etcher-electron
       - bc
       - bison
+      - bluez
+      - bluez-tools
       - boot-repair
       - brasero-cdrkit
       - build-essential
@@ -30,7 +34,6 @@
       - calibre
       - catfish
       - ccze
-      # - celestia
       - checkinstall
       - cheese
       - chrome-gnome-shell
@@ -55,6 +58,7 @@
       - ebtables
       - exiv2
       - fdupes
+      - ffmpeg
       - figlet
       - file-roller
       - filezilla
@@ -68,6 +72,7 @@
       - gcc
       - gdebi
       - gimp
+      - gir1.2-appindicator3-0.1
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
       - git
@@ -79,10 +84,12 @@
       - gnome-software-plugin-flatpak
       - gnome-tweak-tool
       - gnome-tweaks
+      - gnome-web-photo
       - gnupg2
       - golang-go
       - google-chrome-stable
       - gparted
+      - gphoto2
       - gpick
       - graphviz
       - grub-customizer
@@ -98,7 +105,9 @@
       - iptstate
       - jq
       - k3b
+      - kazam
       - kdeconnect
+      - kdenlive
       - krita
       - krita-l10n
       - language-pack-es
@@ -113,18 +122,20 @@
       - libgl1-mesa-dri:i386
       - libglib2.0-dev-bin
       - libguestfs-perl
+      - libimage-exiftool-perl
       - libjack-dev
       - libjack0
       - libjansson-dev
+      - libldap2-dev
       - liblua5.3-dev
       - libmagic-dev
-      - libimage-exiftool-perl
       - libncurses5-dev
       - libnvidia-gl-440 
       - libnvidia-gl-440:i386
       - libopencv-highgui-dev
       - libportmidi-dev
       - libreadline-dev
+      - libsasl2-dev
       - libsqlite3-dev
       - libssl-dev
       - libstdc++5
@@ -178,14 +189,17 @@
       - nvidia-cuda-toolkit
       - nvidia-driver-440 
       - openfortivpn
+      - openshot
       - openssh-client
       - openssh-server
       - openvpn
       - p7zip-full
       - p7zip-rar
       - papirus-icon-theme
+      - pavucontrol
       - pepperflashplugin-nonfree
       - pigz
+      - pitivi
       - pixmap
       - pkg-config
       - plank
@@ -198,7 +212,7 @@
       - pulseaudio-equalizer
       - putty-tools
       - pv
-      # - python
+      - python-dev
       - python-packaging
       - python-setuptools
       - python3-pip
@@ -217,11 +231,11 @@
       - screen
       - screenfetch
       - sharutils
+      - shotcut
       - shotwell
       - shutter
-      - gir1.2-appindicator3-0.1
-      - gnome-web-photo
       - siege
+      - signal-desktop
       - smartmontools
       - snapd
       - snmp
@@ -258,6 +272,8 @@
       - unrar
       - unzip
       - uuid-runtime
+      - v4l2loopback-dkms
+      - v4l2loopback-utils
       - variety
       - vim
       - vim-common
@@ -265,14 +281,13 @@
       - vim-gui-common
       - vim-snippets
       - vinagre
-      # - virtualbox-6.1
       - virtualenv
       - vlc
       - vlc-plugin-bittorrent
-      - woeusb
       - whois
       - wine
       - winetricks
+      - woeusb
       - xclip
       - xinetd
       - xserver-xorg
@@ -282,19 +297,6 @@
       - zip
       - zlib1g-dev
       - zsh
-      - kazam
-      - pavucontrol
-      - bluez
-      - bluez-tools
-      - gphoto2
-      - v4l2loopback-utils
-      - v4l2loopback-dkms
-      - ffmpeg
-      - kdenlive
-      - pitivi
-      - shotcut
-      - openshot
-      - signal-desktop
     state: present
   #register: common-packages-installation
   tags: common
@@ -346,11 +348,11 @@
 - name: Install Python packages.
   pip:
     name: "{{ packages }}"
-    executable: pip3
   vars:
     packages:
       - maestral
       - maestral[gui]
+      - python-ldap
     state: present
 
 # Install from debs
