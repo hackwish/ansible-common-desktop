@@ -198,7 +198,7 @@
       - pulseaudio-equalizer
       - putty-tools
       - pv
-      - python
+      # - python
       - python-packaging
       - python-setuptools
       - python3-pip
