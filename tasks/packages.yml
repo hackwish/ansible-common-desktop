@@ -113,6 +113,7 @@
       - language-pack-es
       - laptop-mode-tools
       - libavformat-dev
+      - libcurl4-openssl-dev
       - libegl1-mesa
       - libelf-dev
       - libffi-dev
@@ -130,6 +131,7 @@
       - liblua5.3-dev
       - libmagic-dev
       - libncurses5-dev
+      - libnotify-dev
       - libnvidia-gl-440 
       - libnvidia-gl-440:i386
       - libopencv-highgui-dev
@@ -368,3 +370,7 @@
     deb: https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
   when: ansible_os_family == "Debian"
   ignore_errors: true
+
+# Install from shell script
+- name:  Install D Programming Language deps 
+  ansible.builtin.shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
