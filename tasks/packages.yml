@@ -318,7 +318,7 @@
       - notion-snap
       - retroarch
       # - signal-desktop
-      - telegram-desktop
+      # - telegram-desktop
         # - teams
       # - vault
       # - wickrme
