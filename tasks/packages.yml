@@ -373,4 +373,4 @@
 
 # Install from shell script
 - name:  Install D Programming Language deps 
-  ansible.builtin.shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
+  shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
