@@ -25,8 +25,8 @@
       - balena-etcher-electron
       - bc
       - bison
-      - bluez
-      - bluez-tools
+        # - bluez
+        # - bluez-tools
       - boot-repair
       - brasero-cdrkit
       - build-essential
@@ -36,16 +36,16 @@
       - ccze
       - checkinstall
       - cheese
-      - chrome-gnome-shell
+        # - chrome-gnome-shell
       - clang
       - cmake
       - cmake-curses-gui
       - collectd
-      - compiz
-      - compiz-plugins-extra
-      - compizconfig-settings-manager
+        # - compiz
+        # - compiz-plugins-extra
+        # - compizconfig-settings-manager
       - curl
-      - dbus
+        # - dbus
       - dconf-editor
       - default-jdk
       - default-jre
@@ -54,7 +54,7 @@
       - dia
       - dirmngr
       - dnsmasq
-      - dropbox
+        # - dropbox
       - ebtables
       - exiv2
       - fdupes
@@ -80,14 +80,14 @@
       - git-ftp
       - git-lfs
       - git-svn
-      - gnome-shell-extensions
-      - gnome-software-plugin-flatpak
-      - gnome-tweak-tool
-      - gnome-tweaks
-      - gnome-web-photo
+        # - gnome-shell-extensions
+        # - gnome-software-plugin-flatpak
+        # - gnome-tweak-tool
+        # - gnome-tweaks
+        # - gnome-web-photo
       - gnupg2
       - golang-go
-      - google-chrome-stable
+        # - google-chrome-stable
       - gparted
       - gphoto2
       - gpick
@@ -107,7 +107,7 @@
       - k3b
       - kazam
       - kdeconnect
-      - kdenlive
+        # - kdenlive
       - krita
       - krita-l10n
       - language-pack-es
@@ -132,8 +132,8 @@
       - libmagic-dev
       - libncurses5-dev
       - libnotify-dev
-      - libnvidia-gl-440 
-      - libnvidia-gl-440:i386
+        # - libnvidia-gl-440 
+        # - libnvidia-gl-440:i386
       - libopencv-highgui-dev
       - libportmidi-dev
       - libreadline-dev
@@ -151,8 +151,8 @@
       - libxml2-dev
       - libxslt-dev
       - libyaml-dev
-      - linux-generic
-      - linux-headers-generic
+        # - linux-generic
+        # - linux-headers-generic
       - lldpd
       - lm-sensors
       - lsb-release
@@ -169,7 +169,7 @@
       - mpack
       - multipath-tools
       - multitail
-      - murrine-themes
+        # - murrine-themes
       - nano
       - ncdu
       - netcat
@@ -180,16 +180,16 @@
       - nfs-kernel-server
       - nmap
       - nmon
-      - nodejs
+        # - nodejs
       - ntp
       - ntpdate
-      - numix-blue-gtk-theme
+        # - numix-blue-gtk-theme
       - numix-gtk-theme
       - numix-icon-theme
       - numix-icon-theme-circle
       - nvidia-cuda-dev
       - nvidia-cuda-toolkit
-      - nvidia-driver-440
+        # - nvidia-driver-440
       - onedrive
       - openfortivpn
       - openshot
@@ -228,7 +228,7 @@
       - redshift
       - redshift-gtk
       - remmina
-      - rtl8812au-dkms
+        # - rtl8812au-dkms
       - ruby-dev
       - ruby-full
       - screen
@@ -238,7 +238,7 @@
       - shotwell
       - shutter
       - siege
-      - signal-desktop
+        # - signal-desktop
       - smartmontools
       - snapd
       - snmp
@@ -260,7 +260,7 @@
       - tcpdump
       - telnetd
       - terminator
-      - timekpr-next
+        # - timekpr-next
       - timeshift
       - tinyca
       - tmux
@@ -290,7 +290,7 @@
       - whois
       - wine
       - winetricks
-      - woeusb
+        # - woeusb
       - xclip
       - xinetd
       - xserver-xorg
@@ -310,18 +310,18 @@
     name:
       - barrier
       - bitwarden
-      - brave
+        # - brave
       # - discord
       - doctl
-      - keepassxc
+        # - keepassxc
       - lxd
       - notion-snap
       - retroarch
       # - signal-desktop
       - telegram-desktop
-      - teams
-      - vault
-      - wickrme
+        # - teams
+      # - vault
+      # - wickrme
       # - zoom-client
 
 - name: Install snaps classic
@@ -367,7 +367,7 @@
 
 - name: Install a .deb package for Discord
   apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
+    deb: https://dl.discordapp.net/apps/linux/0.0.18/discord-0.0.18.deb
   when: ansible_os_family == "Debian"
   ignore_errors: true
 

@@ -36,15 +36,15 @@
     update_cache: no
 
 #Google Chrome
-- apt_key:
-    url: https://dl.google.com/linux/linux_signing_key.pub
-    state: present
+# - apt_key:
+#     url: https://dl.google.com/linux/linux_signing_key.pub
+#     state: present
 
-- apt_repository:
-    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-    state: present
-    filename: google-chrome
-    update_cache: no
+    # - apt_repository:
+    #     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    #     state: present
+    #     filename: google-chrome
+    #     update_cache: no
 
 #SyncThing
 - apt_key:
@@ -84,14 +84,14 @@
     update_cache: no
 
 # DROPBOX
-- apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-    state: present
-- apt_repository:
-    repo: 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu disco main'
-    state : present
-    update_cache: no
+# - apt_key:
+#     keyserver: keyserver.ubuntu.com
+#     id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+ #    state: present
+ # - apt_repository:
+ #     repo: 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu disco main'
+ #     state : present
+ #     update_cache: no
 
 # BOOT REPAIR
 - apt_repository:
