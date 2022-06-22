@@ -353,10 +353,16 @@
     name: "{{ packages }}"
   vars:
     packages:
+      - pip
+      - setuptools
+      - testresources
+      - PyQt6
       - maestral
-      - maestral[gui]
+      - maestral-qt
+      - python3-systemd
       - python3-ldap
-    state: present
+    state: latest
+    extra_args: --upgrade
 
 # Install from debs
 - name: Install a .deb package for Zoom
