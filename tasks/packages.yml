@@ -355,7 +355,7 @@
     packages:
       - maestral
       - maestral[gui]
-      - python-ldap
+      - python3-ldap
     state: present
 
 # Install from debs
