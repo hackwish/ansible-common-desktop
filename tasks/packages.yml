@@ -215,11 +215,11 @@
       - pulseaudio-equalizer
       - putty-tools
       - pv
-      - python-dev
-      - python-packaging
-      - python-setuptools
-      - python3-pip
-      - python3-venv
+        # - python-dev
+        # - python-packaging
+        # - python-setuptools
+        # - python3-pip
+        # - python3-venv
       - quodlibet
       - rar
       - rbenv
