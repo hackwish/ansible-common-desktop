@@ -348,19 +348,25 @@
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
 
+# Install from shell script
+- name:  Install D Programming Language deps
+  shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
+
+- name: Install Python upgrade packages
+  shell: python3 -m pip install pip setuptools --upgrade
+    
 #INSTALL PIPS
 - name: Install Python packages.
   pip:
     name: "{{ packages }}"
   vars:
     packages:
-      - pip
-      - setuptools
+            # - pip
+        # - setuptools
       - testresources
       - PyQt6
       - maestral
       - maestral-qt
-        # - python3-systemd
       - python3-ldap
     state: latest
     extra_args: --upgrade
@@ -378,6 +384,3 @@
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
-# Install from shell script
-- name:  Install D Programming Language deps 
-  shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
