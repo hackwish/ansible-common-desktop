@@ -219,7 +219,8 @@
         # - python-packaging
         # - python-setuptools
         # - python3-pip
-        # - python3-venv
+      - python3-venv
+      - python3-systemd
       - quodlibet
       - rar
       - rbenv
@@ -359,7 +360,7 @@
       - PyQt6
       - maestral
       - maestral-qt
-      - python3-systemd
+        # - python3-systemd
       - python3-ldap
     state: latest
     extra_args: --upgrade
