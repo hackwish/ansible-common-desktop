@@ -142,6 +142,12 @@
     codename: '{{ codename }}'
     update_cache: no
 
+# Lutris-Retroarch compatible library
+- apt_repository:
+    repo: ppa:ubuntu-toolchain-r/test
+    state : present
+    update_cache: no
+
 # Wallpaper changers
 - apt_repository:
     repo: ppa:sicklylife/shotwell
