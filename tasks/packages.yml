@@ -306,6 +306,8 @@
       - zip
       - zlib1g-dev
       - zsh
+      - gnome-shell-extension-system76-power
+      - system76-power
     state: present
   #register: common-packages-installation
   tags: common
