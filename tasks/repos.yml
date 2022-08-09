@@ -148,11 +148,11 @@
     update_cache: no
 
 ## System-76 Drivers
-- apt_repository:
-    repo: ppa:system76-dev/stable
-    codename: '{{ codename }}'
-    update_cache: no
-  state: absent
+# - apt_repository:
+#     repo: ppa:system76-dev/stable
+#     codename: '{{ codename }}'
+#     update_cache: no
+#   state: absent
 
 # Lutris-Retroarch compatible library
 - apt_repository:
