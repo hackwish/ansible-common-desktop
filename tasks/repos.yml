@@ -131,6 +131,7 @@
     repo: ppa:linuxuprising/apps
     codename: '{{ codename }}'
     update_cache: no
+  when: codename != "jammy"
 
 # Lutris
 - apt_repository:
@@ -154,6 +155,7 @@
 # Lutris-Retroarch compatible library
 - apt_repository:
     repo: ppa:ubuntu-toolchain-r/test
+    codename: '{{ codename }}'
     state : present
     update_cache: no
 
