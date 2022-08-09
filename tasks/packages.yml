@@ -274,7 +274,7 @@
       - tor
       - torbrowser-launcher
       - ttf-bitstream-vera
-      - ttf-dejavu
+      # - ttf-dejavu
       - ttf-mscorefonts-installer
       - ubuntu-restricted-extras
       - unace
