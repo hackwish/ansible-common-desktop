@@ -376,6 +376,9 @@
       - org.clementine_player.Clementine
       - com.belmoussaoui.Authenticator
       - com.anydesk.Anydesk
+      - com.adrienplazas.Metronome
+      - com.belmoussaoui.Decoder
+      - org.gnome.Solanum
       # - us.zoom.Zoom
     method: system
 
