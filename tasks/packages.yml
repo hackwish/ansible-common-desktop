@@ -210,7 +210,7 @@
       - p7zip-rar
       - papirus-icon-theme
       - pavucontrol
-      - pepperflashplugin-nonfree
+      # - pepperflashplugin-nonfree
       - pigz
       - pitivi
       - pixmap
