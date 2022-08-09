@@ -8,7 +8,7 @@
   shell: apt-get update
   become: true
   become_user: root
-  ignore_errors: yes
+  ignore_errors: true
 
 #ADD REPOS
 - name: Add Repo Numix
@@ -34,7 +34,7 @@
     repo: ppa:nilarimogard/webupd8
     codename: '{{ codename }}'
     update_cache: no
-  when: codename != "jammy"
+  when: codename != "jammy" or codename != "vanessa"
 
 #Google Chrome
 # - apt_key:
@@ -107,13 +107,13 @@
     codename: '{{ codename }}'
     state : absent
     update_cache: no
-  when: codename != "jammy"
+  when: codename != "jammy" or codename != "vanessa"
 - apt_repository:
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
     state : present
     update_cache: no
-  when: codename != "jammy"
+  when: codename != "jammy" or codename != "vanessa"
 
 # WINE
 - apt_key:
@@ -131,7 +131,7 @@
     repo: ppa:linuxuprising/apps
     codename: '{{ codename }}'
     update_cache: no
-  when: codename != "jammy"
+  when: codename != "jammy" or codename != "vanessa"
 
 # Lutris
 - apt_repository:
@@ -164,7 +164,7 @@
     repo: ppa:sicklylife/shotwell
     codename: '{{ codename }}'
     update_cache: no
-  when: codename != "jammy"
+  when: codename != "jammy" or codename != "vanessa"
 
 - apt_repository:
     repo: ppa:peterlevi/ppa
@@ -194,7 +194,7 @@
 #     # cache_valid_time: 3600
 #     # retries: 10
 #     # delay: 1
-#     # ignore_errors: yes
+#     # ignore_errors: true
 
 # Timekpr
 # - apt_repository:
@@ -224,4 +224,4 @@
   shell: apt-get update
   become: true
   become_user: root
-  ignore_errors: yes
+  ignore_errors: true

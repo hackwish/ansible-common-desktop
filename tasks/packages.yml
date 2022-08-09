@@ -68,7 +68,7 @@
       - clang
       - cmake
       - cmake-curses-gui
-      - collectd
+      # - collectd
       - curl
       - dconf-editor
       - default-jdk
