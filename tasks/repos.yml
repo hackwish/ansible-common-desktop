@@ -34,8 +34,7 @@
     repo: ppa:nilarimogard/webupd8
     codename: '{{ codename }}'
     update_cache: no
-  when: ansible_facts['ansible_distribution_release'] != "vanessa" or
-        ansible_facts['ansible_distribution_release'] != "jammy"
+  when: codename != "jammy"
 
 #Google Chrome
 # - apt_key:
@@ -108,15 +107,13 @@
     codename: '{{ codename }}'
     state : absent
     update_cache: no
-  when: ansible_facts['ansible_distribution_release'] != "vanessa" or
-        ansible_facts['ansible_distribution_release'] != "jammy"
+  when: codename != "jammy"
 - apt_repository:
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
     state : present
     update_cache: no
-  when: ansible_facts['ansible_distribution_release'] != "vanessa" or
-        ansible_facts['ansible_distribution_release'] != "jammy"
+  when: codename != "jammy"
 
 # WINE
 - apt_key:
@@ -165,8 +162,7 @@
     repo: ppa:sicklylife/shotwell
     codename: '{{ codename }}'
     update_cache: no
-  when: ansible_facts['ansible_distribution_release'] != "vanessa" or
-        ansible_facts['ansible_distribution_release'] != "jammy"
+  when: codename != "jammy"
 
 - apt_repository:
     repo: ppa:peterlevi/ppa
