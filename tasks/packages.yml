@@ -94,7 +94,7 @@
       - g++
       - gcc
       - gdebi
-      - gimp
+      # - gimp
       - gir1.2-appindicator3-0.1
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
@@ -115,7 +115,7 @@
       # - hddtemp - se debe reemplazar por exfatprogs
       - htop
       - iftop
-      - inkscape
+      # - inkscape
       - intel-microcode
       - iotop
       - iptables-persistent
@@ -124,8 +124,8 @@
       - k3b
       - kazam
       - kdeconnect
-      - krita
-      - krita-l10n
+      # - krita
+      # - krita-l10n
       - language-pack-es
       - laptop-mode-tools
       - ldap-utils
@@ -202,7 +202,7 @@
       - nvidia-prime
       - onedrive
       - openfortivpn
-      - openshot
+      # - openshot
       - openssh-client
       - openssh-server
       - openvpn
@@ -252,7 +252,7 @@
       - snmpd
       - software-properties-common
       - soundconverter
-      - spotify-client
+      # - spotify-client
       - ssh-askpass
       - steam
       - stellarium
@@ -318,13 +318,14 @@
     name:
       - barrier
       - bitwarden
+      - chromium
         # - brave
       # - discord
       - doctl
         # - keepassxc
       - lxd
       - notion-snap
-      - retroarch
+      # - retroarch
       # - signal-desktop
       # - telegram-desktop
         # - teams
@@ -353,6 +354,21 @@
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
+
+- name: Install multiple packages
+  community.general.flatpak:
+    name:
+      - com.google.Chrome
+      - org.gimp.GIMP
+      - org.inkscape.Inkscape
+      - org.openshot.OpenShot
+      - com.microsoft.Edge
+      - com.spotify.Client
+      - com.mojang.Minecraft
+      - org.kde.krita
+      - io.github.mimbrero.WhatsAppDesktop
+      - us.zoom.Zoom
     method: user
 
 # Install from shell script
