@@ -152,7 +152,7 @@
     repo: ppa:system76-dev/stable
     codename: '{{ codename }}'
     update_cache: no
-  state : absent
+  state: absent
 
 # Lutris-Retroarch compatible library
 - apt_repository:
