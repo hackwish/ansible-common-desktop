@@ -359,17 +359,24 @@
 - name: Install multiple packages
   community.general.flatpak:
     name:
+      - com.adobe.Flash-Player-Projector
+      - com.github.iwalton3.jellyfin-media-player
+      - com.github.tchx84.Flatseal
       - com.google.Chrome
+      - com.microsoft.Edge
+      - com.mojang.Minecraft
+      - com.spotify.Client
+      - io.github.mimbrero.WhatsAppDesktop
       - org.gimp.GIMP
       - org.inkscape.Inkscape
-      - org.openshot.OpenShot
-      - com.microsoft.Edge
-      - com.spotify.Client
-      - com.mojang.Minecraft
+      - org.jitsi.jitsi-meet
       - org.kde.krita
-      - io.github.mimbrero.WhatsAppDesktop
-      - us.zoom.Zoom
-    method: user
+      - org.openshot.OpenShot
+      - com.github.bcedu.vgrive
+      - org.clementine_player.Clementine
+      - com.belmoussaoui.Authenticator
+      # - us.zoom.Zoom
+    method: system
 
 # Install from shell script
 - name:  Install D Programming Language deps
