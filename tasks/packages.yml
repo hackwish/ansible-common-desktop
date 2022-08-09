@@ -269,7 +269,7 @@
       - telnetd
       - terminator
       - timeshift
-      - tinyca
+      # - tinyca
       - tmux
       - tor
       - torbrowser-launcher
