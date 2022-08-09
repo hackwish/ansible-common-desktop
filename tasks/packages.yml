@@ -375,6 +375,7 @@
       - com.github.bcedu.vgrive
       - org.clementine_player.Clementine
       - com.belmoussaoui.Authenticator
+      - com.anydesk.Anydesk
       # - us.zoom.Zoom
     method: system
 
