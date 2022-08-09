@@ -68,9 +68,10 @@
     update_cache: no
 
 #GRUB CUSTOMIZER
-# - apt_repository:
-#     repo: ppa:danielrichter2007/grub-customizer
-#     codename: disco
+- apt_repository:
+    repo: ppa:danielrichter2007/grub-customizer
+    codename: '{{ codename }}'
+    update_cache: no
 
 # ETCHER
 - apt_key:
