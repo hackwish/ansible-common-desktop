@@ -112,7 +112,7 @@
       - grub-customizer
       - gufw
       - hardinfo
-      - hddtemp
+      # - hddtemp - se debe reemplazar por exfatprogs
       - htop
       - iftop
       - inkscape
