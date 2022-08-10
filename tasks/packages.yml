@@ -68,7 +68,7 @@
       - clang
       - cmake
       - cmake-curses-gui
-      - collectd
+      # - collectd
       - curl
       - dconf-editor
       - default-jdk
@@ -94,7 +94,7 @@
       - g++
       - gcc
       - gdebi
-      - gimp
+      # - gimp
       - gir1.2-appindicator3-0.1
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
@@ -105,6 +105,7 @@
       - git-svn
       - gnupg2
       - golang-go
+      - google-chrome-stable
       - gparted
       - gphoto2
       - gpick
@@ -112,10 +113,10 @@
       - grub-customizer
       - gufw
       - hardinfo
-      - hddtemp
+      # - hddtemp - se debe reemplazar por exfatprogs
       - htop
       - iftop
-      - inkscape
+      # - inkscape
       - intel-microcode
       - iotop
       - iptables-persistent
@@ -124,8 +125,8 @@
       - k3b
       - kazam
       - kdeconnect
-      - krita
-      - krita-l10n
+      # - krita
+      # - krita-l10n
       - language-pack-es
       - laptop-mode-tools
       - ldap-utils
@@ -199,10 +200,10 @@
       - numix-icon-theme-circle
       - nvidia-cuda-dev
       - nvidia-cuda-toolkit
-      - nvidia-prime
+      # - nvidia-prime
       - onedrive
       - openfortivpn
-      - openshot
+      # - openshot
       - openssh-client
       - openssh-server
       - openvpn
@@ -210,7 +211,7 @@
       - p7zip-rar
       - papirus-icon-theme
       - pavucontrol
-      - pepperflashplugin-nonfree
+      # - pepperflashplugin-nonfree
       - pigz
       - pitivi
       - pixmap
@@ -252,7 +253,7 @@
       - snmpd
       - software-properties-common
       - soundconverter
-      - spotify-client
+      # - spotify-client
       - ssh-askpass
       - steam
       - stellarium
@@ -269,12 +270,12 @@
       - telnetd
       - terminator
       - timeshift
-      - tinyca
+      # - tinyca
       - tmux
       - tor
       - torbrowser-launcher
       - ttf-bitstream-vera
-      - ttf-dejavu
+      # - ttf-dejavu
       - ttf-mscorefonts-installer
       - ubuntu-restricted-extras
       - unace
@@ -306,8 +307,8 @@
       - zip
       - zlib1g-dev
       - zsh
-      - gnome-shell-extension-system76-power
-      - system76-power
+      # - gnome-shell-extension-system76-power
+      # - system76-power
     state: present
   #register: common-packages-installation
   tags: common
@@ -318,13 +319,14 @@
     name:
       - barrier
       - bitwarden
+      - chromium
         # - brave
       # - discord
       - doctl
         # - keepassxc
       - lxd
       - notion-snap
-      - retroarch
+      # - retroarch
       # - signal-desktop
       # - telegram-desktop
         # - teams
@@ -354,6 +356,32 @@
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
+
+- name: Install multiple packages
+  community.general.flatpak:
+    name:
+      - com.adobe.Flash-Player-Projector
+      - com.github.iwalton3.jellyfin-media-player
+      - com.github.tchx84.Flatseal
+      # - com.google.Chrome
+      - com.microsoft.Edge
+      - com.mojang.Minecraft
+      - com.spotify.Client
+      - io.github.mimbrero.WhatsAppDesktop
+      - org.gimp.GIMP
+      - org.inkscape.Inkscape
+      - org.jitsi.jitsi-meet
+      - org.kde.krita
+      - org.openshot.OpenShot
+      - com.github.bcedu.vgrive
+      - org.clementine_player.Clementine
+      - com.belmoussaoui.Authenticator
+      - com.anydesk.Anydesk
+      - com.adrienplazas.Metronome
+      - com.belmoussaoui.Decoder
+      - org.gnome.Solanum
+      # - us.zoom.Zoom
+    method: system
 
 # Install from shell script
 - name:  Install D Programming Language deps
