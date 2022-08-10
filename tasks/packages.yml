@@ -264,8 +264,8 @@
       - synaptic
       - syncthing
       - sysstat
-      - system76-driver
-      - system76-driver-nvidia
+      # - system76-driver
+      # - system76-driver-nvidia
       - tcpdump
       - telnetd
       - terminator
