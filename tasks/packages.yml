@@ -380,6 +380,7 @@
       - com.adrienplazas.Metronome
       - com.belmoussaoui.Decoder
       - org.gnome.Solanum
+      - net.brinkervii.grapejuice
       # - us.zoom.Zoom
     method: system
 
