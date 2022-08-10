@@ -363,7 +363,7 @@
       - com.adobe.Flash-Player-Projector
       - com.github.iwalton3.jellyfin-media-player
       - com.github.tchx84.Flatseal
-      - com.google.Chrome
+      # - com.google.Chrome
       - com.microsoft.Edge
       - com.mojang.Minecraft
       - com.spotify.Client
