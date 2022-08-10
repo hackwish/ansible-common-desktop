@@ -17,9 +17,9 @@
       vars:
         packages:
           - mint-meta-codecs
-          - mint-meta-mate
+          # - mint-meta-mate
           - language-pack-es
-          - mate-tweak
+          # - mate-tweak
         state: present
       # register: common-aditional-installation
       ignore_errors: true

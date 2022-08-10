@@ -218,4 +218,4 @@
   shell: apt-get update
   become: true
   become_user: root
-  ignore_errors: yes
+  ignore_errors: true
