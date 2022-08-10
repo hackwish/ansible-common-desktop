@@ -105,6 +105,7 @@
       - git-svn
       - gnupg2
       - golang-go
+      - google-chrome-stable
       - gparted
       - gphoto2
       - gpick

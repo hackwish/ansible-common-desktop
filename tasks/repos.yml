@@ -36,16 +36,17 @@
     update_cache: no
   when: codename != "jammy" or codename != "vanessa"
 
-#Google Chrome
-# - apt_key:
-#     url: https://dl.google.com/linux/linux_signing_key.pub
-#     state: present
-
-    # - apt_repository:
-    #     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-    #     state: present
-    #     filename: google-chrome
-    #     update_cache: no
+# Google Chrome
+- name: Add APT Key Google Chrome
+  apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    state: present
+- name: Add Repo Google Chrome
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: google-chrome
+    update_cache: no
 
 #SyncThing
 - apt_key:
