@@ -224,6 +224,18 @@
     state : present
     update_cache: no
 
+# Docklike
+- apt_repository:
+    repo: ppa:xubuntu-dev/extras
+    codename: '{{ codename }}'
+    update_cache: no
+
+# Dockxbar
+- apt_repository:
+    repo: ppa:xuzhen666/dockbarx
+    codename: '{{ codename }}'
+    update_cache: no
+
 - name: apt-get update
   shell: apt-get update
   become: true

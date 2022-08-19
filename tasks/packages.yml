@@ -307,6 +307,10 @@
       - zip
       - zlib1g-dev
       - zsh
+      - xfce4-docklike-plugin
+      - xfce4-dockbarx-plugin
+      - dockbarx
+      - dockbarx-themes-extra
       # - gnome-shell-extension-system76-power
       # - system76-power
     state: present
