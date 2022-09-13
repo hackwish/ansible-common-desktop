@@ -54,7 +54,7 @@
     url: https://syncthing.net/release-key.txt
     state: present
 - apt_repository:
-    repo: deb https://apt.syncthing.net/ syncthing stable
+    repo: deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/syncthing.gpg] https://apt.syncthing.net/ syncthing stable
     state: present
     update_cache: no
 
@@ -65,7 +65,7 @@
     url: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg
     state: present
 - apt_repository:
-    repo: deb http://repository.spotify.com stable non-free
+    repo: deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/spotify.gpg] http://repository.spotify.com stable non-free
     state: present
     update_cache: no
 
@@ -82,8 +82,8 @@
     # id: 379CE192D401AB61
     state: present
 - apt_repository:
-    repo: 'deb https://dl.cloudsmith.io/public/balena/etcher/deb/ubuntu  {{ codename }} main'
-    # repo: deb https://deb.etcher.io stable etcher
+    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/etcher.gpg] https://dl.cloudsmith.io/public/balena/etcher/deb/ubuntu  {{ codename }} main'
+    # repo: deb  [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/somerepo.gpg] https://deb.etcher.io stable etcher
     state : present
     update_cache: no
 
@@ -125,7 +125,7 @@
     url: https://dl.winehq.org/wine-builds/winehq.key
     state: present
 - apt_repository:
-    repo: 'deb https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
+    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/somerepo.gpg] https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
     state: present
     update_cache: no
 
@@ -209,18 +209,18 @@
     id: 1C27A13ABDE62E7917743810AF91A06147FA1307
     state: present
 - apt_repository:
-    repo: 'deb http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
+    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/timekpr.gpg] http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
     state : present
     update_cache: no
 
 # Signal
 - apt_key:
-    url: https://updates.signal.org/desktop/apt/keys.asc
+    url: https://updates.signal.org/desktop/apt/keys.gpg
     # keyserver: hkps://keyserver.ubuntu.com:443
     # id: 379CE192D401AB61
     state: present
 - apt_repository:
-    repo: 'deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main'
+    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/signal.gpg] https://updates.signal.org/desktop/apt xenial main'
     state : present
     update_cache: no
 
