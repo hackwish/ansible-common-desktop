@@ -140,6 +140,7 @@
     repo: ppa:linuxuprising/apps
     codename: '{{ codename }}'
     update_cache: no
+    state : absent
   when: codename != "jammy" or codename != "vanessa"
 
 # Lutris
