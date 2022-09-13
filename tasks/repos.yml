@@ -34,6 +34,7 @@
     repo: ppa:nilarimogard/webupd8
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
   when: codename != "jammy" or codename != "vanessa"
 
 # Google Chrome
@@ -117,7 +118,7 @@
 - apt_repository:
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
-    state : present
+    state : absent
     update_cache: no
   when: codename != "jammy" or codename != "vanessa"
 
@@ -173,6 +174,7 @@
     repo: ppa:sicklylife/shotwell
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
   when: codename != "jammy" or codename != "vanessa"
 
 - apt_repository:
