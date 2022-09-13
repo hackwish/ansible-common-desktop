@@ -52,9 +52,10 @@
 #SyncThing
 - apt_key:
     url: https://syncthing.net/release-key.txt
+    keyring: /usr/share/keyrings/spotify-keyring.gpg
     state: present
 - apt_repository:
-    repo: deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/syncthing.gpg] https://apt.syncthing.net/ syncthing stable
+    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/spotify-keyring.gpg] https://apt.syncthing.net/ syncthing stable
     state: present
     update_cache: no
 
@@ -63,9 +64,10 @@
     # keyserver: hkp://keyserver.ubuntu.com:80
     # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
     url: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg
+    keyring: /usr/share/keyrings/spotify-keyring.gpg
     state: present
 - apt_repository:
-    repo: deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/spotify.gpg] http://repository.spotify.com stable non-free
+    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/spotify-keyring.gpg] http://repository.spotify.com stable non-free
     state: present
     update_cache: no
 
@@ -78,12 +80,13 @@
 # ETCHER
 - apt_key:
     url: https://dl.cloudsmith.io/public/balena/etcher/gpg.70528471AFF9A051.key
+    keyring: /usr/share/keyrings/balena-etcher-archive-keyring.gpg
     # keyserver: hkps://keyserver.ubuntu.com:443
     # id: 379CE192D401AB61
     state: present
 - apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/etcher.gpg] https://dl.cloudsmith.io/public/balena/etcher/deb/ubuntu  {{ codename }} main'
-    # repo: deb  [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/somerepo.gpg] https://deb.etcher.io stable etcher
+    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/balena-etcher-archive-keyring.gpg] https://dl.cloudsmith.io/public/balena/etcher/deb/ubuntu  {{ codename }} main'
+    # repo: deb https://deb.etcher.io stable etcher
     state : present
     update_cache: no
 
@@ -123,9 +126,11 @@
     # keyserver: hkp://keyserver.ubuntu.com:80
     # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
     url: https://dl.winehq.org/wine-builds/winehq.key
+    keyring: /usr/share/keyrings/winehq-archive.key
     state: present
+
 - apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/somerepo.gpg] https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
+    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/winehq-archive.key] https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
     state: present
     update_cache: no
 
@@ -201,26 +206,29 @@
 #     # ignore_errors: true
 
 # Timekpr
-# - apt_repository:
-    # repo: ppa:mjasnik/ppa
-    # codename: '{{ codename }}'
 - apt_key:
     keyserver: keyserver.ubuntu.com
     id: 1C27A13ABDE62E7917743810AF91A06147FA1307
     state: present
+
 - apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/timekpr.gpg] http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
-    state : present
+    repo: ppa:mjasnik/ppa
+    codename: '{{ codename }}'
     update_cache: no
+
+# - apt_repository:
+#     repo: 'deb http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
+#     state : present
+#     update_cache: no
 
 # Signal
 - apt_key:
-    url: https://updates.signal.org/desktop/apt/keys.gpg
-    # keyserver: hkps://keyserver.ubuntu.com:443
-    # id: 379CE192D401AB61
-    state: present
+    url: https://updates.signal.org/desktop/apt/keys.asc
+    keyring: /usr/share/keyrings/signal-desktop-keyring.gpg
+    state: present    
+
 - apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/signal.gpg] https://updates.signal.org/desktop/apt xenial main'
+    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main'
     state : present
     update_cache: no
 
