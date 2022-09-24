@@ -311,6 +311,7 @@
       - xfce4-dockbarx-plugin
       - dockbarx
       - dockbarx-themes-extra
+      - tomboy-ng
       # - gnome-shell-extension-system76-power
       # - system76-power
     state: present
@@ -387,6 +388,7 @@
       - org.jitsi.jitsi-meet
       - org.kde.krita
       - org.openshot.OpenShot
+      - org.gnome.Tomboy
     method: system
 
 # Install from shell script
