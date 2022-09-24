@@ -321,22 +321,23 @@
 - name: Install snaps
   snap:
     name:
-      - barrier
-      - bitwarden
-      - chromium
-        # - brave
       # - discord
-      - doctl
-        # - keepassxc
-      - lxd
-      - notion-snap
+      # - keepassxc
       # - retroarch
       # - signal-desktop
+      # - teams
       # - telegram-desktop
-        # - teams
       # - vault
       # - wickrme
       # - zoom-client
+      - barrier
+      - bitwarden
+      - brave
+      - chromium
+      - doctl
+      - lxd
+      - notion-snap
+      - opera
 
 - name: Install snaps classic
   snap:
@@ -364,28 +365,28 @@
 - name: Install multiple packages
   community.general.flatpak:
     name:
+      # - com.google.Chrome
+      # - us.zoom.Zoom
       - com.adobe.Flash-Player-Projector
+      - com.adrienplazas.Metronome
+      - com.anydesk.Anydesk
+      - com.belmoussaoui.Authenticator
+      - com.belmoussaoui.Decoder
+      - com.github.bcedu.vgrive
       - com.github.iwalton3.jellyfin-media-player
       - com.github.tchx84.Flatseal
-      # - com.google.Chrome
       - com.microsoft.Edge
       - com.mojang.Minecraft
       - com.spotify.Client
       - io.github.mimbrero.WhatsAppDesktop
+      - net.brinkervii.grapejuice
+      - org.clementine_player.Clementine
       - org.gimp.GIMP
+      - org.gnome.Solanum
       - org.inkscape.Inkscape
       - org.jitsi.jitsi-meet
       - org.kde.krita
       - org.openshot.OpenShot
-      - com.github.bcedu.vgrive
-      - org.clementine_player.Clementine
-      - com.belmoussaoui.Authenticator
-      - com.anydesk.Anydesk
-      - com.adrienplazas.Metronome
-      - com.belmoussaoui.Decoder
-      - org.gnome.Solanum
-      - net.brinkervii.grapejuice
-      # - us.zoom.Zoom
     method: system
 
 # Install from shell script
