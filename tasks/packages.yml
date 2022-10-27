@@ -312,6 +312,7 @@
       - dockbarx
       - dockbarx-themes-extra
       - tomboy-ng
+      - linphone
       # - gnome-shell-extension-system76-power
       # - system76-power
     state: present
@@ -389,6 +390,9 @@
       - org.kde.krita
       - org.openshot.OpenShot
       - org.gnome.Tomboy
+      - com.icanblink.blink
+      - org.gnome.Calls
+      - net.jami.Jami
     method: system
 
 # Install from shell script
