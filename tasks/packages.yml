@@ -313,6 +313,10 @@
       - dockbarx-themes-extra
       - tomboy-ng
       - linphone
+      - flac
+      - ffmpeg
+      - shntool
+      - cuetools
       # - gnome-shell-extension-system76-power
       # - system76-power
     state: present
