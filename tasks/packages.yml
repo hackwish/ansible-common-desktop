@@ -418,6 +418,7 @@
     packages:
             # - pip
         # - setuptools
+      - beets
       - testresources
       - PyQt6
       - maestral
