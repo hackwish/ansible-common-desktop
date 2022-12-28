@@ -11,39 +11,56 @@
     name: "{{ packages }}"
   vars:
     packages:
-        # - bluez
-        # - bluez-tools
-        # - chrome-gnome-shell
-        # - compiz
-        # - compiz-plugins-extra
-        # - compizconfig-settings-manager
-        # - dbus
-        # - dropbox
-        # - gnome-shell-extensions
-        # - gnome-software-plugin-flatpak
-        # - gnome-tweak-tool
-        # - gnome-tweaks
-        # - gnome-web-photo
-        # - google-chrome-stable
-        # - kdenlive
-        # - libnvidia-gl-440 
-        # - libnvidia-gl-440:i386
-        # - linux-generic
-        # - linux-headers-generic
-        # - murrine-themes
-        # - nodejs
-        # - numix-blue-gtk-theme
-        # - nvidia-driver-440
-        # - python-dev
-        # - python-packaging
-        # - python-setuptools
-        # - python3-pip
-        # - rtl8812au-dkms
-        # - signal-desktop
-        # - timekpr-next
-        # - woeusb
+      # - bluez
+      # - bluez-tools
       # - celestia
+      # - chrome-gnome-shell
+      # - collectd
+      # - compiz
+      # - compiz-plugins-extra
+      # - compizconfig-settings-manager
+      # - dbus
+      # - dropbox
+      # - gimp
+      # - gnome-shell-extension-system76-power
+      # - gnome-shell-extensions
+      # - gnome-software-plugin-flatpak
+      # - gnome-tweak-tool
+      # - gnome-tweaks
+      # - gnome-web-photo
+      # - google-chrome-stable
+      # - hddtemp - se debe reemplazar por exfatprogs
+      # - inkscape
+      # - kdenlive
+      # - krita
+      # - krita-l10n
+      # - libnvidia-gl-440 
+      # - libnvidia-gl-440:i386
+      # - linux-generic
+      # - linux-headers-generic
+      # - murrine-themes
+      # - nodejs
+      # - numix-blue-gtk-theme
+      # - nvidia-driver-440
+      # - nvidia-prime
+      # - openshot
+      # - pepperflashplugin-nonfree
+      # - python-dev
+      # - python-packaging
+      # - python-setuptools
+      # - python3-pip
+      # - rtl8812au-dkms
+      # - signal-desktop
+      # - spotify-client
+      # - system76-driver
+      # - system76-driver-nvidia
+      # - system76-power
+      # - timekpr-next
+      # - tinyca
+      # - ttf-dejavu
       # - virtualbox-6.1
+      # - woeusb
+      - abcde
       - acl
       - apt-transport-https
       - apt-xapian-index
@@ -63,12 +80,13 @@
       - calibre
       - catfish
       - ccze
+      - cdparanoia
       - checkinstall
       - cheese
       - clang
       - cmake
       - cmake-curses-gui
-      # - collectd
+      - cuetools
       - curl
       - dconf-editor
       - default-jdk
@@ -78,6 +96,8 @@
       - dia
       - dirmngr
       - dnsmasq
+      - dockbarx
+      - dockbarx-themes-extra
       - ebtables
       - exiv2
       - fdupes
@@ -87,6 +107,7 @@
       - filezilla
       - filezilla-common
       - filezilla-theme-papirus
+      - flac
       - flatpak
       - fonts-noto
       - fpc
@@ -94,7 +115,6 @@
       - g++
       - gcc
       - gdebi
-      # - gimp
       - gir1.2-appindicator3-0.1
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
@@ -103,6 +123,7 @@
       - git-ftp
       - git-lfs
       - git-svn
+      - glyrc
       - gnupg2
       - golang-go
       - google-chrome-stable
@@ -113,10 +134,9 @@
       - grub-customizer
       - gufw
       - hardinfo
-      # - hddtemp - se debe reemplazar por exfatprogs
       - htop
       - iftop
-      # - inkscape
+      - imagemagick
       - intel-microcode
       - iotop
       - iptables-persistent
@@ -125,8 +145,6 @@
       - k3b
       - kazam
       - kdeconnect
-      # - krita
-      # - krita-l10n
       - language-pack-es
       - laptop-mode-tools
       - ldap-utils
@@ -167,6 +185,7 @@
       - libxml2-dev
       - libxslt-dev
       - libyaml-dev
+      - linphone
       - lldpd
       - lm-sensors
       - lsb-release
@@ -176,6 +195,7 @@
       - make
       - mat
       - mat2
+      - memtester
       - mesa-vulkan-drivers
       - mesa-vulkan-drivers:i386
       - module-assistant
@@ -200,10 +220,8 @@
       - numix-icon-theme-circle
       - nvidia-cuda-dev
       - nvidia-cuda-toolkit
-      # - nvidia-prime
       - onedrive
       - openfortivpn
-      # - openshot
       - openssh-client
       - openssh-server
       - openvpn
@@ -211,7 +229,6 @@
       - p7zip-rar
       - papirus-icon-theme
       - pavucontrol
-      # - pepperflashplugin-nonfree
       - pigz
       - pitivi
       - pixmap
@@ -242,6 +259,7 @@
       - screen
       - screenfetch
       - sharutils
+      - shntool
       - shotcut
       - shotwell
       - shutter
@@ -253,7 +271,6 @@
       - snmpd
       - software-properties-common
       - soundconverter
-      # - spotify-client
       - ssh-askpass
       - steam
       - stellarium
@@ -264,18 +281,15 @@
       - synaptic
       - syncthing
       - sysstat
-      # - system76-driver
-      # - system76-driver-nvidia
       - tcpdump
       - telnetd
       - terminator
       - timeshift
-      # - tinyca
       - tmux
+      - tomboy-ng
       - tor
       - torbrowser-launcher
       - ttf-bitstream-vera
-      # - ttf-dejavu
       - ttf-mscorefonts-installer
       - ubuntu-restricted-extras
       - unace
@@ -299,6 +313,8 @@
       - wine
       - winetricks
       - xclip
+      - xfce4-dockbarx-plugin
+      - xfce4-docklike-plugin
       - xinetd
       - xserver-xorg
       - xserver-xorg-input-all
@@ -307,18 +323,6 @@
       - zip
       - zlib1g-dev
       - zsh
-      - xfce4-docklike-plugin
-      - xfce4-dockbarx-plugin
-      - dockbarx
-      - dockbarx-themes-extra
-      - tomboy-ng
-      - linphone
-      - flac
-      - ffmpeg
-      - shntool
-      - cuetools
-      # - gnome-shell-extension-system76-power
-      # - system76-power
     state: present
   #register: common-packages-installation
   tags: common
