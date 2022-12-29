@@ -310,6 +310,7 @@
       - virtualenv
       - vlc
       - vlc-plugin-bittorrent
+      - wavpack
       - whois
       - wine
       - winetricks
