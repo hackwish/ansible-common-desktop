@@ -43,6 +43,12 @@
     url: https://dl.google.com/linux/linux_signing_key.pub
     keyring: /usr/share/keyrings/google-chrome.gpg
     state: present
+- name: Remove old Repo Google Chrome 8workaround
+  apt_repository:
+    repo: 'deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main'
+    state: absent
+    filename: google-chrome
+    update_cache: no
 - name: Add Repo Google Chrome
   apt_repository:
     repo: deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main
@@ -62,9 +68,7 @@
 
 #Spotify
 - apt_key:
-    # keyserver: hkp://keyserver.ubuntu.com:80
-    # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-    url: https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg
+    url: https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
     keyring: /usr/share/keyrings/spotify-keyring.gpg
     state: present
 - apt_repository:
@@ -105,6 +109,7 @@
 - apt_repository:
     repo: ppa:yannubuntu/boot-repair
     codename: '{{ codename }}'
+    state : present
     update_cache: no
 
 # SHUTTER
