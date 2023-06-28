@@ -362,9 +362,12 @@
 - name: Install snaps classic
   snap:
     name:
+      # - skype
       - bashtop
       - bpytop
-      # - skype
+      - dmd
+      - dub
+      - ldc2
       - slack
     classic: yes
 
@@ -414,8 +417,8 @@
     method: system
 
 # Install from shell script
-- name:  Install D Programming Language deps
-  shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
+# - name:  Install D Programming Language deps
+#   shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
 
 - name: Install Python upgrade packages
   shell: python3 -m pip install pip setuptools --upgrade
