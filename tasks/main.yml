@@ -10,8 +10,5 @@
 - include: aditional-packages.yml
   tags: aditional-packages
 
-# - include: sshd.yml
-#   tags: sshd
-
-# - include: fail2ban.yml
-#   tags: fail2ban
+- include: upgrade.yml
+  tags: upgrade
