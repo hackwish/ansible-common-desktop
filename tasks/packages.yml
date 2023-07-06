@@ -184,7 +184,7 @@
       # - libvulkan1:i386
       - libxml-writer-perl
       - libxml2-dev
-      - libxslt-dev
+      # - libxslt-dev
       - libyaml-dev
       # - libwine-development
       - linphone
@@ -199,7 +199,7 @@
       - mat2
       - memtester
       - mesa-vulkan-drivers
-      - mesa-vulkan-drivers:i386
+      # - mesa-vulkan-drivers:i386
       - module-assistant
       - moreutils
       - mpack
@@ -328,7 +328,7 @@
       - xserver-xorg
       - xserver-xorg-input-all
       - xserver-xorg-video-all
-      - yarn
+      # - yarn
       - zip
       - zlib1g-dev
       - zsh
