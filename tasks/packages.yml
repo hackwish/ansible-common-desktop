@@ -145,7 +145,7 @@
       - kazam
       - kdeconnect
       - language-pack-es
-      - laptop-mode-tools
+      # - laptop-mode-tools
       - ldap-utils
       - libavformat-dev
       - libcurl4-openssl-dev
@@ -184,6 +184,7 @@
       - libxml2-dev
       - libxslt-dev
       - libyaml-dev
+      - libwine-development
       - linphone
       - lldpd
       - lm-sensors
@@ -245,6 +246,7 @@
       - python3-dev
       - python3-systemd
       - python3-venv
+      - python3-evdev
       - quodlibet
       - radeontop
       - rar
