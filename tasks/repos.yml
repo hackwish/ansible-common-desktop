@@ -153,6 +153,7 @@
     repo: ppa:lutris-team/lutris
     codename: '{{ codename }}'
     update_cache: no
+    state : absent
     
 # Lutris Vulkan Drivers
 ## Nvidia PPA

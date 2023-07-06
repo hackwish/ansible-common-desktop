@@ -115,6 +115,8 @@
       - gir1.2-appindicator3-0.1
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
+      - gir1.2-webkit2-4.0
+      # - gir1.2-webkit2-4.1
       - git
       - git-flow
       - git-ftp
@@ -190,7 +192,7 @@
       - lm-sensors
       - lsb-release
       - lshw
-      - lutris
+      # - lutris
       - mailutils
       - make
       - mat
@@ -445,7 +447,12 @@
 
 - name: Install a .deb package for Discord
   apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.18/discord-0.0.18.deb
+    deb: https://dl.discordapp.net/apps/linux/0.0.27/discord-0.0.27.deb
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
+- name: Install a .deb package for Lutris
+  apt:
+    deb: https://github.com/lutris/lutris/releases/download/v0.5.13/lutris_0.5.13_all.deb
+  when: ansible_os_family == "Debian"
+  ignore_errors: true
