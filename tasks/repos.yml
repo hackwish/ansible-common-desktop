@@ -125,7 +125,7 @@
     codename: '{{ codename }}'
     state : present
     update_cache: no
-  when: codename != "jammy" or codename != "vanessa"
+  when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 # WINE
 - apt_key:
@@ -264,3 +264,14 @@
   become: true
   become_user: root
   ignore_errors: true
+
+# Steam
+- apt_key:
+    url: http://repo.steampowered.com/steam/archive/stable/steam.gpg
+    keyring: /usr/share/keyrings/steam.gpg
+    state: present
+
+- apt_repository:
+    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/steam.gpg] http://repo.steampowered.com/steam/ stable steam'
+    state : present
+    update_cache: no  
