@@ -65,7 +65,7 @@
       - audacity
       - autoconf
       - automake
-      - balena-etcher-electron
+      # - balena-etcher-electron
       - bc
       - beets
       - bison
