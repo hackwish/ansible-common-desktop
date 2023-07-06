@@ -157,7 +157,7 @@
       - libfile-tee-perl
       - libfreetype6-dev
       - libgdbm-dev
-      - libgl1-mesa-dri:i386
+      # - libgl1-mesa-dri:i386
       - libglib2.0-dev-bin
       - libguestfs-perl
       - libimage-exiftool-perl
@@ -181,7 +181,7 @@
       - libswscale-dev
       - libtool
       - libvulkan1
-      - libvulkan1:i386
+      # - libvulkan1:i386
       - libxml-writer-perl
       - libxml2-dev
       - libxslt-dev
