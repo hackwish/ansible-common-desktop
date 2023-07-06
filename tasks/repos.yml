@@ -119,7 +119,13 @@
     codename: '{{ codename }}'
     state : absent
     update_cache: no
-  when: codename != "jammy" or codename != "vanessa"
+  # when: codename != "jammy" or codename != "vanessa" or codename != "vera"
+- apt_repository:
+    repo: ppa:shutter/ppa 
+    codename: '{{ codename }}'
+    state : absent
+    update_cache: no
+
 - apt_repository:
     repo: ppa:shutter/ppa 
     codename: '{{ codename }}'
@@ -146,7 +152,7 @@
     codename: '{{ codename }}'
     update_cache: no
     state : absent
-  when: codename != "jammy" or codename != "vanessa"
+  when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 # Lutris
 - apt_repository:
@@ -182,7 +188,7 @@
     codename: '{{ codename }}'
     update_cache: no
     state: absent
-  when: codename != "jammy" or codename != "vanessa"
+  when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 - apt_repository:
     repo: ppa:peterlevi/ppa
