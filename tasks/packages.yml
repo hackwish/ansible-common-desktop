@@ -184,7 +184,7 @@
       - libxml2-dev
       - libxslt-dev
       - libyaml-dev
-      - libwine-development
+      # - libwine-development
       - linphone
       - lldpd
       - lm-sensors
