@@ -158,6 +158,8 @@
       - libfreetype6-dev
       - libgdbm-dev
       # - libgl1-mesa-dri:i386
+      - libgcc-s1
+      - libgcc-s1:i386
       - libglib2.0-dev-bin
       - libguestfs-perl
       - libimage-exiftool-perl
@@ -181,7 +183,7 @@
       - libswscale-dev
       - libtool
       - libvulkan1
-      # - libvulkan1:i386
+      - libvulkan1:i386
       - libxml-writer-perl
       - libxml2-dev
       # - libxslt-dev
@@ -199,7 +201,7 @@
       - mat2
       - memtester
       - mesa-vulkan-drivers
-      # - mesa-vulkan-drivers:i386
+      - mesa-vulkan-drivers:i386
       - module-assistant
       - moreutils
       - mpack
@@ -333,9 +335,9 @@
       - zlib1g-dev
       - zsh
       - libgl1-mesa-dri:amd64
-      # - libgl1-mesa-dri:i386
+      - libgl1-mesa-dri:i386
       - libgl1-mesa-glx:amd64
-      # - libgl1-mesa-glx:i386
+      - libgl1-mesa-glx:i386
       # - steam-launcher
       - steam
       - steam-devices
