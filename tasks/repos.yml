@@ -126,12 +126,12 @@
     state : absent
     update_cache: no
 
-- apt_repository:
-    repo: ppa:shutter/ppa 
-    codename: '{{ codename }}'
-    state : present
-    update_cache: no
-  when: codename != "jammy" or codename != "vanessa" or codename != "vera"
+# - apt_repository:
+#     repo: ppa:shutter/ppa 
+#     codename: '{{ codename }}'
+#     state : present
+#     update_cache: no
+#   when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 # WINE
 - apt_key:
