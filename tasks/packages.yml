@@ -149,6 +149,7 @@
       - language-pack-es
       # - laptop-mode-tools
       - ldap-utils
+      - libatomic1:i386
       - libavformat-dev
       - libcurl4-openssl-dev
       - libegl1-mesa
@@ -167,6 +168,7 @@
       - libjack0
       - libjansson-dev
       - libldap2-dev
+      - libllvm15:i386
       - liblua5.3-dev
       - libmagic-dev
       - libncurses5-dev
