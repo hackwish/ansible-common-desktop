@@ -67,7 +67,7 @@
       - automake
       # - balena-etcher-electron
       - bc
-      - beets
+      # - beets
       - bison
       - boot-repair
       - brasero-cdrkit
