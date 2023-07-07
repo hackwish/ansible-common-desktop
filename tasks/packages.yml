@@ -179,6 +179,7 @@
       - libssl-dev
       - libstdc++5
       - libstdc++6
+      - libstdc++6:i386
       - libsvn-java
       - libswscale-dev
       - libtool
