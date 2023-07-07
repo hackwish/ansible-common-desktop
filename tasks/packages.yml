@@ -93,8 +93,8 @@
       - dia
       - dirmngr
       - dnsmasq
-      # - dockbarx
-      # - dockbarx-themes-extra
+      - dockbarx
+      - dockbarx-themes-extra
       - ebtables
       - exiv2
       - fdupes
