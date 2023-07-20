@@ -5,6 +5,8 @@
     name: "{{ packages }}"
   vars:
     packages:
+      # - balena-etcher-electron
+      # - beets
       # - bluez
       # - bluez-tools
       # - celestia
@@ -16,6 +18,7 @@
       # - dbus
       # - dropbox
       # - gimp
+      # - gir1.2-webkit2-4.1
       # - gnome-shell-extension-system76-power
       # - gnome-shell-extensions
       # - gnome-software-plugin-flatpak
@@ -28,10 +31,15 @@
       # - kdenlive
       # - krita
       # - krita-l10n
+      # - laptop-mode-tools
+      # - libgcc-s1
+      # - libgl1-mesa-dri:i386
       # - libnvidia-gl-440 
       # - libnvidia-gl-440:i386
+      # - libxslt-dev
       # - linux-generic
       # - linux-headers-generic
+      # - lutris
       # - murrine-themes
       # - nodejs
       # - numix-blue-gtk-theme
@@ -46,6 +54,8 @@
       # - rtl8812au-dkms
       # - signal-desktop
       # - spotify-client
+      # - steam
+      # - steam-launcher
       # - system76-driver
       # - system76-driver-nvidia
       # - system76-power
@@ -54,6 +64,7 @@
       # - ttf-dejavu
       # - virtualbox-6.1
       # - woeusb
+      # - yarn
       - abcde
       - acl
       - apt-transport-https
@@ -65,9 +76,7 @@
       - audacity
       - autoconf
       - automake
-      # - balena-etcher-electron
       - bc
-      # - beets
       - bison
       - boot-repair
       - brasero-cdrkit
@@ -116,7 +125,6 @@
       - gir1.2-clutter-1.0
       - gir1.2-gtop-2.0
       - gir1.2-webkit2-4.0
-      # - gir1.2-webkit2-4.1
       - git
       - git-flow
       - git-ftp
@@ -147,7 +155,6 @@
       - kazam
       - kdeconnect
       - language-pack-es
-      # - laptop-mode-tools
       - ldap-utils
       - libatomic1:i386
       - libavformat-dev
@@ -157,10 +164,12 @@
       - libffi-dev
       - libfile-tee-perl
       - libfreetype6-dev
-      - libgdbm-dev
-      # - libgl1-mesa-dri:i386
-      # - libgcc-s1
       - libgcc-s1:i386
+      - libgdbm-dev
+      - libgl1-mesa-dri:amd64
+      - libgl1-mesa-dri:i386
+      - libgl1-mesa-glx:amd64
+      - libgl1-mesa-glx:i386
       - libglib2.0-dev-bin
       - libguestfs-perl
       - libimage-exiftool-perl
@@ -187,17 +196,15 @@
       - libtool
       - libvulkan1
       - libvulkan1:i386
+      - libwine-development
       - libxml-writer-perl
       - libxml2-dev
-      # - libxslt-dev
       - libyaml-dev
-      - libwine-development
       - linphone
       - lldpd
       - lm-sensors
       - lsb-release
       - lshw
-      # - lutris
       - mailutils
       - make
       - mat
@@ -251,9 +258,9 @@
       - putty-tools
       - pv
       - python3-dev
+      - python3-evdev
       - python3-systemd
       - python3-venv
-      - python3-evdev
       - quodlibet
       - radeontop
       - rar
@@ -283,7 +290,8 @@
       - ssh-askpass
       - sshfs
       - sshuttle
-      # - steam
+      - steam
+      - steam-devices
       - stellarium
       - stress
       - subversion
@@ -333,17 +341,9 @@
       - xserver-xorg
       - xserver-xorg-input-all
       - xserver-xorg-video-all
-      # - yarn
       - zip
       - zlib1g-dev
       - zsh
-      - libgl1-mesa-dri:amd64
-      - libgl1-mesa-dri:i386
-      - libgl1-mesa-glx:amd64
-      - libgl1-mesa-glx:i386
-      # - steam-launcher
-      - steam
-      - steam-devices
     state: present
   #register: common-packages-installation
   tags: common
@@ -351,7 +351,9 @@
 # Snap
 - name: Install snaps
   snap:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
       # - discord
       # - keepassxc
       # - retroarch
@@ -372,7 +374,9 @@
 
 - name: Install snaps classic
   snap:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
       # - skype
       - bashtop
       - bpytop
@@ -384,7 +388,9 @@
 
 - name: Install snaps edge
   snap:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
       - celestia-daily
     channel: latest/edge
 
@@ -398,7 +404,9 @@
 
 - name: Install multiple packages
   community.general.flatpak:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
       # - com.google.Chrome
       # - us.zoom.Zoom
       - com.adobe.Flash-Player-Projector
@@ -425,7 +433,7 @@
       - com.icanblink.blink
       # - org.gnome.Calls
       # - net.jami.Jami
-    method: system
+    method: user
 
 # Install from shell script
 # - name:  Install D Programming Language deps
@@ -457,14 +465,26 @@
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
+# Discord
+- name: Get latest Release from Discord
+  shell: curl -Lo /tmp/discord.deb https://discord.com/api/download?platform=linux&format=deb
+  args:
+    warn: no
+
 - name: Install a .deb package for Discord
   apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.27/discord-0.0.27.deb
+    deb: /tmp/discord.deb
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
+# Lutris
+- name: Get latest Release from Lutris
+  shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
+  args:
+    warn: no
+
 - name: Install a .deb package for Lutris
   apt:
-    deb: https://github.com/lutris/lutris/releases/download/v0.5.13/lutris_0.5.13_all.deb
+    deb: /tmp/lutris.deb
   when: ansible_os_family == "Debian"
   ignore_errors: true
