@@ -441,6 +441,7 @@
       - org.kde.krita
       - org.openshot.OpenShot
       - org.telegram.desktop
+      - io.github.anirbandey1.ChatbotClient
     method: user
 
 # Install from shell script

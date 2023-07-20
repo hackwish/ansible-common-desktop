@@ -21,7 +21,8 @@
           - mint-meta-codecs
           - mint-meta-mate
           - mint-meta-xfce
-          - xfce4 xfce4-goodies
+          - xfce4
+          - xfce4-goodies
         state: present
       # register: common-aditional-installation
       ignore_errors: true
