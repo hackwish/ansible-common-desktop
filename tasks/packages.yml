@@ -350,7 +350,7 @@
 
 # Snap
 - name: Install snaps
-  snap:
+  community.general.snap:
     name: "{{ packages }}"
   vars:
     packages:
@@ -373,7 +373,7 @@
       - opera
 
 - name: Install snaps classic
-  snap:
+  community.general.snap:
     name: "{{ packages }}"
   vars:
     packages:
@@ -387,7 +387,7 @@
     classic: yes
 
 - name: Install snaps edge
-  snap:
+  community.general.snap:
     name: "{{ packages }}"
   vars:
     packages:
