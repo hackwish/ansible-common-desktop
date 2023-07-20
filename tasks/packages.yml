@@ -295,6 +295,7 @@
       - stellarium
       - stress
       - subversion
+      - sublime-music
       - sudo
       - swaks
       - synaptic
@@ -363,36 +364,36 @@
 #       # - vault
 #       # - wickrme
 #       # - zoom-client
-#       - barrier
+#       # - barrier
 #       - bitwarden
 #       - brave
-#       - chromium
+#       # - chromium
 #       - doctl
 #       - lxd
 #       - notion-snap
-#       - opera
+#       # - opera
 
-- name: Install snaps classic
-  community.general.snap:
-    name: "{{ packages }}"
-  vars:
-    packages:
-      # - skype
-      - bashtop
-      - bpytop
-      - dmd
-      - dub
-      - ldc2
-      - slack
-    classic: yes
+# - name: Install snaps classic
+#   community.general.snap:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
+#       # - skype
+#       - bashtop
+#       - bpytop
+#       - dmd
+#       - dub
+#       - ldc2
+#       # - slack
+#     classic: yes
 
-- name: Install snaps edge
-  community.general.snap:
-    name: "{{ packages }}"
-  vars:
-    packages:
-      - celestia-daily
-    channel: latest/edge
+# - name: Install snaps edge
+#   community.general.snap:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
+#       - celestia-daily
+#     channel: latest/edge
 
 # Flatpak
 - name: Add the flathub flatpak repository remote to the user installation
@@ -408,6 +409,11 @@
   vars:
     packages:
       # - com.google.Chrome
+      # - io.github.mimbrero.WhatsAppDesktop
+      # - net.jami.Jami
+      # - org.gnome.Calls
+      # - org.gnome.Solanum
+      # - org.gnome.Tomboy
       # - us.zoom.Zoom
       - com.adobe.Flash-Player-Projector
       - com.adrienplazas.Metronome
@@ -415,24 +421,26 @@
       - com.belmoussaoui.Authenticator
       - com.belmoussaoui.Decoder
       - com.github.bcedu.vgrive
+      - com.github.debauchee.barrier
       - com.github.iwalton3.jellyfin-media-player
       - com.github.tchx84.Flatseal
+      - com.icanblink.blink
       - com.microsoft.Edge
       - com.mojang.Minecraft
+      - com.opera.Opera
+      - com.skype.Client
+      - com.slack.Slack
       - com.spotify.Client
-      - io.github.mimbrero.WhatsAppDesktop
+      - io.github.dweymouth.supersonic
       - net.brinkervii.grapejuice
+      - org.chromium.Chromium
       - org.clementine_player.Clementine
       - org.gimp.GIMP
-      # - org.gnome.Solanum
       - org.inkscape.Inkscape
       - org.jitsi.jitsi-meet
       - org.kde.krita
       - org.openshot.OpenShot
-      # - org.gnome.Tomboy
-      - com.icanblink.blink
-      # - org.gnome.Calls
-      # - net.jami.Jami
+      - org.telegram.desktop
     method: user
 
 # Install from shell script
