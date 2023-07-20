@@ -349,28 +349,28 @@
   tags: common
 
 # Snap
-- name: Install snaps
-  community.general.snap:
-    name: "{{ packages }}"
-  vars:
-    packages:
-      # - discord
-      # - keepassxc
-      # - retroarch
-      # - signal-desktop
-      # - teams
-      # - telegram-desktop
-      # - vault
-      # - wickrme
-      # - zoom-client
-      - barrier
-      - bitwarden
-      - brave
-      - chromium
-      - doctl
-      - lxd
-      - notion-snap
-      - opera
+# - name: Install snaps
+#   community.general.snap:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
+#       # - discord
+#       # - keepassxc
+#       # - retroarch
+#       # - signal-desktop
+#       # - teams
+#       # - telegram-desktop
+#       # - vault
+#       # - wickrme
+#       # - zoom-client
+#       - barrier
+#       - bitwarden
+#       - brave
+#       - chromium
+#       - doctl
+#       - lxd
+#       - notion-snap
+#       - opera
 
 - name: Install snaps classic
   community.general.snap:
