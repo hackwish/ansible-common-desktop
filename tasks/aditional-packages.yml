@@ -17,12 +17,12 @@
       vars:
         packages:
           - language-pack-es
-          - mate-tweak
+          # - mate-tweak
           - mint-meta-codecs
-          - mint-meta-mate
-          - mint-meta-xfce
-          - xfce4
-          - xfce4-goodies
+          # - mint-meta-mate
+          # - mint-meta-xfce
+          # - xfce4
+          # - xfce4-goodies
         state: present
       # register: common-aditional-installation
       ignore_errors: true
