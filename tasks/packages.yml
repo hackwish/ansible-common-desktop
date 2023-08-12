@@ -243,6 +243,7 @@
       - p7zip-rar
       - papirus-icon-theme
       - pavucontrol
+      - picard
       - pigz
       - pitivi
       - pixmap
@@ -403,7 +404,7 @@
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
 
-- name: Install multiple packages
+- name: Install Flatpak packages
   community.general.flatpak:
     name: "{{ packages }}"
   vars:
