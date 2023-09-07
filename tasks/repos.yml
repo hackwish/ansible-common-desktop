@@ -274,6 +274,16 @@
     state : present
     update_cache: no  
 
+# Waydroid
+- apt_key:
+    url: https://repo.waydro.id/waydroid.gpg
+    keyring: /usr/share/keyrings/waydroid.gpg
+    state: present
+- apt_repository:
+    repo: 'deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ {{ codename }} main'
+    state : present
+    update_cache: no  
+
 - name: apt-get update
   shell: apt-get update
   become: true

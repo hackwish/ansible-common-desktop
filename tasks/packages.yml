@@ -142,6 +142,7 @@
       - gufw
       - hardinfo
       - htop
+      - i3lock
       - iftop
       - imagemagick
       - intel-microcode
@@ -217,6 +218,7 @@
       - mpack
       - multipath-tools
       - multitail
+      - mpv
       - nano
       - ncdu
       - netcat
@@ -332,6 +334,7 @@
       - vlc
       - vlc-plugin-bittorrent
       - wavpack
+      - waydroid
       - whois
       - wine
       - winetricks
