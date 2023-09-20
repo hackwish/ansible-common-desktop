@@ -399,19 +399,19 @@
 #       - celestia-daily
 #     channel: latest/edge
 
-# Flatpak
-- name: Add the flathub flatpak repository remote to the user installation
-  flatpak_remote:
-    name: flathub
-    state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    method: user
+# # Flatpak
+# - name: Add the flathub flatpak repository remote to the user installation
+#   flatpak_remote:
+#     name: flathub
+#     state: present
+#     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+#     method: user
 
-- name: Install Flatpak packages
-  community.general.flatpak:
-    name: "{{ packages }}"
-  vars:
-    packages:
+# - name: Install Flatpak packages
+#   community.general.flatpak:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
       # - com.google.Chrome
       # - io.github.mimbrero.WhatsAppDesktop
       # - net.jami.Jami
@@ -419,34 +419,34 @@
       # - org.gnome.Solanum
       # - org.gnome.Tomboy
       # - us.zoom.Zoom
-      - com.adobe.Flash-Player-Projector
-      - com.adrienplazas.Metronome
-      - com.anydesk.Anydesk
-      - com.belmoussaoui.Authenticator
-      - com.belmoussaoui.Decoder
-      - com.github.bcedu.vgrive
-      - com.github.debauchee.barrier
-      - com.github.iwalton3.jellyfin-media-player
-      - com.github.tchx84.Flatseal
-      - com.icanblink.blink
-      - com.microsoft.Edge
-      - com.mojang.Minecraft
-      - com.opera.Opera
-      - com.skype.Client
-      - com.slack.Slack
-      - com.spotify.Client
-      - io.github.dweymouth.supersonic
-      - net.brinkervii.grapejuice
-      - org.chromium.Chromium
-      - org.clementine_player.Clementine
-      - org.gimp.GIMP
-      - org.inkscape.Inkscape
-      - org.jitsi.jitsi-meet
-      - org.kde.krita
-      - org.openshot.OpenShot
-      - org.telegram.desktop
-      - io.github.anirbandey1.ChatbotClient
-    method: user
+#       - com.adobe.Flash-Player-Projector
+#       - com.adrienplazas.Metronome
+#       - com.anydesk.Anydesk
+#       - com.belmoussaoui.Authenticator
+#       - com.belmoussaoui.Decoder
+#       - com.github.bcedu.vgrive
+#       - com.github.debauchee.barrier
+#       - com.github.iwalton3.jellyfin-media-player
+#       - com.github.tchx84.Flatseal
+#       - com.icanblink.blink
+#       - com.microsoft.Edge
+#       - com.mojang.Minecraft
+#       - com.opera.Opera
+#       - com.skype.Client
+#       - com.slack.Slack
+#       - com.spotify.Client
+#       - io.github.dweymouth.supersonic
+#       - net.brinkervii.grapejuice
+#       - org.chromium.Chromium
+#       - org.clementine_player.Clementine
+#       - org.gimp.GIMP
+#       - org.inkscape.Inkscape
+#       - org.jitsi.jitsi-meet
+#       - org.kde.krita
+#       - org.openshot.OpenShot
+#       - org.telegram.desktop
+#       - io.github.anirbandey1.ChatbotClient
+#     method: user
 
 # Install from shell script
 # - name:  Install D Programming Language deps
