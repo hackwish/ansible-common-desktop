@@ -1,395 +1,393 @@
----
 #INSTALL COMMON PACKAGES 
 - name: Instala paquetes common
-  apt: 
+  apt:
     name: "{{ packages }}"
   vars:
     packages:
-      # - balena-etcher-electron
-      # - beets
-      # - bluez
-      # - bluez-tools
-      # - celestia
-      # - chrome-gnome-shell
-      # - collectd
-      # - compiz
-      # - compiz-plugins-extra
-      # - compizconfig-settings-manager
-      # - dbus
-      # - dropbox
-      # - gimp
-      # - gir1.2-webkit2-4.1
-      # - gnome-shell-extension-system76-power
-      # - gnome-shell-extensions
-      # - gnome-software-plugin-flatpak
-      # - gnome-tweak-tool
-      # - gnome-tweaks
-      # - gnome-web-photo
-      # - google-chrome-stable
-      # - hddtemp - se debe reemplazar por exfatprogs
-      # - inkscape
-      # - kdenlive
-      # - krita
-      # - krita-l10n
-      # - laptop-mode-tools
-      # - libgcc-s1
-      # - libgl1-mesa-dri:i386
-      # - libnvidia-gl-440 
-      # - libnvidia-gl-440:i386
-      # - libxslt-dev
-      # - linux-generic
-      # - linux-headers-generic
-      # - lutris
-      # - murrine-themes
-      # - nodejs
-      # - numix-blue-gtk-theme
-      # - nvidia-driver-440
-      # - nvidia-prime
-      # - openshot
-      # - pepperflashplugin-nonfree
-      # - python-dev
-      # - python-packaging
-      # - python-setuptools
-      # - python3-pip
-      # - rtl8812au-dkms
-      # - signal-desktop
-      # - spotify-client
-      # - steam
-      # - steam-launcher
-      # - system76-driver
-      # - system76-driver-nvidia
-      # - system76-power
-      # - timekpr-next
-      # - tinyca
-      # - ttf-dejavu
-      # - virtualbox-6.1
-      # - woeusb
-      # - yarn
-      - abcde
-      - acl
-      - apt-transport-https
-      - apt-xapian-index
-      - aptitude
-      - arc-theme
-      - arj
-      - atop
-      - audacity
-      - autoconf
-      - automake
-      - bc
-      - bison
-      - boot-repair
-      - brasero-cdrkit
-      - bridge-utils
-      - build-essential
-      - ca-certificates
-      - calibre
-      - catfish
-      - ccze
-      - cdparanoia
-      - checkinstall
-      - cheese
-      - clang
-      - cmake
-      - cmake-curses-gui
-      - cuetools
-      - curl
-      - dconf-editor
-      - default-jdk
-      - default-jre
-      - deja-dup
-      - deja-dup-caja
-      - dia
-      - dirmngr
-      - dnsmasq
-      # - dockbarx
-      # - dockbarx-themes-extra
-      - ebtables
-      - exiv2
-      - fdupes
-      - ffmpeg
-      - figlet
-      - file-roller
-      - filezilla
-      - filezilla-common
-      - filezilla-theme-papirus
-      - flac
-      - flatpak
-      - fonts-noto
-      - fpc
-      - freeglut3
-      - g++
-      - gcc
-      - gdebi
-      - gir1.2-appindicator3-0.1
-      - gir1.2-clutter-1.0
-      - gir1.2-gtop-2.0
-      - gir1.2-webkit2-4.0
-      - git
-      - git-flow
-      - git-ftp
-      - git-lfs
-      - git-svn
-      - glyrc
-      - gnupg2
-      - golang-go
-      - google-chrome-stable
-      - gparted
-      - gphoto2
-      - gpick
-      - graphviz
-      - grub-customizer
-      - gufw
-      - hardinfo
-      - htop
-      - i3lock
-      - iftop
-      - imagemagick
-      - intel-microcode
-      - iotop
-      - iptables-persistent
-      - iptstate
-      - joystick
-      - jq
-      - jstest-gtk
-      - k3b
-      - kazam
-      - kdeconnect
-      - language-pack-es
-      - ldap-utils
-      - libatomic1:i386
-      - libavformat-dev
-      - libcurl4-openssl-dev
-      - libegl1-mesa
-      - libelf-dev
-      - libffi-dev
-      - libfile-tee-perl
-      - libfreetype6-dev
-      - libgcc-s1:i386
-      - libgdbm-dev
-      - libgl1-mesa-dri:amd64
-      - libgl1-mesa-dri:i386
-      - libgl1-mesa-glx:amd64
-      - libgl1-mesa-glx:i386
-      - libglib2.0-dev-bin
-      - libguestfs-perl
-      - libimage-exiftool-perl
-      - libjack-dev
-      - libjack0
-      - libjansson-dev
-      - libldap2-dev
-      - libllvm15:i386
-      - liblua5.3-dev
-      - libmagic-dev
-      - libncurses5-dev
-      - libnotify-dev
-      - libopencv-highgui-dev
-      - libportmidi-dev
-      - libreadline-dev
-      - libsasl2-dev
-      - libsqlite3-dev
-      - libssl-dev
-      - libstdc++5
-      - libstdc++6
-      - libstdc++6:i386
-      - libsvn-java
-      - libswscale-dev
-      - libtool
-      - libvulkan1
-      - libvulkan1:i386
-      - libwine-development
-      - libxml-writer-perl
-      - libxml2-dev
-      - libyaml-dev
-      - linphone
-      - lldpd
-      - lm-sensors
-      - lsb-release
-      - lshw
-      - mailutils
-      - make
-      - mat
-      - mat2
-      - memtester
-      - mesa-vulkan-drivers
-      - mesa-vulkan-drivers:i386
-      - module-assistant
-      - moreutils
-      - mpack
-      - multipath-tools
-      - multitail
-      - mpv
-      - nano
-      - ncdu
-      - netcat
-      - netcat-openbsd
-      - network-manager-openvpn
-      - network-manager-openvpn-gnome
-      - nfs-common
-      - nfs-kernel-server
-      - nmap
-      - nmon
-      - ntp
-      - ntpdate
-      - numix-gtk-theme
-      - numix-icon-theme
-      - numix-icon-theme-circle
-      - nvidia-cuda-dev
-      - nvidia-cuda-toolkit
-      - onedrive
-      - openfortivpn
-      - openssh-client
-      - openssh-server
-      - openvpn
-      - p7zip-full
-      - p7zip-rar
-      - papirus-icon-theme
-      - pavucontrol
-      - picard
-      - pigz
-      - pitivi
-      - pixmap
-      - pkg-config
-      - plank
-      - playonlinux
-      - portaudio19-dev
-      - postfix
-      - powertop
-      - preload
-      - psensor
-      - pulseaudio-equalizer
-      - putty-tools
-      - pv
-      - python3-dev
-      - python3-evdev
-      - python3-systemd
-      - python3-venv
-      - quodlibet
-      - radeontop
-      - rar
-      - rbenv
-      - rdesktop
-      - rdfind
-      - redshift
-      - redshift-gtk
-      - remmina
-      - ruby-dev
-      - ruby-full
-      - screen
-      - screenfetch
-      - sharutils
-      - shntool
-      - shotcut
-      - shotwell
-      - shutter
-      - siege
-      - smartmontools
-      - snapd
-      - snmp
-      - snmp-mibs-downloader
-      - snmpd
-      - software-properties-common
-      - soundconverter
-      - ssh-askpass
-      - sshfs
-      - sshuttle
-      - steam
-      - steam-devices
-      - stellarium
-      - stress
-      - subversion
-      - sublime-music
-      - sudo
-      - swaks
-      - synaptic
-      - syncthing
-      - sysstat
-      - tcpdump
-      - telnetd
-      - terminator
-      - timeshift
-      # - tlp
-      - tmux
-      - tomboy-ng
-      - tor
-      - torbrowser-launcher
-      - ttf-bitstream-vera
-      - ttf-mscorefonts-installer
-      - ubuntu-restricted-extras
-      - unace
-      - unixodbc-dev
-      - unrar
-      - unzip
-      - uuid-runtime
-      - v4l2loopback-dkms
-      - v4l2loopback-utils
-      - variety
-      - vim
-      - vim-common
-      - vim-gtk
-      - vim-gui-common
-      - vim-snippets
-      - vinagre
-      - virtualenv
-      - vlc
-      - vlc-plugin-bittorrent
-      - wavpack
-      - waydroid
-      - whois
-      - wine
-      - winetricks
-      - xboxdrv
-      - xclip
-      # - xfce4-dockbarx-plugin
-      - xfce4-docklike-plugin
-      - xinetd
-      - xserver-xorg
-      - xserver-xorg-input-all
-      - xserver-xorg-video-all
-      - zip
-      - zlib1g-dev
-      - zsh
+    # - balena-etcher-electron
+    # - beets
+    # - bluez
+    # - bluez-tools
+    # - celestia
+    # - chrome-gnome-shell
+    # - collectd
+    # - compiz
+    # - compiz-plugins-extra
+    # - compizconfig-settings-manager
+    # - dbus
+    # - dropbox
+    # - gimp
+    # - gir1.2-webkit2-4.1
+    # - gnome-shell-extension-system76-power
+    # - gnome-shell-extensions
+    # - gnome-software-plugin-flatpak
+    # - gnome-tweak-tool
+    # - gnome-tweaks
+    # - gnome-web-photo
+    # - google-chrome-stable
+    # - hddtemp - se debe reemplazar por exfatprogs
+    # - inkscape
+    # - kdenlive
+    # - krita
+    # - krita-l10n
+    # - laptop-mode-tools
+    # - libgcc-s1
+    # - libgl1-mesa-dri:i386
+    # - libnvidia-gl-440 
+    # - libnvidia-gl-440:i386
+    # - libxslt-dev
+    # - linux-generic
+    # - linux-headers-generic
+    # - lutris
+    # - murrine-themes
+    # - nodejs
+    # - numix-blue-gtk-theme
+    # - nvidia-driver-440
+    # - nvidia-prime
+    # - openshot
+    # - pepperflashplugin-nonfree
+    # - python-dev
+    # - python-packaging
+    # - python-setuptools
+    # - python3-pip
+    # - rtl8812au-dkms
+    # - signal-desktop
+    # - spotify-client
+    # - steam
+    # - steam-launcher
+    # - system76-driver
+    # - system76-driver-nvidia
+    # - system76-power
+    # - timekpr-next
+    # - tinyca
+    # - ttf-dejavu
+    # - virtualbox-6.1
+    # - woeusb
+    # - yarn
+    - abcde
+    - acl
+    - apt-transport-https
+    - apt-xapian-index
+    - aptitude
+    - arc-theme
+    - arj
+    - atop
+    - audacity
+    - autoconf
+    - automake
+    - bc
+    - bison
+    - boot-repair
+    - brasero-cdrkit
+    - bridge-utils
+    - build-essential
+    - ca-certificates
+    - calibre
+    - catfish
+    - ccze
+    - cdparanoia
+    - checkinstall
+    - cheese
+    - clang
+    - cmake
+    - cmake-curses-gui
+    - cuetools
+    - curl
+    - dconf-editor
+    - default-jdk
+    - default-jre
+    - deja-dup
+    - deja-dup-caja
+    - dia
+    - dirmngr
+    - dnsmasq
+    # - dockbarx
+    # - dockbarx-themes-extra
+    - ebtables
+    - exiv2
+    - fdupes
+    - ffmpeg
+    - figlet
+    - file-roller
+    - filezilla
+    - filezilla-common
+    - filezilla-theme-papirus
+    - flac
+    - flatpak
+    - fonts-noto
+    - fpc
+    - freeglut3
+    - g++
+    - gcc
+    - gdebi
+    - gir1.2-appindicator3-0.1
+    - gir1.2-clutter-1.0
+    - gir1.2-gtop-2.0
+    - gir1.2-webkit2-4.0
+    - git
+    - git-flow
+    - git-ftp
+    - git-lfs
+    - git-svn
+    - glyrc
+    - gnupg2
+    - golang-go
+    - google-chrome-stable
+    - gparted
+    - gphoto2
+    - gpick
+    - graphviz
+    - grub-customizer
+    - gufw
+    - hardinfo
+    - htop
+    - i3lock
+    - iftop
+    - imagemagick
+    - intel-microcode
+    - iotop
+    - iptables-persistent
+    - iptstate
+    - joystick
+    - jq
+    - jstest-gtk
+    - k3b
+    - kazam
+    - kdeconnect
+    - language-pack-es
+    - ldap-utils
+    - libatomic1:i386
+    - libavformat-dev
+    - libcurl4-openssl-dev
+    - libegl1-mesa
+    - libelf-dev
+    - libffi-dev
+    - libfile-tee-perl
+    - libfreetype6-dev
+    - libgcc-s1:i386
+    - libgdbm-dev
+    - libgl1-mesa-dri:amd64
+    - libgl1-mesa-dri:i386
+    - libgl1-mesa-glx:amd64
+    - libgl1-mesa-glx:i386
+    - libglib2.0-dev-bin
+    - libguestfs-perl
+    - libimage-exiftool-perl
+    - libjack-dev
+    - libjack0
+    - libjansson-dev
+    - libldap2-dev
+    - libllvm15:i386
+    - liblua5.3-dev
+    - libmagic-dev
+    - libncurses5-dev
+    - libnotify-dev
+    - libopencv-highgui-dev
+    - libportmidi-dev
+    - libreadline-dev
+    - libsasl2-dev
+    - libsqlite3-dev
+    - libssl-dev
+    - libstdc++5
+    - libstdc++6
+    - libstdc++6:i386
+    - libsvn-java
+    - libswscale-dev
+    - libtool
+    - libvulkan1
+    - libvulkan1:i386
+    - libwine-development
+    - libxml-writer-perl
+    - libxml2-dev
+    - libyaml-dev
+    - linphone
+    - lldpd
+    - lm-sensors
+    - lsb-release
+    - lshw
+    - mailutils
+    - make
+    - mat
+    - mat2
+    - memtester
+    - mesa-vulkan-drivers
+    - mesa-vulkan-drivers:i386
+    - module-assistant
+    - moreutils
+    - mpack
+    - multipath-tools
+    - multitail
+    - mpv
+    - nano
+    - ncdu
+    - netcat
+    - netcat-openbsd
+    - network-manager-openvpn
+    - network-manager-openvpn-gnome
+    - nfs-common
+    - nfs-kernel-server
+    - nmap
+    - nmon
+    - ntp
+    - ntpdate
+    - numix-gtk-theme
+    - numix-icon-theme
+    - numix-icon-theme-circle
+    - nvidia-cuda-dev
+    - nvidia-cuda-toolkit
+    - onedrive
+    - openfortivpn
+    - openssh-client
+    - openssh-server
+    - openvpn
+    - p7zip-full
+    - p7zip-rar
+    - papirus-icon-theme
+    - pavucontrol
+    - picard
+    - pigz
+    - pitivi
+    - pixmap
+    - pkg-config
+    - plank
+    - playonlinux
+    - portaudio19-dev
+    - postfix
+    - powertop
+    - preload
+    - psensor
+    - pulseaudio-equalizer
+    - putty-tools
+    - pv
+    - python3-dev
+    - python3-evdev
+    - python3-systemd
+    - python3-venv
+    - quodlibet
+    - radeontop
+    - rar
+    - rbenv
+    - rdesktop
+    - rdfind
+    - redshift
+    - redshift-gtk
+    - remmina
+    - ruby-dev
+    - ruby-full
+    - screen
+    - screenfetch
+    - sharutils
+    - shntool
+    - shotcut
+    - shotwell
+    - shutter
+    - siege
+    - smartmontools
+    - snapd
+    - snmp
+    - snmp-mibs-downloader
+    - snmpd
+    - software-properties-common
+    - soundconverter
+    - ssh-askpass
+    - sshfs
+    - sshuttle
+    - steam
+    - steam-devices
+    - stellarium
+    - stress
+    - subversion
+    - sublime-music
+    - sudo
+    - swaks
+    - synaptic
+    - syncthing
+    - sysstat
+    - tcpdump
+    - telnetd
+    - terminator
+    - timeshift
+    # - tlp
+    - tmux
+    - tomboy-ng
+    - tor
+    - torbrowser-launcher
+    - ttf-bitstream-vera
+    - ttf-mscorefonts-installer
+    - ubuntu-restricted-extras
+    - unace
+    - unixodbc-dev
+    - unrar
+    - unzip
+    - uuid-runtime
+    - v4l2loopback-dkms
+    - v4l2loopback-utils
+    - variety
+    - vim
+    - vim-common
+    - vim-gtk
+    - vim-gui-common
+    - vim-snippets
+    - vinagre
+    - virtualenv
+    - vlc
+    - vlc-plugin-bittorrent
+    - wavpack
+    - waydroid
+    - whois
+    - wine
+    - winetricks
+    - xboxdrv
+    - xclip
+    # - xfce4-dockbarx-plugin
+    - xfce4-docklike-plugin
+    - xinetd
+    - xserver-xorg
+    - xserver-xorg-input-all
+    - xserver-xorg-video-all
+    - zip
+    - zlib1g-dev
+    - zsh
     state: present
   #register: common-packages-installation
   tags: common
 
 # Snap
-# - name: Install snaps
-#   community.general.snap:
-#     name: "{{ packages }}"
-#   vars:
-#     packages:
-#       # - discord
-#       # - keepassxc
-#       # - retroarch
-#       # - signal-desktop
-#       # - teams
-#       # - telegram-desktop
-#       # - vault
-#       # - wickrme
-#       # - zoom-client
-#       # - barrier
-#       - bitwarden
-#       - brave
-#       # - chromium
-#       - doctl
-#       - lxd
-#       - notion-snap
-#       # - opera
+- name: Install snaps
+  community.general.snap:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    # - discord
+    # - keepassxc
+    # - retroarch
+    # - signal-desktop
+    # - teams
+    # - telegram-desktop
+    # - vault
+    # - wickrme
+    # - zoom-client
+    # - barrier
+    - bitwarden
+    - brave
+    # - chromium
+    - doctl
+    - lxd
+    - notion-snap
+    - opera
 
-# - name: Install snaps classic
-#   community.general.snap:
-#     name: "{{ packages }}"
-#   vars:
-#     packages:
-#       # - skype
-#       - bashtop
-#       - bpytop
-#       - dmd
-#       - dub
-#       - ldc2
-#       # - slack
-#     classic: yes
+- name: Install snaps classic
+  community.general.snap:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - skype
+    - bashtop
+    - bpytop
+    - dmd
+    - dub
+    - ldc2
+    classic: yes
 
 # - name: Install snaps edge
 #   community.general.snap:
@@ -399,26 +397,19 @@
 #       - celestia-daily
 #     channel: latest/edge
 
-# # Flatpak
-# - name: Add the flathub flatpak repository remote to the user installation
-#   flatpak_remote:
-#     name: flathub
-#     state: present
-#     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-#     method: user
+# Flatpak
+- name: Add the flathub flatpak repository remote to the user installation
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
 
 # - name: Install Flatpak packages
 #   community.general.flatpak:
 #     name: "{{ packages }}"
 #   vars:
 #     packages:
-      # - com.google.Chrome
-      # - io.github.mimbrero.WhatsAppDesktop
-      # - net.jami.Jami
-      # - org.gnome.Calls
-      # - org.gnome.Solanum
-      # - org.gnome.Tomboy
-      # - us.zoom.Zoom
 #       - com.adobe.Flash-Player-Projector
 #       - com.adrienplazas.Metronome
 #       - com.anydesk.Anydesk
@@ -448,26 +439,22 @@
 #       - io.github.anirbandey1.ChatbotClient
 #     method: user
 
-# Install from shell script
-# - name:  Install D Programming Language deps
-#   shell: curl -fsS https://dlang.org/install.sh | bash -s dmd
-
 - name: Install Python upgrade packages
   shell: python3 -m pip install pip setuptools --upgrade
-    
+
 #INSTALL PIPS
 - name: Install Python packages.
   pip:
     name: "{{ packages }}"
   vars:
     packages:
-            # - pip
-        # - setuptools
-      - testresources
-      - PyQt6
-      - maestral
-      - maestral-qt
-      - python3-ldap
+    # - pip
+    # - setuptools
+    - testresources
+    - PyQt6
+    - maestral
+    - maestral-qt
+    - python3-ldap
     state: latest
     extra_args: --upgrade
 
