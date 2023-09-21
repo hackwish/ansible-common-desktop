@@ -355,7 +355,9 @@
 # Snap
 - name: Install snaps
   snap:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
     # - discord
     # - keepassxc
     # - retroarch
@@ -376,7 +378,9 @@
 
 - name: Install snaps classic
   snap:
-    name:
+    name: "{{ packages }}"
+  vars:
+    packages:
     - skype
     - bashtop
     - bpytop
