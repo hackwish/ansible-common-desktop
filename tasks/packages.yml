@@ -360,8 +360,11 @@
 - name: Install snaps
   snap:
     name:
+    # - barrier
+    # - chromium
     # - discord
     # - keepassxc
+    # - notion-snap
     # - retroarch
     # - signal-desktop
     # - teams
@@ -369,25 +372,14 @@
     # - vault
     # - wickrme
     # - zoom-client
-    # - barrier
+    - bashtop
     - bitwarden
+    - bpytop
     - brave
-    # - chromium
     - doctl
     - lxd
-    - notion-snap
     - opera
-
-- name: Install snaps classic
-  snap:
-    name:
     - skype
-    - bashtop
-    - bpytop
-    - dmd
-    - dub
-    - ldc2
-    classic: yes
 
 # - name: Install snaps edge
 #   community.general.snap:
