@@ -366,9 +366,8 @@
     # - keepassxc
     # - notion-snap
     # - retroarch
-    # - signal-desktop
+    - signal-desktop
     # - teams
-    # - telegram-desktop
     # - vault
     # - wickrme
     # - zoom-client
@@ -377,9 +376,16 @@
     - bpytop
     - brave
     - doctl
+    - gimp
+    - inkscape
+    - jellyfinmediaplayer
+    - krita
     - lxd
     - opera
     - skype
+    - spotify
+    - telegram-desktop
+    - slack
 
 # - name: Install snaps edge
 #   community.general.snap:
@@ -397,39 +403,39 @@
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     method: user
 
-# - name: Install Flatpak packages
-#   community.general.flatpak:
-#     name: "{{ packages }}"
-#   vars:
-#     packages:
-#       - com.adobe.Flash-Player-Projector
-#       - com.adrienplazas.Metronome
-#       - com.anydesk.Anydesk
-#       - com.belmoussaoui.Authenticator
-#       - com.belmoussaoui.Decoder
-#       - com.github.bcedu.vgrive
-#       - com.github.debauchee.barrier
-#       - com.github.iwalton3.jellyfin-media-player
-#       - com.github.tchx84.Flatseal
-#       - com.icanblink.blink
-#       - com.microsoft.Edge
-#       - com.mojang.Minecraft
-#       - com.opera.Opera
-#       - com.skype.Client
-#       - com.slack.Slack
-#       - com.spotify.Client
-#       - io.github.dweymouth.supersonic
-#       - net.brinkervii.grapejuice
-#       - org.chromium.Chromium
-#       - org.clementine_player.Clementine
-#       - org.gimp.GIMP
-#       - org.inkscape.Inkscape
-#       - org.jitsi.jitsi-meet
-#       - org.kde.krita
-#       - org.openshot.OpenShot
-#       - org.telegram.desktop
-#       - io.github.anirbandey1.ChatbotClient
-#     method: user
+- name: Install Flatpak packages
+  community.general.flatpak:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - com.adobe.Flash-Player-Projector
+    - com.adrienplazas.Metronome
+    - com.anydesk.Anydesk
+    - com.belmoussaoui.Authenticator
+    - com.belmoussaoui.Decoder
+    - com.github.bcedu.vgrive
+    - com.github.debauchee.barrier
+    - com.github.tchx84.Flatseal
+    - com.icanblink.blink
+    - com.microsoft.Edge
+    - com.mojang.Minecraft
+    - io.github.anirbandey1.ChatbotClient
+    - io.github.dweymouth.supersonic
+    - net.brinkervii.grapejuice
+    - org.jitsi.jitsi-meet
+    - org.openshot.OpenShot
+    #       - com.github.iwalton3.jellyfin-media-player
+    #       - com.opera.Opera
+    #       - com.skype.Client
+    #       - com.slack.Slack
+    #       - com.spotify.Client
+    #       - org.chromium.Chromium
+    #       - org.clementine_player.Clementine
+    #       - org.gimp.GIMP
+    #       - org.inkscape.Inkscape
+    #       - org.kde.krita
+    #       - org.telegram.desktop
+    method: user
 
 - name: Install Python upgrade packages
   shell: python3 -m pip install pip setuptools --upgrade
