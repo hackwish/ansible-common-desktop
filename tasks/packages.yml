@@ -340,7 +340,7 @@
     - xboxdrv
     - xclip
     # - xfce4-dockbarx-plugin
-    - xfce4-docklike-plugin
+    # - xfce4-docklike-plugin
     - xinetd
     - xserver-xorg
     - xserver-xorg-input-all
@@ -359,9 +359,7 @@
 
 - name: Install snaps
   snap:
-    name: "{{ packages }}"
-  vars:
-    packages:
+    name:
     # - discord
     # - keepassxc
     # - retroarch
@@ -382,9 +380,7 @@
 
 - name: Install snaps classic
   snap:
-    name: "{{ packages }}"
-  vars:
-    packages:
+    name:
     - skype
     - bashtop
     - bpytop
