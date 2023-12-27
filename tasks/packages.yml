@@ -420,7 +420,7 @@
     - com.microsoft.Edge
     - com.mojang.Minecraft
     - io.github.anirbandey1.ChatbotClient
-    - io.github.dweymouth.supersonic
+    # - io.github.dweymouth.supersonic
     - net.brinkervii.grapejuice
     - org.jitsi.jitsi-meet
     - org.openshot.OpenShot
