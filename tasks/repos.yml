@@ -288,6 +288,16 @@
     repo: ppa:appimagelauncher-team/stable
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
+
+- apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: ACD802F535B6F55D365285574AF9B16F75EF2FCA
+    state: present
+- apt_repository:
+    repo: 'deb https://ppa.launchpadcontent.net/appimagelauncher-team/stable/ubuntu {{ codename }} main'
+    state: present
+    update_cache: no
 
 - name: apt-get update
   shell: apt-get update
