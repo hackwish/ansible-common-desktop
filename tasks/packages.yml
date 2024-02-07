@@ -349,6 +349,8 @@
     - zip
     - zlib1g-dev
     - zsh
+    - gddrescue
+    - gnome-disk-utility
     state: present
   #register: common-packages-installation
   tags: common
