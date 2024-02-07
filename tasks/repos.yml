@@ -66,14 +66,14 @@
     update_cache: no
 
 #Spotify - DEPRECATED
-- apt_key:
-    url: https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
-    keyring: /usr/share/keyrings/spotify-keyring.gpg
-    state: absent
-- apt_repository:
-    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/spotify-keyring.gpg] http://repository.spotify.com stable non-free
-    state: absent
-    update_cache: no
+# - apt_key:
+#     url: https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
+#     keyring: /usr/share/keyrings/spotify-keyring.gpg
+#     state: absent
+# - apt_repository:
+#     repo: deb [arch=amd64 signed-by=/usr/share/keyrings/spotify-keyring.gpg] http://repository.spotify.com stable non-free
+#     state: absent
+#     update_cache: no
 
 #GRUB CUSTOMIZER
 - apt_repository:
