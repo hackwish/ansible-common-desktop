@@ -179,7 +179,7 @@
     - libjack0
     - libjansson-dev
     - libldap2-dev
-    - libllvm15:i386
+    # - libllvm15:i386
     - liblua5.3-dev
     - libmagic-dev
     - libncurses5-dev
