@@ -299,7 +299,7 @@
     - stellarium
     - stress
     - subversion
-    - sublime-music
+    # - sublime-music
     - sudo
     - swaks
     - synaptic
