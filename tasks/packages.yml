@@ -333,7 +333,7 @@
     - vinagre
     - virtualenv
     - vlc
-    - vlc-plugin-bittorrent
+    # - vlc-plugin-bittorrent
     - wavpack
     - waydroid
     - whois
