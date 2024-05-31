@@ -335,7 +335,7 @@
     - vlc
     # - vlc-plugin-bittorrent
     - wavpack
-    - waydroid
+    # - waydroid
     - whois
     - wine
     - winetricks
