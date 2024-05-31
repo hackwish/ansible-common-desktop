@@ -337,7 +337,7 @@
     - wavpack
     # - waydroid
     - whois
-    - wine
+    # - wine
     - winetricks
     - xboxdrv
     - xclip
