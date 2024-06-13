@@ -133,25 +133,25 @@
 #   when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 # WINE
-- apt_key:
-    # keyserver: hkp://keyserver.ubuntu.com:80
-    # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-    url: https://dl.winehq.org/wine-builds/winehq.key
-    keyring: /usr/share/keyrings/winehq-archive.key
-    state: absent
+# - apt_key:
+#     # keyserver: hkp://keyserver.ubuntu.com:80
+#     # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+#     url: https://dl.winehq.org/wine-builds/winehq.key
+#     keyring: /usr/share/keyrings/winehq-archive.key
+#     state: absent
 
-- apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/winehq-archive.key] https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
-    state: absent
-    update_cache: no
+# - apt_repository:
+#     repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/winehq-archive.key] https://dl.winehq.org/wine-builds/ubuntu/ {{ codename }} main'
+#     state: absent
+#     update_cache: no
 
-#vlc-plugin-bittorrent
-- apt_repository:
-    repo: ppa:linuxuprising/apps
-    codename: '{{ codename }}'
-    update_cache: no
-    state: absent
-    # when: codename != "jammy" or codename != "vanessa" or codename != "vera"
+# #vlc-plugin-bittorrent
+# - apt_repository:
+#     repo: ppa:linuxuprising/apps
+#     codename: '{{ codename }}'
+#     update_cache: no
+#     state: absent
+#     # when: codename != "jammy" or codename != "vanessa" or codename != "vera"
 
 # Lutris
 - apt_repository:
