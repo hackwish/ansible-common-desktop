@@ -4,6 +4,7 @@
     name: "{{ packages }}"
   vars:
     packages:
+    # - appimagelauncher
     # - balena-etcher-electron
     # - beets
     # - bluez
@@ -15,6 +16,8 @@
     # - compiz-plugins-extra
     # - compizconfig-settings-manager
     # - dbus
+    # - dockbarx
+    # - dockbarx-themes-extra
     # - dropbox
     # - gimp
     # - gir1.2-webkit2-4.1
@@ -33,12 +36,14 @@
     # - laptop-mode-tools
     # - libgcc-s1
     # - libgl1-mesa-dri:i386
+    # - libllvm15:i386
     # - libnvidia-gl-440 
     # - libnvidia-gl-440:i386
     # - libxslt-dev
     # - linux-generic
     # - linux-headers-generic
     # - lutris
+    # - mat2
     # - murrine-themes
     # - nodejs
     # - numix-blue-gtk-theme
@@ -51,22 +56,29 @@
     # - python-setuptools
     # - python3-pip
     # - rtl8812au-dkms
+    # - shotcut
     # - signal-desktop
     # - spotify-client
     # - steam
     # - steam-launcher
+    # - sublime-music
     # - system76-driver
     # - system76-driver-nvidia
     # - system76-power
     # - timekpr-next
     # - tinyca
+    # - tlp
     # - ttf-dejavu
     # - virtualbox-6.1
+    # - vlc-plugin-bittorrent
+    # - waydroid
+    # - wine
     # - woeusb
+    # - xfce4-dockbarx-plugin
+    # - xfce4-docklike-plugin
     # - yarn
     - abcde
     - acl
-    # - appimagelauncher
     - apt-transport-https
     - apt-xapian-index
     - aptitude
@@ -77,6 +89,7 @@
     - audio-recorder
     - autoconf
     - automake
+    - bash
     - bc
     - bison
     - boot-repair
@@ -103,8 +116,7 @@
     - dia
     - dirmngr
     - dnsmasq
-    # - dockbarx
-    # - dockbarx-themes-extra
+    - dosfstools
     - ebtables
     - exiv2
     - fdupes
@@ -114,13 +126,16 @@
     - filezilla
     - filezilla-common
     - filezilla-theme-papirus
+    - findutils
     - flac
     - flatpak
     - fonts-noto
     - fpc
     - freeglut3
     - g++
+    - gawk
     - gcc
+    - gddrescue
     - gdebi
     - gir1.2-appindicator3-0.1
     - gir1.2-clutter-1.0
@@ -132,6 +147,7 @@
     - git-lfs
     - git-svn
     - glyrc
+    - gnome-disk-utility
     - gnupg2
     - golang-go
     - google-chrome-stable
@@ -139,7 +155,10 @@
     - gphoto2
     - gpick
     - graphviz
+    - grep
+    - grub-common
     - grub-customizer
+    - grub-pc-bin
     - gufw
     - hardinfo
     - htop
@@ -179,7 +198,6 @@
     - libjack0
     - libjansson-dev
     - libldap2-dev
-    # - libllvm15:i386
     - liblua5.3-dev
     - libmagic-dev
     - libncurses5-dev
@@ -210,16 +228,15 @@
     - mailutils
     - make
     - mat
-    # - mat2
     - memtester
     - mesa-vulkan-drivers
     - mesa-vulkan-drivers:i386
     - module-assistant
     - moreutils
     - mpack
+    - mpv
     - multipath-tools
     - multitail
-    - mpv
     - nano
     - ncdu
     - netcat
@@ -230,6 +247,7 @@
     - nfs-kernel-server
     - nmap
     - nmon
+    - ntfs-3g
     - ntp
     - ntpdate
     - numix-gtk-theme
@@ -245,6 +263,7 @@
     - p7zip-full
     - p7zip-rar
     - papirus-icon-theme
+    - parted
     - pavucontrol
     - picard
     - pigz
@@ -280,7 +299,6 @@
     - screenfetch
     - sharutils
     - shntool
-    # - shotcut
     - shotwell
     - shutter
     - siege
@@ -299,7 +317,6 @@
     - stellarium
     - stress
     - subversion
-    # - sublime-music
     - sudo
     - swaks
     - synaptic
@@ -309,7 +326,6 @@
     - telnetd
     - terminator
     - timeshift
-    # - tlp
     - tmux
     - tomboy-ng
     - tor
@@ -321,6 +337,7 @@
     - unixodbc-dev
     - unrar
     - unzip
+    - util-linux
     - uuid-runtime
     - v4l2loopback-dkms
     - v4l2loopback-utils
@@ -333,16 +350,13 @@
     - vinagre
     - virtualenv
     - vlc
-    # - vlc-plugin-bittorrent
     - wavpack
-    # - waydroid
+    - wget
     - whois
-    # - wine
+    - wimtools
     - winetricks
     - xboxdrv
     - xclip
-    # - xfce4-dockbarx-plugin
-    # - xfce4-docklike-plugin
     - xinetd
     - xserver-xorg
     - xserver-xorg-input-all
@@ -350,8 +364,6 @@
     - zip
     - zlib1g-dev
     - zsh
-    - gddrescue
-    - gnome-disk-utility
     state: present
   #register: common-packages-installation
   tags: common
