@@ -361,6 +361,7 @@
     - xserver-xorg
     - xserver-xorg-input-all
     - xserver-xorg-video-all
+    - youtube-dl
     - zip
     - zlib1g-dev
     - zsh
