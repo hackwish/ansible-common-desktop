@@ -131,7 +131,7 @@
     - flatpak
     - fonts-noto
     - fpc
-    - freeglut3
+    # - freeglut3
     - g++
     - gawk
     - gcc
