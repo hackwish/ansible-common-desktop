@@ -86,7 +86,7 @@
     - arj
     - atop
     - audacity
-    - audio-recorder
+    # - audio-recorder
     - autoconf
     - automake
     - bash
@@ -250,9 +250,9 @@
     - ntfs-3g
     - ntp
     - ntpdate
-    - numix-gtk-theme
-    - numix-icon-theme
-    - numix-icon-theme-circle
+    # - numix-gtk-theme
+    # - numix-icon-theme
+    # - numix-icon-theme-circle
     - nvidia-cuda-dev
     - nvidia-cuda-toolkit
     - onedrive
@@ -327,7 +327,7 @@
     - terminator
     - timeshift
     - tmux
-    - tomboy-ng
+    # - tomboy-ng
     - tor
     - torbrowser-launcher
     - ttf-bitstream-vera
@@ -341,7 +341,7 @@
     - uuid-runtime
     # - v4l2loopback-dkms
     # - v4l2loopback-utils
-    - variety
+    # - variety
     - vim
     - vim-common
     - vim-gtk
@@ -379,7 +379,7 @@
     name:
     # - barrier
     # - chromium
-    # - discord
+    - discord
     # - keepassxc
     # - notion-snap
     # - retroarch
@@ -389,19 +389,19 @@
     # - wickrme
     # - zoom-client
     - bashtop
-    - bitwarden
+    # - bitwarden
     - bpytop
-    - brave
+    # - brave
     - doctl
     - gimp
     - inkscape
-    - jellyfinmediaplayer
+    # - jellyfinmediaplayer
     - krita
     - lxd
-    - opera
+    # - opera
     - skype
     - spotify
-    - telegram-desktop
+    # - telegram-desktop
     - slack
 
 # - name: Install snaps edge
@@ -439,7 +439,7 @@
     # - io.github.dweymouth.supersonic
     - com.adobe.Flash-Player-Projector
     - com.adrienplazas.Metronome
-    - com.anydesk.Anydesk
+    # - com.anydesk.Anydesk
     - com.belmoussaoui.Authenticator
     - com.belmoussaoui.Decoder
     - com.github.bcedu.vgrive
@@ -481,17 +481,17 @@
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
-# Discord
-- name: Get latest Release from Discord
-  shell: curl -Lo /tmp/discord.deb https://discord.com/api/download?platform=linux&format=deb
-  args:
-    warn: no
+# # Discord
+# - name: Get latest Release from Discord
+#   shell: curl -Lo /tmp/discord.deb https://discord.com/api/download?platform=linux&format=deb
+#   args:
+#     warn: no
 
-- name: Install a .deb package for Discord
-  apt:
-    deb: /tmp/discord.deb
-  when: ansible_os_family == "Debian"
-  ignore_errors: true
+# - name: Install a .deb package for Discord
+#   apt:
+#     deb: /tmp/discord.deb
+#   when: ansible_os_family == "Debian"
+#   ignore_errors: true
 
 # Lutris
 - name: Get latest Release from Lutris
