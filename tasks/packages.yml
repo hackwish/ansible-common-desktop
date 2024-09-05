@@ -339,8 +339,8 @@
     - unzip
     - util-linux
     - uuid-runtime
-    - v4l2loopback-dkms
-    - v4l2loopback-utils
+    # - v4l2loopback-dkms
+    # - v4l2loopback-utils
     - variety
     - vim
     - vim-common
@@ -425,22 +425,6 @@
     name: "{{ packages }}"
   vars:
     packages:
-    - com.adobe.Flash-Player-Projector
-    - com.adrienplazas.Metronome
-    - com.anydesk.Anydesk
-    - com.belmoussaoui.Authenticator
-    - com.belmoussaoui.Decoder
-    - com.github.bcedu.vgrive
-    - com.github.debauchee.barrier
-    - com.github.tchx84.Flatseal
-    - com.icanblink.blink
-    - com.microsoft.Edge
-    - com.mojang.Minecraft
-    - io.github.anirbandey1.ChatbotClient
-    # - io.github.dweymouth.supersonic
-    - net.brinkervii.grapejuice
-    - org.jitsi.jitsi-meet
-    - org.openshot.OpenShot
     #       - com.github.iwalton3.jellyfin-media-player
     #       - com.opera.Opera
     #       - com.skype.Client
@@ -452,6 +436,23 @@
     #       - org.inkscape.Inkscape
     #       - org.kde.krita
     #       - org.telegram.desktop
+    # - io.github.dweymouth.supersonic
+    - com.adobe.Flash-Player-Projector
+    - com.adrienplazas.Metronome
+    - com.anydesk.Anydesk
+    - com.belmoussaoui.Authenticator
+    - com.belmoussaoui.Decoder
+    - com.github.bcedu.vgrive
+    - com.github.debauchee.barrier
+    - com.github.tchx84.Flatseal
+    - com.github.unrud.VideoDownloader
+    - com.icanblink.blink
+    - com.microsoft.Edge
+    - com.mojang.Minecraft
+    - io.github.anirbandey1.ChatbotClient
+    - net.brinkervii.grapejuice
+    - org.jitsi.jitsi-meet
+    - org.openshot.OpenShot
     method: user
 
 - name: Install Python upgrade packages

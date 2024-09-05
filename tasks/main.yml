@@ -1,14 +1,14 @@
 ---
 # tasks file for ansible-commom-desktop
 
-- include: repos.yml
+- include_tasks: repos.yml
   tags: repos
 
-- include: packages.yml
+- include_tasks: packages.yml
   tags: packages
 
-- include: aditional-packages.yml
+- include_tasks: aditional-packages.yml
   tags: aditional-packages
 
-- include: upgrade.yml
+- include_tasks: upgrade.yml
   tags: upgrade
