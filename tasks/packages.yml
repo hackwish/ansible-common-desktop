@@ -137,10 +137,10 @@
     - gcc
     - gddrescue
     - gdebi
-    - gir1.2-appindicator3-0.1
-    - gir1.2-clutter-1.0
-    - gir1.2-gtop-2.0
-    - gir1.2-webkit2-4.0
+    # - gir1.2-appindicator3-0.1
+    # - gir1.2-clutter-1.0
+    # - gir1.2-gtop-2.0
+    # - gir1.2-webkit2-4.0
     - git
     - git-flow
     - git-ftp
