@@ -5,6 +5,7 @@
   vars:
     packages:
     # - appimagelauncher
+    # - audio-recorder
     # - balena-etcher-electron
     # - beets
     # - bluez
@@ -19,7 +20,12 @@
     # - dockbarx
     # - dockbarx-themes-extra
     # - dropbox
+    # - freeglut3
     # - gimp
+    # - gir1.2-appindicator3-0.1
+    # - gir1.2-clutter-1.0
+    # - gir1.2-gtop-2.0
+    # - gir1.2-webkit2-4.0
     # - gir1.2-webkit2-4.1
     # - gnome-shell-extension-system76-power
     # - gnome-shell-extensions
@@ -34,23 +40,43 @@
     # - krita
     # - krita-l10n
     # - laptop-mode-tools
+    # - libatomic1:i386
+    # - libegl1-mesa
     # - libgcc-s1
+    # - libgcc-s1:i386
+    # - libgl1-mesa-dri:amd64
     # - libgl1-mesa-dri:i386
+    # - libgl1-mesa-dri:i386
+    # - libgl1-mesa-glx:amd64
+    # - libgl1-mesa-glx:i386
+    # - libglib2.0-dev-bin
     # - libllvm15:i386
     # - libnvidia-gl-440 
     # - libnvidia-gl-440:i386
+    # - libstdc++6:i386
+    # - libvulkan1:i386
+    # - libwine-development
     # - libxslt-dev
+    # - linphone
     # - linux-generic
     # - linux-headers-generic
     # - lutris
+    # - mat
     # - mat2
+    # - mesa-vulkan-drivers:i386
     # - murrine-themes
+    # - netcat
+    # - netcat-openbsd
     # - nodejs
     # - numix-blue-gtk-theme
+    # - numix-gtk-theme
+    # - numix-icon-theme
+    # - numix-icon-theme-circle
     # - nvidia-driver-440
     # - nvidia-prime
     # - openshot
     # - pepperflashplugin-nonfree
+    # - pixmap
     # - python-dev
     # - python-packaging
     # - python-setuptools
@@ -68,7 +94,12 @@
     # - timekpr-next
     # - tinyca
     # - tlp
+    # - tomboy-ng
     # - ttf-dejavu
+    # - v4l2loopback-dkms
+    # - v4l2loopback-utils
+    # - variety
+    # - vim-gtk
     # - virtualbox-6.1
     # - vlc-plugin-bittorrent
     # - waydroid
@@ -77,6 +108,7 @@
     # - xfce4-dockbarx-plugin
     # - xfce4-docklike-plugin
     # - yarn
+    # - youtube-dl
     - abcde
     - acl
     - apt-transport-https
@@ -86,7 +118,6 @@
     - arj
     - atop
     - audacity
-    # - audio-recorder
     - autoconf
     - automake
     - bash
@@ -131,16 +162,11 @@
     - flatpak
     - fonts-noto
     - fpc
-    # - freeglut3
     - g++
     - gawk
     - gcc
     - gddrescue
     - gdebi
-    # - gir1.2-appindicator3-0.1
-    # - gir1.2-clutter-1.0
-    # - gir1.2-gtop-2.0
-    # - gir1.2-webkit2-4.0
     - git
     - git-flow
     - git-ftp
@@ -177,21 +203,13 @@
     - kdeconnect
     - language-pack-es
     - ldap-utils
-    # - libatomic1:i386
     - libavformat-dev
     - libcurl4-openssl-dev
-    # - libegl1-mesa
     - libelf-dev
     - libffi-dev
     - libfile-tee-perl
     - libfreetype6-dev
-    # - libgcc-s1:i386
     - libgdbm-dev
-    # - libgl1-mesa-dri:amd64
-    # - libgl1-mesa-dri:i386
-    # - libgl1-mesa-glx:amd64
-    # - libgl1-mesa-glx:i386
-    # - libglib2.0-dev-bin
     - libguestfs-perl
     - libimage-exiftool-perl
     - libjack-dev
@@ -210,39 +228,31 @@
     - libssl-dev
     - libstdc++5
     - libstdc++6
-    # - libstdc++6:i386
     - libsvn-java
     - libswscale-dev
     - libtool
     - libvulkan1
-    # - libvulkan1:i386
-    # - libwine-development
     - libxml-writer-perl
     - libxml2-dev
     - libyaml-dev
-    # - linphone
     - lldpd
     - lm-sensors
     - lsb-release
     - lshw
     - mailutils
     - make
-    # - mat
     - memtester
+    - mencoder
     - mesa-vulkan-drivers
-    # - mesa-vulkan-drivers:i386
     - module-assistant
     - moreutils
     - mpack
-    - mencoder
     - mplayer
     - mpv
     - multipath-tools
     - multitail
     - nano
     - ncdu
-    # - netcat
-    # - netcat-openbsd
     - network-manager-openvpn
     - network-manager-openvpn-gnome
     - nfs-common
@@ -252,9 +262,6 @@
     - ntfs-3g
     - ntp
     - ntpdate
-    # - numix-gtk-theme
-    # - numix-icon-theme
-    # - numix-icon-theme-circle
     - nvidia-cuda-dev
     - nvidia-cuda-toolkit
     - onedrive
@@ -270,7 +277,6 @@
     - picard
     - pigz
     - pitivi
-    # - pixmap
     - pkg-config
     - plank
     - playonlinux
@@ -284,9 +290,9 @@
     - pv
     - python3-dev
     - python3-evdev
+    - python3-pip
     - python3-systemd
     - python3-venv
-    - python3-pip
     - quodlibet
     - radeontop
     - rar
@@ -330,7 +336,6 @@
     - terminator
     - timeshift
     - tmux
-    # - tomboy-ng
     - tor
     - torbrowser-launcher
     - ttf-bitstream-vera
@@ -342,12 +347,8 @@
     - unzip
     - util-linux
     - uuid-runtime
-    # - v4l2loopback-dkms
-    # - v4l2loopback-utils
-    # - variety
     - vim
     - vim-common
-    # - vim-gtk
     - vim-gui-common
     - vim-snippets
     - vinagre
@@ -364,7 +365,6 @@
     - xserver-xorg
     - xserver-xorg-input-all
     - xserver-xorg-video-all
-    # - youtube-dl
     - zip
     - zlib1g-dev
     - zsh
@@ -498,10 +498,9 @@
 
 # Lutris
 - name: Get latest Release from Lutris
-  shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
-  args:
-    warn: no
-
+  ansible.builtin.shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
+  # args:
+  #   warn: no
 - name: Install a .deb package for Lutris
   apt:
     deb: /tmp/lutris.deb
