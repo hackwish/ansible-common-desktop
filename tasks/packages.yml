@@ -346,7 +346,7 @@
     # - variety
     - vim
     - vim-common
-    - vim-gtk
+    # - vim-gtk
     - vim-gui-common
     - vim-snippets
     - vinagre
