@@ -458,8 +458,8 @@
     - org.openshot.OpenShot
     method: user
 
-- name: Install Python upgrade packages
-  shell: python3 -m pip install pip setuptools --upgrade
+# - name: Install Python upgrade packages
+#   shell: python3 -m pip install pip setuptools --upgrade
 
 #INSTALL PIPS
 - name: Install Python packages.
