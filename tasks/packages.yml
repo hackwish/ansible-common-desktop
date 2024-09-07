@@ -461,21 +461,21 @@
 # - name: Install Python upgrade packages
 #   shell: python3 -m pip install pip setuptools --upgrade
 
-#INSTALL PIPS
-- name: Install Python packages.
-  pip:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    # - pip
-    # - setuptools
-    - testresources
-    - PyQt6
-    - maestral
-    - maestral-qt
-    - python3-ldap
-    state: latest
-    extra_args: --upgrade
+# #INSTALL PIPS
+# - name: Install Python packages.
+#   pip:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
+#     # - pip
+#     # - setuptools
+#     - testresources
+#     - PyQt6
+#     - maestral
+#     - maestral-qt
+#     - python3-ldap
+#     state: latest
+#     extra_args: --upgrade
 
 # Install from debs
 - name: Install a .deb package for Zoom
