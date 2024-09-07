@@ -270,7 +270,7 @@
     - picard
     - pigz
     - pitivi
-    - pixmap
+    # - pixmap
     - pkg-config
     - plank
     - playonlinux
