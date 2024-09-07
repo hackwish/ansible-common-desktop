@@ -180,7 +180,7 @@
     - libatomic1:i386
     - libavformat-dev
     - libcurl4-openssl-dev
-    - libegl1-mesa
+    # - libegl1-mesa
     - libelf-dev
     - libffi-dev
     - libfile-tee-perl
