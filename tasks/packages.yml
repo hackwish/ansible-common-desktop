@@ -227,7 +227,7 @@
     - lshw
     - mailutils
     - make
-    - mat
+    # - mat
     - memtester
     - mesa-vulkan-drivers
     # - mesa-vulkan-drivers:i386
