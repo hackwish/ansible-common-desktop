@@ -286,6 +286,7 @@
     - python3-evdev
     - python3-systemd
     - python3-venv
+    - python3-pip
     - quodlibet
     - radeontop
     - rar
