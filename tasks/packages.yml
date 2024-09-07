@@ -241,8 +241,8 @@
     - multitail
     - nano
     - ncdu
-    - netcat
-    - netcat-openbsd
+    # - netcat
+    # - netcat-openbsd
     - network-manager-openvpn
     - network-manager-openvpn-gnome
     - nfs-common
