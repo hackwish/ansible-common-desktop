@@ -220,7 +220,7 @@
     - libxml-writer-perl
     - libxml2-dev
     - libyaml-dev
-    - linphone
+    # - linphone
     - lldpd
     - lm-sensors
     - lsb-release
