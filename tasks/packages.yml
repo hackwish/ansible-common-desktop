@@ -4,6 +4,8 @@
     name: "{{ packages }}"
   vars:
     packages:
+    # - appimagelauncher
+    # - audio-recorder
     # - balena-etcher-electron
     # - beets
     # - bluez
@@ -15,8 +17,15 @@
     # - compiz-plugins-extra
     # - compizconfig-settings-manager
     # - dbus
+    # - dockbarx
+    # - dockbarx-themes-extra
     # - dropbox
+    # - freeglut3
     # - gimp
+    # - gir1.2-appindicator3-0.1
+    # - gir1.2-clutter-1.0
+    # - gir1.2-gtop-2.0
+    # - gir1.2-webkit2-4.0
     # - gir1.2-webkit2-4.1
     # - gnome-shell-extension-system76-power
     # - gnome-shell-extensions
@@ -31,42 +40,77 @@
     # - krita
     # - krita-l10n
     # - laptop-mode-tools
+    # - libatomic1:i386
+    # - libegl1-mesa
     # - libgcc-s1
+    # - libgcc-s1:i386
+    # - libgl1-mesa-dri:amd64
     # - libgl1-mesa-dri:i386
+    # - libgl1-mesa-dri:i386
+    # - libgl1-mesa-glx:amd64
+    # - libgl1-mesa-glx:i386
+    # - libglib2.0-dev-bin
+    # - libllvm15:i386
     # - libnvidia-gl-440 
     # - libnvidia-gl-440:i386
+    # - libstdc++6:i386
+    # - libvulkan1:i386
+    # - libwine-development
     # - libxslt-dev
+    # - linphone
     # - linux-generic
     # - linux-headers-generic
     # - lutris
+    # - mat
+    # - mat2
+    # - mesa-vulkan-drivers:i386
     # - murrine-themes
+    # - netcat
+    # - netcat-openbsd
     # - nodejs
     # - numix-blue-gtk-theme
+    # - numix-gtk-theme
+    # - numix-icon-theme
+    # - numix-icon-theme-circle
     # - nvidia-driver-440
     # - nvidia-prime
     # - openshot
     # - pepperflashplugin-nonfree
+    # - pixmap
     # - python-dev
     # - python-packaging
     # - python-setuptools
     # - python3-pip
     # - rtl8812au-dkms
+    # - shotcut
     # - signal-desktop
     # - spotify-client
     # - steam
     # - steam-launcher
+    # - sublime-music
     # - system76-driver
     # - system76-driver-nvidia
     # - system76-power
     # - timekpr-next
     # - tinyca
+    # - tlp
+    # - tomboy-ng
     # - ttf-dejavu
+    # - v4l2loopback-dkms
+    # - v4l2loopback-utils
+    # - variety
+    # - vim-gtk
     # - virtualbox-6.1
+    # - vlc-plugin-bittorrent
+    # - waydroid
+    # - wine
     # - woeusb
+    # - xfce4-dockbarx-plugin
+    # - xfce4-docklike-plugin
     # - yarn
+    # - youtube-dl
     - abcde
     - acl
-    # - appimagelauncher
     - apt-transport-https
     - apt-xapian-index
     - aptitude
@@ -74,9 +118,9 @@
     - arj
     - atop
     - audacity
-    - audio-recorder
     - autoconf
     - automake
+    - bash
     - bc
     - bison
     - boot-repair
@@ -103,8 +147,7 @@
     - dia
     - dirmngr
     - dnsmasq
-    # - dockbarx
-    # - dockbarx-themes-extra
+    - dosfstools
     - ebtables
     - exiv2
     - fdupes
@@ -114,24 +157,23 @@
     - filezilla
     - filezilla-common
     - filezilla-theme-papirus
+    - findutils
     - flac
     - flatpak
     - fonts-noto
     - fpc
-    - freeglut3
     - g++
+    - gawk
     - gcc
+    - gddrescue
     - gdebi
-    - gir1.2-appindicator3-0.1
-    - gir1.2-clutter-1.0
-    - gir1.2-gtop-2.0
-    - gir1.2-webkit2-4.0
     - git
     - git-flow
     - git-ftp
     - git-lfs
     - git-svn
     - glyrc
+    - gnome-disk-utility
     - gnupg2
     - golang-go
     - google-chrome-stable
@@ -139,7 +181,10 @@
     - gphoto2
     - gpick
     - graphviz
+    - grep
+    - grub-common
     - grub-customizer
+    - grub-pc-bin
     - gufw
     - hardinfo
     - htop
@@ -158,28 +203,19 @@
     - kdeconnect
     - language-pack-es
     - ldap-utils
-    - libatomic1:i386
     - libavformat-dev
     - libcurl4-openssl-dev
-    - libegl1-mesa
     - libelf-dev
     - libffi-dev
     - libfile-tee-perl
     - libfreetype6-dev
-    - libgcc-s1:i386
     - libgdbm-dev
-    - libgl1-mesa-dri:amd64
-    - libgl1-mesa-dri:i386
-    - libgl1-mesa-glx:amd64
-    - libgl1-mesa-glx:i386
-    - libglib2.0-dev-bin
     - libguestfs-perl
     - libimage-exiftool-perl
     - libjack-dev
     - libjack0
     - libjansson-dev
     - libldap2-dev
-    # - libllvm15:i386
     - liblua5.3-dev
     - libmagic-dev
     - libncurses5-dev
@@ -192,49 +228,40 @@
     - libssl-dev
     - libstdc++5
     - libstdc++6
-    - libstdc++6:i386
     - libsvn-java
     - libswscale-dev
     - libtool
     - libvulkan1
-    - libvulkan1:i386
-    - libwine-development
     - libxml-writer-perl
     - libxml2-dev
     - libyaml-dev
-    - linphone
     - lldpd
     - lm-sensors
     - lsb-release
     - lshw
     - mailutils
     - make
-    - mat
-    # - mat2
     - memtester
+    - mencoder
     - mesa-vulkan-drivers
-    - mesa-vulkan-drivers:i386
     - module-assistant
     - moreutils
     - mpack
+    - mplayer
+    - mpv
     - multipath-tools
     - multitail
-    - mpv
     - nano
     - ncdu
-    - netcat
-    - netcat-openbsd
     - network-manager-openvpn
     - network-manager-openvpn-gnome
     - nfs-common
     - nfs-kernel-server
     - nmap
     - nmon
+    - ntfs-3g
     - ntp
     - ntpdate
-    - numix-gtk-theme
-    - numix-icon-theme
-    - numix-icon-theme-circle
     - nvidia-cuda-dev
     - nvidia-cuda-toolkit
     - onedrive
@@ -245,11 +272,11 @@
     - p7zip-full
     - p7zip-rar
     - papirus-icon-theme
+    - parted
     - pavucontrol
     - picard
     - pigz
     - pitivi
-    - pixmap
     - pkg-config
     - plank
     - playonlinux
@@ -263,6 +290,7 @@
     - pv
     - python3-dev
     - python3-evdev
+    - python3-pip
     - python3-systemd
     - python3-venv
     - quodlibet
@@ -280,7 +308,6 @@
     - screenfetch
     - sharutils
     - shntool
-    # - shotcut
     - shotwell
     - shutter
     - siege
@@ -299,7 +326,6 @@
     - stellarium
     - stress
     - subversion
-    # - sublime-music
     - sudo
     - swaks
     - synaptic
@@ -309,9 +335,7 @@
     - telnetd
     - terminator
     - timeshift
-    # - tlp
     - tmux
-    - tomboy-ng
     - tor
     - torbrowser-launcher
     - ttf-bitstream-vera
@@ -321,28 +345,22 @@
     - unixodbc-dev
     - unrar
     - unzip
+    - util-linux
     - uuid-runtime
-    - v4l2loopback-dkms
-    - v4l2loopback-utils
-    - variety
     - vim
     - vim-common
-    - vim-gtk
     - vim-gui-common
     - vim-snippets
     - vinagre
     - virtualenv
     - vlc
-    # - vlc-plugin-bittorrent
     - wavpack
-    # - waydroid
+    - wget
     - whois
-    # - wine
+    - wimtools
     - winetricks
     - xboxdrv
     - xclip
-    # - xfce4-dockbarx-plugin
-    # - xfce4-docklike-plugin
     - xinetd
     - xserver-xorg
     - xserver-xorg-input-all
@@ -350,8 +368,6 @@
     - zip
     - zlib1g-dev
     - zsh
-    - gddrescue
-    - gnome-disk-utility
     state: present
   #register: common-packages-installation
   tags: common
@@ -366,7 +382,7 @@
     name:
     # - barrier
     # - chromium
-    # - discord
+    - discord
     # - keepassxc
     # - notion-snap
     # - retroarch
@@ -376,19 +392,19 @@
     # - wickrme
     # - zoom-client
     - bashtop
-    - bitwarden
+    # - bitwarden
     - bpytop
-    - brave
+    # - brave
     - doctl
     - gimp
     - inkscape
-    - jellyfinmediaplayer
+    # - jellyfinmediaplayer
     - krita
     - lxd
-    - opera
+    # - opera
     - skype
     - spotify
-    - telegram-desktop
+    # - telegram-desktop
     - slack
 
 # - name: Install snaps edge
@@ -412,22 +428,6 @@
     name: "{{ packages }}"
   vars:
     packages:
-    - com.adobe.Flash-Player-Projector
-    - com.adrienplazas.Metronome
-    - com.anydesk.Anydesk
-    - com.belmoussaoui.Authenticator
-    - com.belmoussaoui.Decoder
-    - com.github.bcedu.vgrive
-    - com.github.debauchee.barrier
-    - com.github.tchx84.Flatseal
-    - com.icanblink.blink
-    - com.microsoft.Edge
-    - com.mojang.Minecraft
-    - io.github.anirbandey1.ChatbotClient
-    # - io.github.dweymouth.supersonic
-    - net.brinkervii.grapejuice
-    - org.jitsi.jitsi-meet
-    - org.openshot.OpenShot
     #       - com.github.iwalton3.jellyfin-media-player
     #       - com.opera.Opera
     #       - com.skype.Client
@@ -439,26 +439,43 @@
     #       - org.inkscape.Inkscape
     #       - org.kde.krita
     #       - org.telegram.desktop
+    # - io.github.dweymouth.supersonic
+    - com.adobe.Flash-Player-Projector
+    - com.adrienplazas.Metronome
+    # - com.anydesk.Anydesk
+    - com.belmoussaoui.Authenticator
+    - com.belmoussaoui.Decoder
+    - com.github.bcedu.vgrive
+    - com.github.debauchee.barrier
+    - com.github.tchx84.Flatseal
+    - com.github.unrud.VideoDownloader
+    - com.icanblink.blink
+    - com.microsoft.Edge
+    - com.mojang.Minecraft
+    - io.github.anirbandey1.ChatbotClient
+    - net.brinkervii.grapejuice
+    - org.jitsi.jitsi-meet
+    - org.openshot.OpenShot
     method: user
 
-- name: Install Python upgrade packages
-  shell: python3 -m pip install pip setuptools --upgrade
+# - name: Install Python upgrade packages
+#   shell: python3 -m pip install pip setuptools --upgrade
 
-#INSTALL PIPS
-- name: Install Python packages.
-  pip:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    # - pip
-    # - setuptools
-    - testresources
-    - PyQt6
-    - maestral
-    - maestral-qt
-    - python3-ldap
-    state: latest
-    extra_args: --upgrade
+# #INSTALL PIPS
+# - name: Install Python packages.
+#   pip:
+#     name: "{{ packages }}"
+#   vars:
+#     packages:
+#     # - pip
+#     # - setuptools
+#     - testresources
+#     - PyQt6
+#     - maestral
+#     - maestral-qt
+#     - python3-ldap
+#     state: latest
+#     extra_args: --upgrade
 
 # Install from debs
 - name: Install a .deb package for Zoom
@@ -467,24 +484,23 @@
   when: ansible_os_family == "Debian"
   ignore_errors: true
 
-# Discord
-- name: Get latest Release from Discord
-  shell: curl -Lo /tmp/discord.deb https://discord.com/api/download?platform=linux&format=deb
-  args:
-    warn: no
+# # Discord
+# - name: Get latest Release from Discord
+#   shell: curl -Lo /tmp/discord.deb https://discord.com/api/download?platform=linux&format=deb
+#   args:
+#     warn: no
 
-- name: Install a .deb package for Discord
-  apt:
-    deb: /tmp/discord.deb
-  when: ansible_os_family == "Debian"
-  ignore_errors: true
+# - name: Install a .deb package for Discord
+#   apt:
+#     deb: /tmp/discord.deb
+#   when: ansible_os_family == "Debian"
+#   ignore_errors: true
 
 # Lutris
 - name: Get latest Release from Lutris
-  shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
-  args:
-    warn: no
-
+  ansible.builtin.shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
+  # args:
+  #   warn: no
 - name: Install a .deb package for Lutris
   apt:
     deb: /tmp/lutris.deb

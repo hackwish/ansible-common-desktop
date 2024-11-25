@@ -15,6 +15,7 @@
     repo: ppa:numix/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 - name: Add Repo Git Core
   apt_repository:
@@ -42,7 +43,7 @@
     url: https://dl.google.com/linux/linux_signing_key.pub
     keyring: /usr/share/keyrings/google-chrome.gpg
     state: present
-- name: Remove old Repo Google Chrome 8workaround
+- name: Remove old Repo Google Chrome workaround
   apt_repository:
     repo: 'deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main'
     state: absent
@@ -193,12 +194,15 @@
     repo: ppa:peterlevi/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
+
 
 #Audio-Recorder
 - apt_repository:
     repo: ppa:audio-recorder/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 
 # Astronomy
@@ -261,6 +265,7 @@
     repo: ppa:d-bannon/ppa-tomboy-ng
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 
 # Steam
@@ -293,10 +298,10 @@
 - apt_key:
     keyserver: keyserver.ubuntu.com
     id: ACD802F535B6F55D365285574AF9B16F75EF2FCA
-    state: present
+    state: absent
 - apt_repository:
     repo: 'deb https://ppa.launchpadcontent.net/appimagelauncher-team/stable/ubuntu {{ codename }} main'
-    state: present
+    state: absent
     update_cache: no
 
 - name: apt-get update
