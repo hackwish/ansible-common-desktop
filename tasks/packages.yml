@@ -303,7 +303,7 @@
     - sudo
     - swaks
     - synaptic
-    - syncthing
+    # - syncthing
     - sysstat
     - tcpdump
     - telnetd

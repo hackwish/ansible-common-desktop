@@ -55,15 +55,15 @@
     filename: google-chrome
     update_cache: no
 
-#SyncThing
-- apt_key:
-    url: https://syncthing.net/release-key.txt
-    keyring: /usr/share/keyrings/syncthing-keyring.gpg
-    state: present
-- apt_repository:
-    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/syncthing-keyring.gpg] https://apt.syncthing.net/ syncthing stable
-    state: present
-    update_cache: no
+# #SyncThing
+# - apt_key:
+#     url: https://syncthing.net/release-key.txt
+#     keyring: /usr/share/keyrings/syncthing-keyring.gpg
+#     state: present
+# - apt_repository:
+#     repo: deb [arch=amd64 signed-by=/usr/share/keyrings/syncthing-keyring.gpg] https://apt.syncthing.net/ syncthing stable
+#     state: present
+#     update_cache: no
 
 #Spotify - DEPRECATED
 # - apt_key:
