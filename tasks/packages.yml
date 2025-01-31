@@ -285,7 +285,7 @@
     - powertop
     - preload
     - psensor
-    - pulseaudio-equalizer
+    # - pulseaudio-equalizer
     - putty-tools
     - pv
     - python-is-python3
