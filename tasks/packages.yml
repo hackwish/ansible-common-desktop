@@ -86,10 +86,8 @@
     # - numix-gtk-theme
     # - numix-gtk-theme
     # - numix-icon-theme
-    - numix-icon-theme
-    - numix-icon-theme-circle
-    - numix-icon-theme-square
     # - numix-icon-theme-circle
+    # - numix-icon-theme-square
     # - nvidia-driver-440
     # - nvidia-driver-440
     # - nvidia-prime
@@ -321,6 +319,8 @@
     - ntfs-3g
     - ntp
     - ntpdate
+    - numix-icon-theme
+    - numix-icon-theme-circle
     - nvidia-cuda-dev
     - nvidia-cuda-toolkit
     - onedrive
