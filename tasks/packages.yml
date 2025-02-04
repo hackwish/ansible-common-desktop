@@ -20,7 +20,7 @@
     # - dockbarx
     # - dockbarx-themes-extra
     # - dropbox
-    # - freeglut3
+    # - freeglkan1:i386
     # - gimp
     # - gir1.2-appindicator3-0.1
     # - gir1.2-clutter-1.0
@@ -56,58 +56,117 @@
     # - libstdc++6:i386
     # - libvulkan1:i386
     # - libwine-development
+    # - libwine-development
+    # - libxslt-dev
     # - libxslt-dev
     # - linphone
+    # - linphone
+    # - linux-generic
     # - linux-generic
     # - linux-headers-generic
+    # - linux-headers-generic
+    # - lutris
     # - lutris
     # - mat
+    # - mat
+    # - mat2
     # - mat2
     # - mesa-vulkan-drivers:i386
+    # - mesa-vulkan-drivers:i386
+    # - murrine-themes
     # - murrine-themes
     # - netcat
+    # - netcat
+    # - netcat-openbsd
     # - netcat-openbsd
     # - nodejs
+    # - nodejs
+    # - numix-blue-gtk-theme
     # - numix-blue-gtk-theme
     # - numix-gtk-theme
+    # - numix-gtk-theme
     # - numix-icon-theme
+    - numix-icon-theme
+    - numix-icon-theme-circle
+    - numix-icon-theme-square
     # - numix-icon-theme-circle
     # - nvidia-driver-440
+    # - nvidia-driver-440
+    # - nvidia-prime
     # - nvidia-prime
     # - openshot
+    # - openshot
+    # - pepperflashplugin-nonfree
     # - pepperflashplugin-nonfree
     # - pixmap
+    # - pixmap
+    # - pulseaudio-equalizer
+    # - pulseaudio-equalizer
+    # - python-dev
     # - python-dev
     # - python-packaging
+    # - python-packaging
+    # - python-setuptools
     # - python-setuptools
     # - python3-pip
+    # - python3-pip
+    # - rtl8812au-dkms
     # - rtl8812au-dkms
     # - shotcut
+    # - shotcut
+    # - signal-desktop
     # - signal-desktop
     # - spotify-client
+    # - spotify-client
+    # - steam
     # - steam
     # - steam-launcher
+    # - steam-launcher
     # - sublime-music
+    # - sublime-music
+    # - syncthing
+    # - syncthingut3
+    # - system76-driver
     # - system76-driver
     # - system76-driver-nvidia
+    # - system76-driver-nvidia
+    # - system76-power
     # - system76-power
     # - timekpr-next
+    # - timekpr-next
+    # - tinyca
     # - tinyca
     # - tlp
+    # - tlp
+    # - tomboy-ng
     # - tomboy-ng
     # - ttf-dejavu
+    # - ttf-dejavu
+    # - v4l2loopback-dkms
     # - v4l2loopback-dkms
     # - v4l2loopback-utils
+    # - v4l2loopback-utils
+    # - variety
     # - variety
     # - vim-gtk
+    # - vim-gtk
+    # - virtualbox-6.1
     # - virtualbox-6.1
     # - vlc-plugin-bittorrent
+    # - vlc-plugin-bittorrent
+    # - waydroid
     # - waydroid
     # - wine
+    # - wine
+    # - woeusb
     # - woeusb
     # - xfce4-dockbarx-plugin
+    # - xfce4-dockbarx-plugin
+    # - xfce4-docklike-plugin
     # - xfce4-docklike-plugin
     # - yarn
+    # - yarn
+    # - youtube-dl
     # - youtube-dl
     - abcde
     - acl
@@ -285,7 +344,6 @@
     - powertop
     - preload
     - psensor
-    # - pulseaudio-equalizer
     - putty-tools
     - pv
     - python-is-python3
@@ -335,7 +393,6 @@
     - sudo
     - swaks
     - synaptic
-    # - syncthing
     - sysstat
     - tcpdump
     - telnetd
@@ -353,6 +410,7 @@
     - unzip
     - util-linux
     - uuid-runtime
+    - variety
     - vim
     - vim-common
     - vim-gui-common
