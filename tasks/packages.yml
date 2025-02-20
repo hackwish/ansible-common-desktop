@@ -449,7 +449,7 @@
     # - chromium
     - discord
     # - keepassxc
-    # - notion-snap
+    - notion-desktop
     # - retroarch
     - signal-desktop
     # - teams
