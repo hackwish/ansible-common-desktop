@@ -511,7 +511,7 @@
     - com.belmoussaoui.Authenticator
     - com.belmoussaoui.Decoder
     - com.github.bcedu.vgrive
-    # - com.github.debauchee.barrier
+    - com.github.debauchee.barrier
     - com.github.tchx84.Flatseal
     - com.github.unrud.VideoDownloader
     - com.icanblink.blink
