@@ -385,8 +385,8 @@
     - ssh-askpass
     - sshfs
     - sshuttle
-    - steam
-    - steam-devices
+    # - steam
+    # - steam-devices
     - stellarium
     - stress
     - subversion
