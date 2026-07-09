@@ -1,5 +1,8 @@
 ---
-- hosts: localhost
-  remote_user: root
+# test.yml
+
+- name: Test Antigravity installation
+  hosts: all
+  gather_facts: true
   roles:
-    - ansible-commom-desktop
+    - ansible-common-desktop
