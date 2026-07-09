@@ -1,0 +1,55 @@
+---
+- name: Install Homebrew packages
+  community.general.homebrew:
+    name: "{{ packages }}"
+    state: present
+    update_homebrew: yes
+    upgrade_all: yes
+  vars:
+    packages:
+      - imagemagick
+      - youtubedr
+      - rclone
+      - qpdf
+      - iperf3
+      - wkhtmltopdf
+      - samba
+      - pipx
+      - net-snmp
+      - ghostwriter
+      - poppler
+  register: brew_common_result
+  ignore_errors: true
+
+- name: Install Homebrew cask packages
+  community.general.homebrew_cask:
+    name: "{{ packages }}"
+    state: present
+    upgrade_all: yes
+    update_homebrew: yes
+  vars:
+    packages:
+      - barrier
+      - bitwarden
+      - discord
+      - firefox
+      - font-hack-nerd-font
+      - gimp
+      - google-chat
+      - google-chrome
+      - google-drive
+      - keybase
+      - libreoffice
+      - maestral
+      - rar
+      - royal-tsx
+      - skype
+      - slack
+      - spotify
+      - telegram
+      - tor-browser
+      - vlc
+      - zoom
+      - marktext
+  register: brew_cask_desktop_result
+  ignore_errors: true

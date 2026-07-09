@@ -1,0 +1,244 @@
+---
+- name: Install Fedora common packages
+  dnf:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - abcde
+      - acl
+      - arj
+      - atop
+      - audacity
+      - autoconf
+      - automake
+      - bc
+      - bison
+      - brasero
+      - bridge-utils
+      - calibre
+      - catfish
+      - ccze
+      - cheese
+      - clang
+      - cmake
+      - cmake-curses-gui
+      - curl
+      - dconf-editor
+      - deja-dup
+      - dia
+      - dnsmasq
+      - dosfstools
+      - ebtables
+      - exiv2
+      - fdupes
+      - ffmpeg
+      - figlet
+      - file-roller
+      - filezilla
+      - flac
+      - flatpak
+      - gawk
+      - gcc
+      - gcc-c++
+      - gddrescue
+      - git
+      - git-lfs
+      - gnome-disk-utility
+      - gnupg2
+      - golang
+      - gparted
+      - gphoto2
+      - gpick
+      - graphviz
+      - gufw
+      - htop
+      - i3lock
+      - iftop
+      - ImageMagick
+      - iotop
+      - iptstate
+      - jq
+      - k3b
+      - kazam
+      - kdeconnect
+      - lm_sensors
+      - lshw
+      - mailutils
+      - make
+      - memtester
+      - mesa-vulkan-drivers
+      - moreutils
+      - mpv
+      - multitail
+      - nano
+      - ncdu
+      - nmap
+      - nmon
+      - ntfs-3g
+      - ntp
+      - p7zip
+      - p7zip-plugins
+      - parted
+      - pavucontrol
+      - picard
+      - pigz
+      - pkg-config
+      - plank
+      - powertop
+      - pv
+      - python3
+      - python3-devel
+      - python3-pip
+      - python3-setuptools
+      - python3-virtualenv
+      - python3-wheel
+      - rar
+      - rdesktop
+      - rdfind
+      - redshift
+      - remmina
+      - screen
+      - screenfetch
+      - sharutils
+      - shotwell
+      - shutter
+      - smartmontools
+      - snapd
+      - soundconverter
+      - sshfs
+      - sshuttle
+      - stellarium
+      - stress
+      - subversion
+      - swaks
+      - synaptic
+      - sysstat
+      - tcpdump
+      - terminator
+      - timeshift
+      - tmux
+      - tor
+      - unace
+      - unrar
+      - unzip
+      - variety
+      - vim
+      - vlc
+      - wavpack
+      - wget
+      - whois
+      - xclip
+      - xsensors
+      - zip
+      - zsh
+    state: present
+  tags: common
+
+- name: Install additional requested packages (Fedora)
+  dnf:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - net-snmp
+      - net-snmp-utils
+      - epiphany
+      - etherwake
+      - rclone
+      - qpdf
+      - poppler-utils
+      - iperf3
+      - libnotify
+      - wkhtmltopdf
+      - ghostwriter
+      - cloud-utils
+      - samba
+      - mokutil
+      - kernel-devel
+      - cups-devel
+      - pipx
+      - wxPython
+      - cups
+      - cups-bsd
+      - cups-client
+      - cups-image-devel
+      - sane-backends-devel
+      - avahi-devel
+      - xsane
+      - python3-notify2
+      - python3-reportlab
+      - libusb-devel
+      - "@development-tools"
+  ignore_errors: true
+  tags: common
+
+- name: Install kernel headers (Fedora)
+  dnf:
+    name: "kernel-devel-{{ ansible_kernel }}"
+    state: present
+  ignore_errors: true
+  tags: common
+
+# Google Chrome repo for Fedora
+- name: Add Google Chrome repo (Fedora)
+  yum_repository:
+    name: google-chrome
+    description: Google Chrome Repository
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+  when: ansible_os_family == "RedHat"
+
+- name: Install Google Chrome (Fedora)
+  dnf:
+    name: google-chrome-stable
+    state: present
+  when: ansible_os_family == "RedHat"
+  ignore_errors: true
+
+# Flatpak on Fedora
+- name: Add Flathub remote (Fedora)
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  when: ansible_os_family == "RedHat"
+
+- name: Install Flatpak packages (Fedora)
+  community.general.flatpak:
+    name: "{{ packages }}"
+    method: user
+  vars:
+    packages:
+      - com.microsoft.Edge
+      - com.mojang.Minecraft
+      - org.openshot.OpenShot
+      - org.jitsi.jitsi-meet
+      - com.github.tchx84.Flatseal
+      - com.github.marktext.marktext
+  when: ansible_os_family == "RedHat"
+
+# Snap on Fedora
+- name: Enable snapd service (Fedora)
+  systemd:
+    name: snapd
+    enabled: yes
+    state: started
+  when: ansible_os_family == "RedHat"
+
+- name: Install Snap packages (Fedora)
+  community.general.snap:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - discord
+      - spotify
+      - signal-desktop
+      - slack
+      - inkscape
+      - gimp
+      - krita
+      - doctl
+  when: ansible_os_family == "RedHat"

@@ -6,18 +6,18 @@
   when: ansible_distribution == 'Ubuntu'
 
 # UPGRADE
-- name: Upgrading all packages
+- name: Upgrading all packages (Debian/Ubuntu)
   apt:
     upgrade: 'yes'
-  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
+  when: ansible_os_family == "Debian"
 
-- name: Upgrading all dist packages (Ubuntu/Debian)
+- name: Upgrading all dist packages (Debian/Ubuntu)
   apt:
     upgrade: dist
-  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
+  when: ansible_os_family == "Debian"
 
-- name: Upgrading all packages (RHEL based)
-  yum:
+- name: Upgrading all packages (Fedora/RHEL)
+  dnf:
     name: '*'
     state: latest
   when: ansible_os_family == "RedHat"

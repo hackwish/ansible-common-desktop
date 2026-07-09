@@ -1,14 +1,25 @@
 ---
-# tasks file for ansible-commom-desktop
+# tasks file for ansible-common-desktop
 
 - include_tasks: repos.yml
   tags: repos
+  when: ansible_os_family == "Debian"
 
-- include_tasks: packages.yml
+- include_tasks: packages-debian.yml
   tags: packages
+  when: ansible_os_family == "Debian"
+
+- include_tasks: packages-fedora.yml
+  tags: packages
+  when: ansible_os_family == "RedHat"
+
+- include_tasks: packages-mac.yml
+  tags: packages
+  when: ansible_os_family == "Darwin"
 
 - include_tasks: aditional-packages.yml
   tags: aditional-packages
+  when: ansible_distribution == 'Linux Mint'
 
 - include_tasks: upgrade.yml
   tags: upgrade
