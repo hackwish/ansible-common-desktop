@@ -39,24 +39,7 @@
     state: absent
   when: codename != "jammy" or codename != "vanessa"
 
-# Google Chrome
-- name: Add APT Key Google Chrome
-  apt_key:
-    url: https://dl.google.com/linux/linux_signing_key.pub
-    keyring: /usr/share/keyrings/google-chrome.gpg
-    state: present
-- name: Remove old Repo Google Chrome workaround
-  apt_repository:
-    repo: 'deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main'
-    state: absent
-    filename: google-chrome
-    update_cache: no
-- name: Add Repo Google Chrome
-  apt_repository:
-    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main
-    state: present
-    filename: google-chrome
-    update_cache: no
+
 
 # #SyncThing
 # - apt_key:

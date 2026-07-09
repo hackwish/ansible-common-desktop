@@ -181,22 +181,9 @@
   tags: common
 
 # Google Chrome repo for Fedora
-- name: Add Google Chrome repo (Fedora)
-  yum_repository:
-    name: google-chrome
-    description: Google Chrome Repository
-    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
-    enabled: yes
-    gpgcheck: yes
-    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
-  when: ansible_os_family == "RedHat"
 
-- name: Install Google Chrome (Fedora)
-  dnf:
-    name: google-chrome-stable
-    state: present
-  when: ansible_os_family == "RedHat"
-  ignore_errors: true
+
+
 
 # Flatpak on Fedora
 - name: Add Flathub remote (Fedora)
