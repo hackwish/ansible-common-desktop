@@ -1,41 +1,63 @@
-Role Name
-=========
+# ansible-common-desktop
 
-A brief description of the role goes here.
+Ansible role for setting up common desktop packages across multiple operating systems.
 
-Requirements
-------------
+## Supported OS
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+| OS Family | Distributions |
+|---|---|
+| Debian | Ubuntu (focal, jammy, noble), Linux Mint (vanessa, vera, victoria) |
+| RedHat | Fedora (all) |
+| Darwin | macOS (all) |
 
-Role Variables
---------------
+## Requirements
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- Ansible ≥ 2.14
+- `community.general` collection (for Homebrew, Snap, Flatpak modules)
+- **macOS:** Homebrew must be installed
+- **Debian:** `DISTRIB_CODENAME` env var must be set (e.g., `jammy`, `noble`) for PPA repos
 
-Dependencies
-------------
+## Role Variables
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+| Variable | Default | Description |
+|---|---|---|
+| `codename` | `lookup('env','DISTRIB_CODENAME')` | Ubuntu codename for PPA repos (Debian only) |
 
-Example Playbook
-----------------
+## Tags
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+| Tag | Description |
+|---|---|
+| `repos` | APT repository setup (Debian only) |
+| `packages` | Package installation across all OSes |
+| `aditional-packages` | Linux Mint specific packages |
+| `upgrade` | System upgrade |
+| `common` | Common package installation subtag |
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## Example Playbook
 
-License
--------
+```yaml
+- hosts: localhost
+  connection: local
+  roles:
+    - ansible-common-desktop
+```
+
+## Architecture
+
+`tasks/main.yml` dispatches by `ansible_os_family`:
+
+- **Debian** → `repos.yml` (PPAs/APT repos) → `packages.yml` (APT + Snap + Flatpak + .deb curls) → `aditional-packages.yml`
+- **RedHat** → `packages-fedora.yml` (DNF + Snap + Flatpak + Chrome repo)
+- **Darwin** → `packages-mac.yml` (Homebrew + Homebrew Cask)
+- **All** → `upgrade.yml`
+
+## Caveats
+
+- Some shell-based tasks (Lutris curl install, `apt-get clean`, `apt-get update`) are not idempotent
+- Task names mix Spanish and English
+- `rtl8812au-dkms` may fail on newer kernels — use with `ignore_errors`
+- Templates in `templates/` (`20auto-upgrades.j2`, `jail.local.j2`, `sshd_config.j2`) exist but are not deployed by any task
+
+## License
 
 BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-# ansible-common-desktop
-# ansible-common-desktop
-# ansible-common-desktop
