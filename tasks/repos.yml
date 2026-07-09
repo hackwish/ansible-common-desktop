@@ -17,17 +17,19 @@
     update_cache: no
     state: absent
 
-- name: Add Repo Git Core
+- name: Remove Repo Git Core
   apt_repository:
     repo: ppa:git-core/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
-- name: Add Repo Papirus
+- name: Remove Repo Papirus
   apt_repository:
     repo: ppa:papirus/papirus
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 - name: Add Repo webupd8 general porpuses
   apt_repository:
@@ -81,12 +83,13 @@
     repo: ppa:danielrichter2007/grub-customizer
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 # BOOT REPAIR
 - apt_repository:
     repo: ppa:yannubuntu/boot-repair
     codename: '{{ codename }}'
-    state: present
+    state: absent
     update_cache: no
 
   # ETCHER
@@ -167,6 +170,7 @@
     repo: ppa:graphics-drivers/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 ## System-76 Drivers
 # - apt_repository:
@@ -179,7 +183,7 @@
 - apt_repository:
     repo: ppa:ubuntu-toolchain-r/test
     codename: '{{ codename }}'
-    state: present
+    state: absent
     update_cache: no
 
 # Wallpaper changers
@@ -232,6 +236,7 @@
     repo: ppa:mjasnik/ppa
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 # - apt_repository:
 #     repo: 'deb http://ppa.launchpad.net/mjasnik/ppa/ubuntu {{ codename }} main'
@@ -253,12 +258,14 @@
     repo: ppa:xubuntu-dev/extras
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 # Dockxbar
 - apt_repository:
     repo: ppa:xuzhen666/dockbarx
     codename: '{{ codename }}'
     update_cache: no
+    state: absent
 
 # Tomboy-NG
 - apt_repository:

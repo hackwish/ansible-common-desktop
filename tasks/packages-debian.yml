@@ -179,7 +179,6 @@
     - bash
     - bc
     - bison
-    - boot-repair
     - brasero-cdrkit
     - bridge-utils
     - build-essential
@@ -217,7 +216,6 @@
     - file-roller
     - filezilla
     - filezilla-common
-    - filezilla-theme-papirus
     - findutils
     - flac
     - flatpak
@@ -245,7 +243,6 @@
     - graphviz
     - grep
     - grub-common
-    - grub-customizer
     - grub-pc-bin
     - gufw
     - hardinfo
@@ -349,7 +346,6 @@
     - openvpn
     - p7zip-full
     - p7zip-rar
-    - papirus-icon-theme
     - parted
     - pavucontrol
     - picard
