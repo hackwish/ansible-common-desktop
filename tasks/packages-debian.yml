@@ -267,7 +267,7 @@
       - libavahi-core-dev
       - libavformat-dev
       - libcups2-dev
-      - libcups2t64
+      # - libcups2t64
       - libcupsimage2-dev
       - libcurl4-openssl-dev
       - libelf-dev
