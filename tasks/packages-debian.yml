@@ -603,10 +603,12 @@
 #   ignore_errors: true
 
 # Lutris
-- name: Get latest Release from Lutris
-  ansible.builtin.shell: curl -Lo /tmp/lutris.deb https://github.com/lutris/lutris/releases/download/$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4)/lutris_$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | grep tag_name | cut -d '"' -f 4 | tr -d v)_all.deb
-  # args:
-  #   warn: no
+- name: Get latest Lutris release info
+  ansible.builtin.shell: |
+    TAG=$(curl -s https://api.github.com/repos/lutris/lutris/releases/latest | python3 -c "import sys,json; print(json.load(sys.stdin)['tag_name'])")
+    curl -sL "https://github.com/lutris/lutris/releases/download/${TAG}/lutris_${TAG#v}_all.deb" -o /tmp/lutris.deb
+    file /tmp/lutris.deb
+  changed_when: false
 - name: Install a .deb package for Lutris
   apt:
     deb: /tmp/lutris.deb
