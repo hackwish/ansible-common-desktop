@@ -52,3 +52,15 @@
       - marktext
   register: brew_cask_desktop_result
   ignore_errors: true
+
+- name: Install Python packages.
+  pip:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - ane_transformers
+    - openai-whisper
+    - coremltools
+    - openvino
+    state: present
+  ignore_errors: true

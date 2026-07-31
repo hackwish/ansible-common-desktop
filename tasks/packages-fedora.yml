@@ -180,6 +180,18 @@
   ignore_errors: true
   tags: common
 
+- name: Install Python packages.
+  pip:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - ane_transformers
+    - openai-whisper
+    - coremltools
+    - openvino
+    state: present
+  tags: common
+
 # Google Chrome repo for Fedora
 
 
