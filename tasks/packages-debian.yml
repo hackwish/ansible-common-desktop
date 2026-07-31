@@ -568,9 +568,17 @@
 #   shell: python3 -m pip install pip setuptools --upgrade
 
 #INSTALL PIPS
+- name: Create Python virtualenv for AI packages.
+  ansible.builtin.command:
+    cmd: python3 -m venv /opt/venvs/ai
+    creates: /opt/venvs/ai/bin/python
+  tags: common
+
 - name: Install Python packages.
   pip:
     name: "{{ packages }}"
+    virtualenv: /opt/venvs/ai
+    virtualenv_command: python3 -m venv
   vars:
     packages:
     - ane_transformers

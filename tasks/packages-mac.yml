@@ -53,9 +53,17 @@
   register: brew_cask_desktop_result
   ignore_errors: true
 
+- name: Create Python virtualenv for AI packages.
+  ansible.builtin.command:
+    cmd: python3 -m venv /opt/venvs/ai
+    creates: /opt/venvs/ai/bin/python
+  ignore_errors: true
+
 - name: Install Python packages.
   pip:
     name: "{{ packages }}"
+    virtualenv: /opt/venvs/ai
+    virtualenv_command: python3 -m venv
   vars:
     packages:
     - ane_transformers
