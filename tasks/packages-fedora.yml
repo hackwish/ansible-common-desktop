@@ -204,25 +204,26 @@
   ansible.builtin.getent:
     database: passwd
 
+- name: Build list of active users.
+  ansible.builtin.set_fact:
+    ai_rc_files: >-
+      {%- set out = [] -%} {%- for user, entry in ansible_facts.getent_passwd.items() -%} {%- if entry[4] and entry[5] and not entry[5].endswith('nologin') and not entry[5].endswith('/false') -%} {%- for rc in ['.bashrc', '.zshrc'] -%} {%- set _ = out.append({'home': entry[4], 'rc': rc}) -%} {%- endfor -%} {%- endif -%} {%- endfor -%} {{ out }}
+
+- name: Check home directories of active users.
+  ansible.builtin.stat:
+    path: "{{ item.home }}"
+  loop: "{{ ai_rc_files }}"
+  register: ai_home_stats
+
 - name: Add ai() function to RC files of active users.
   ansible.builtin.lineinfile:
-    path: "{{ item.home }}/{{ item.rc }}"
+    path: "{{ item.item.home }}/{{ item.item.rc }}"
     regexp: '^ai\(\) \{ source /opt/venvs/ai/bin/activate; \}$'
     line: 'ai() { source /opt/venvs/ai/bin/activate; }'
     state: present
     create: no
-  vars:
-    ai_rc_files: >-
-      {%- set out = [] -%}
-      {%- for user, entry in ansible_facts.getent_passwd.items() -%}
-      {%- if entry[4] and entry[5] and not entry[5].endswith('nologin') and not entry[5].endswith('/false') -%}
-      {%- for rc in ['.bashrc', '.zshrc'] -%}
-      {%- set _ = out.append({'home': entry[4], 'rc': rc}) -%}
-      {%- endfor -%}
-      {%- endif -%}
-      {%- endfor -%}
-      {{ out }}
-  loop: "{{ ai_rc_files }}"
+  loop: "{{ ai_home_stats.results }}"
+  when: item.stat.exists
   tags: common
 
 # Google Chrome repo for Fedora

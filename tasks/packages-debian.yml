@@ -567,43 +567,52 @@
 # - name: Install Python upgrade packages
 #   shell: python3 -m pip install pip setuptools --upgrade
 
-#INSTALL PIPS
-- name: Create Python virtualenv for AI packages.
-  ansible.builtin.command:
-    cmd: python3 -m venv /opt/venvs/ai
-    creates: /opt/venvs/ai/bin/python
-  tags: common
+# #INSTALL PIPS
+# - name: Create Python virtualenv for AI packages.
+#   ansible.builtin.command:
+#     cmd: python3 -m venv /opt/venvs/ai
+#     creates: /opt/venvs/ai/bin/python
+#   tags: common
 
-- name: Install AI Python packages.
-  pip:
-    name: "{{ packages }}"
-    virtualenv: /opt/venvs/ai
-    virtualenv_command: python3 -m venv
-  vars:
-    packages:
-    - ane_transformers
-    - openai-whisper
-    - coremltools
-    - openvino
-    state: present
-  tags: common
+# - name: Install AI Python packages.
+#   pip:
+#     name: "{{ packages }}"
+#     virtualenv: /opt/venvs/ai
+#     virtualenv_command: python3 -m venv
+#   vars:
+#     packages:
+#     - ane_transformers
+#     - openai-whisper
+#     - coremltools
+#     - openvino
+#     state: present
+#   tags: common
 
-- name: Get system users.
-  ansible.builtin.getent:
-    database: passwd
+# - name: Get system users.
+#   ansible.builtin.getent:
+#     database: passwd
 
-- name: Add ai() function to RC files of active users.
-  ansible.builtin.lineinfile:
-    path: "{{ item.home }}/{{ item.rc }}"
-    regexp: '^ai\(\) \{ source /opt/venvs/ai/bin/activate; \}$'
-    line: 'ai() { source /opt/venvs/ai/bin/activate; }'
-    state: present
-    create: no
-  vars:
-    ai_rc_files: >-
-      {%- set out = [] -%} {%- for user, entry in ansible_facts.getent_passwd.items() -%} {%- if entry[4] and entry[5] and not entry[5].endswith('nologin') and not entry[5].endswith('/false') -%} {%- for rc in ['.bashrc', '.zshrc'] -%} {%- set _ = out.append({'home': entry[4], 'rc': rc}) -%} {%- endfor -%} {%- endif -%} {%- endfor -%} {{ out }}
-  loop: "{{ ai_rc_files }}"
-  tags: common
+# - name: Build list of active users.
+#   ansible.builtin.set_fact:
+#     ai_rc_files: >-
+#       {%- set out = [] -%} {%- for user, entry in ansible_facts.getent_passwd.items() -%} {%- if entry[4] and entry[5] and not entry[5].endswith('nologin') and not entry[5].endswith('/false') -%} {%- for rc in ['.bashrc', '.zshrc'] -%} {%- set _ = out.append({'home': entry[4], 'rc': rc}) -%} {%- endfor -%} {%- endif -%} {%- endfor -%} {{ out }}
+
+# - name: Check home directories of active users.
+#   ansible.builtin.stat:
+#     path: "{{ item.home }}"
+#   loop: "{{ ai_rc_files }}"
+#   register: ai_home_stats
+
+# - name: Add ai() function to RC files of active users.
+#   ansible.builtin.lineinfile:
+#     path: "{{ item.item.home }}/{{ item.item.rc }}"
+#     regexp: '^ai\(\) \{ source /opt/venvs/ai/bin/activate; \}$'
+#     line: 'ai() { source /opt/venvs/ai/bin/activate; }'
+#     state: present
+#     create: no
+#   loop: "{{ ai_home_stats.results }}"
+#   when: item.stat.exists
+#   tags: common
 
 # Install from debs
 - name: Install a .deb package for Zoom
