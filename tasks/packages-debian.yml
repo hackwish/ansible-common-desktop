@@ -388,7 +388,7 @@
     - redshift
     - redshift-gtk
     - remmina
-    - rtl8812au-dkms
+    # - rtl8812au-dkms
     - ruby-dev
     - ruby-full
     - samba
