@@ -550,15 +550,15 @@
     # - com.anydesk.Anydesk
     - com.belmoussaoui.Authenticator
     - com.belmoussaoui.Decoder
-    - com.github.bcedu.vgrive
+    # - com.github.bcedu.vgrive
     - com.github.debauchee.barrier
     - com.github.tchx84.Flatseal
     - com.github.unrud.VideoDownloader
     - com.icanblink.blink
     - com.microsoft.Edge
     - com.mojang.Minecraft
-    - io.github.anirbandey1.ChatbotClient
-    - net.brinkervii.grapejuice
+    # - io.github.anirbandey1.ChatbotClient
+    # - net.brinkervii.grapejuice
     - org.jitsi.jitsi-meet
     - org.openshot.OpenShot
     - com.github.marktext.marktext
