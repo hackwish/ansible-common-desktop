@@ -555,7 +555,7 @@
     - com.github.tchx84.Flatseal
     - com.github.unrud.VideoDownloader
     - com.icanblink.blink
-    - com.microsoft.Edge
+    # - com.microsoft.Edge
     - com.mojang.Minecraft
     # - io.github.anirbandey1.ChatbotClient
     # - net.brinkervii.grapejuice
