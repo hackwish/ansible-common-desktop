@@ -252,21 +252,21 @@
 
 # Tomboy-NG
 - apt_repository:
-    repo: ppa:d-bannon/ppa-tomboy-ng
+    # repo: ppa:d-bannon/ppa-tomboy-ng
     codename: '{{ codename }}'
     update_cache: no
     state: absent
 
 
-# Steam
-- apt_key:
-    url: http://repo.steampowered.com/steam/archive/stable/steam.gpg
-    keyring: /usr/share/keyrings/steam.gpg
-    state: present
-- apt_repository:
-    repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/steam.gpg] http://repo.steampowered.com/steam/ stable steam'
-    state: present
-    update_cache: no
+# # Steam
+# - apt_key:
+#     url: http://repo.steampowered.com/steam/archive/stable/steam.gpg
+#     keyring: /usr/share/keyrings/steam.gpg
+#     state: present
+# - apt_repository:
+#     repo: 'deb [arch=amd64 signed-by=/usr/share/keyrings/steam.gpg] http://repo.steampowered.com/steam/ stable steam'
+#     state: present
+#     update_cache: no
 
 # Waydroid
 - apt_key:
